@@ -8,6 +8,27 @@ media_folder: "static/images/messages"
 public_folder: "/images/messages"
 
 collections:
+  - name: "landing_pages"
+    label: "Landing Pages"
+    label_singular: "Landing Page"
+    description: "Standalone pages with independent designs. Published pages are accessible by URL but excluded from site listings. Custom designs and bundled CSS/JS are edited in the repository."
+    folder: "content/landing-pages"
+    filter: { field: "landing_page", value: true }
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { name: "landing_page", widget: "hidden", default: true }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Public URL", name: "url", widget: "string", required: false, pattern: ['^/[a-z0-9]+(?:[/-][a-z0-9]+)*/$', 'Use a path such as /vrleaders/ with a trailing slash.'], hint: "Optional: /vrleaders/. Leave empty for /landing-pages/page-slug/. Choose an unused URL; existing pages must not share it." }
+      - { label: "Custom layout", name: "layout", widget: "string", required: false, hint: "Leave blank for the starter. A developer can add a matching template under layouts/landing-pages/." }
+      - { label: "Hide from search engines", name: "noindex", widget: "boolean", default: true, hint: "Requests no indexing. This does not make the page private or password-protected." }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Content", name: "body", widget: "markdown", required: false }
+
   - name: "message_series"
     label: "Series (Part 1)"
     label_singular: "Series"

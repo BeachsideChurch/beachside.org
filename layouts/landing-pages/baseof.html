@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en-US" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} | {{ site.Title }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ if .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  {{ with .Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+  <link rel="icon" href="{{ "/images/brand/favicon-32.png" | relURL }}" type="image/png">
+  {{ $style := .Resources.GetMatch "style.css" }}
+  {{ if not $style }}{{ $style = resources.Get "css/landing-page.css" }}{{ end }}
+  {{ with $style | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{ end }}
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content">{{ block "main" . }}{{ end }}</main>
+  {{ with .Resources.GetMatch "script.js" }}
+    {{ with . | minify | fingerprint }}<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>{{ end }}
+  {{ end }}
+</body>
+</html>

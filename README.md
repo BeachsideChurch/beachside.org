@@ -263,6 +263,68 @@ Do not edit a generated file in `public/messages/`; Hugo will overwrite it on
 the next build. Always edit the corresponding source file in
 `content/messages/`.
 
+## Add an independent landing page
+
+**Landing Pages** in `/admin/` manages standalone pages stored in
+`content/landing-pages/`. Each page is a Hugo leaf bundle: its own folder with
+`index.md`, images, and optional `style.css` and `script.js`. This keeps unrelated
+designs together in the repository without forcing them to share the main site's
+appearance. See Hugo's [page bundle documentation](https://gohugo.io/content-management/page-bundles/).
+
+In the editor, choose **Landing Pages → New Landing Page**, enter the title,
+description and content, and optionally set **Public URL** to an unused path
+such as `/vrleaders/`. Without that field, the URL is
+`/landing-pages/<page-slug>/`. Keep **Draft** enabled until ready to publish.
+Do not reuse an existing page's URL. The example is a draft at
+`/landing-page-example/`; it is a starter, not a copy of the existing VR Leaders page.
+
+To create a page with its own stylesheet from the command line:
+
+```sh
+hugo new content --kind landing-pages landing-pages/my-campaign
+hugo server --disableFastRender --buildDrafts
+```
+
+Edit `content/landing-pages/my-campaign/index.md` and `style.css`. Add
+`url: /my-campaign/` to the YAML front matter for a shorter URL. Bundle images
+can use relative links such as `![Descriptive text](photo.jpg)` even with a
+custom URL. The `landing_page: true` marker makes the entry visible in the CMS.
+
+The standalone template loads no main-site navigation, footer, announcement,
+styles, or scripts. It uses the bundle's `style.css`, or the minimal
+`assets/css/landing-page.css` fallback for pages created in the CMS. If present,
+`script.js` is loaded only on that page. Edit those files in the repository;
+the CMS edits content and uploads images, not CSS or template code. If a page
+needs a Church Center popup or another integration, add that integration to its
+custom layout explicitly.
+
+For a completely different structure, create
+`layouts/landing-pages/my-design.html` and set `layout: my-design` in the page's
+front matter (the **Custom layout** field in the CMS). For example:
+
+```go-html-template
+{{ define "main" }}
+<section class="campaign">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</section>
+{{ end }}
+```
+
+The shared standalone `baseof.html` provides metadata, a viewport tag, a skip
+link, and page-specific assets. A custom layout can also define a `head` block.
+Keep keyboard focus styling and the skip link usable in custom stylesheets.
+
+The section's `_index.md` applies Hugo
+[build options](https://gohugo.io/content-management/build-options/) to exclude
+landing pages from page collections, including site search, feeds, and the
+sitemap, while still publishing each non-draft page at its URL. There is no
+public landing-page directory. No navigation links are added automatically.
+**Hide from search engines** adds a `noindex` request by default; turning it off
+allows indexing but does not add the page to listings or the sitemap.
+Unlisted pages are public, not password-protected. Drafts are omitted from normal
+production builds.
+
 ## Add a discipleship guide
 
 The guide archive is generated at `/discipleship-guides/`. Individual guides
