@@ -20,7 +20,7 @@ ministry:
     times: 9:00 & 10:45
     period: am
     body: 'Drop-off begins 15 minutes before each service. All UpStreet volunteers are carefully
-      trained and background checked. Our secure check-in process helps keep every child safe.
+      trained and background checked. Our secure check-in process helps keep every child safe. 
 
 
       Tell us about allergies, medical needs, or behavioral needs so we can best support your family.
