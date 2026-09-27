@@ -26,24 +26,6 @@ collections:
             pattern:
               - '^\s*https://(?:(?:www\.)?youtube\.com/(?:watch\?(?:[^#&\s]*&)*v=|(?:live|embed)/)|(?:www\.)?youtube-nocookie\.com/embed/|youtu\.be/)([A-Za-z0-9_-]{11})(?:[?&#][^\s]*)?\s*$'
               - "Enter a YouTube video URL, such as https://www.youtube.com/watch?v=waa1ouN5Aao or https://youtu.be/waa1ouN5Aao. Channel links are not supported."
-          - label: "Next-step cards"
-            name: "sections"
-            widget: "list"
-            fields:
-              - { name: "kind", widget: "hidden", default: "cards" }
-              - { label: "Section title", name: "title", widget: "string" }
-              - { label: "Columns", name: "columns", widget: "number", value_type: "int", min: 1, max: 4 }
-              - label: "Cards"
-                name: "cards"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "Destination URL", name: "url", widget: "string" }
-                  - { label: "External link", name: "external", widget: "boolean", default: false, required: false }
-                  - { label: "Link label", name: "link_label", widget: "string" }
-          - { label: "Page content", name: "body", widget: "markdown", required: false }
 
   - name: "landing_pages"
     label: "Landing Pages"
