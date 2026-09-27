@@ -44,7 +44,14 @@
   const announcement = document.querySelector('[data-announcement]');
   const announcementClose = document.querySelector('[data-announcement-close]');
   if (announcement && announcementClose) {
+    const announcementDismissalKey = 'beachside-announcement-dismissed';
+    if (sessionStorage.getItem(announcementDismissalKey) === 'true') {
+      announcement.hidden = true;
+      body.classList.remove('has-announcement');
+    }
+
     announcementClose.addEventListener('click', () => {
+      sessionStorage.setItem(announcementDismissalKey, 'true');
       announcement.hidden = true;
       body.classList.remove('has-announcement');
     });

@@ -211,6 +211,8 @@ The optional announcement banner is managed in Decap at `/admin/` under
 label, and set the destination URL. Use a site path such as `/visit/` or a
 complete `https://` URL for an external destination. These settings are stored
 in `data/announcement.yaml`; leave the file in place when disabling the banner.
+Visitors who dismiss it won't see it again while navigating in the same tab
+session. It appears again in a new tab session.
 
 ## Add messages and message series
 

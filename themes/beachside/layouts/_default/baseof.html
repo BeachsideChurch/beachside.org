@@ -3,7 +3,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="site-theme {{ if .IsHome }}home{{ else }}interior{{ end }}{{ if or .Params.header_overlay (eq .Layout "ministry") }} overlay-header{{ end }}{{ if site.Params.announcement.enabled }} has-announcement{{ end }}{{ with .Section }} section-{{ . | urlize }}{{ end }}">
+  <body class="site-theme {{ if .IsHome }}home{{ else }}interior{{ end }}{{ if or .Params.header_overlay (eq .Layout "ministry") }} overlay-header{{ end }}{{ if hugo.Data.announcement.enabled }} has-announcement{{ end }}{{ with .Section }} section-{{ . | urlize }}{{ end }}">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     {{ partial "header.html" . }}
     <main id="main-content">
