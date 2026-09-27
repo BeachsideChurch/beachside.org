@@ -1,3 +1,6 @@
+Note: The design of this site is made with assistance of AI coding
+assistants. All content is reviewed and approved by Beachside staff.
+
 # Beachside Church Hugo site
 
 This repository contains the source for the Beachside Church website. It is a
@@ -136,7 +139,7 @@ The message feature automatically selects the newest published message with a
 video, including series landing pages and individual parts. Its watch button
 opens that message. The design's unfinished testimonial placeholders are
 replaced with editable Groups and Starting Point cards. The announcement
-appears after the homepage footer and can still be dismissed.
+stays fixed at the bottom of the browser window and can still be dismissed.
 
 The homepage's **Watch live now!** badge links to `/watch-live/` and appears only
 on Sundays during the windows in `data/home.yaml` under `hero.live`. The initial

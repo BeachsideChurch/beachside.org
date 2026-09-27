@@ -37,7 +37,7 @@
   font-family: Figtree, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-.site-theme.has-announcement { padding-bottom: 0; }
+.site-theme.has-announcement { padding-bottom: 80px; }
 .site-theme a { text-decoration: none; }
 .site-theme a:focus-visible, .site-theme button:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
 .site-theme h1, .site-theme h2, .site-theme h3 { font-weight: 800; letter-spacing: -.03em; }
@@ -140,7 +140,7 @@
 .theme-footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; padding-block: 24px; border-top: 1px solid #ffffff24; font-size: 13px; }
 .theme-footer-bottom div a { margin-left: 20px; }
 .theme-footer-bottom nav { display: flex; flex-wrap: wrap; gap: 20px; }
-.site-theme .announcement { position: relative; min-height: 76px; padding: 18px 56px; background: var(--aqua); color: var(--ink); }
+.site-theme .announcement { position: fixed; min-height: 76px; padding: 18px 56px; background: var(--aqua); color: var(--ink); }
 .site-theme .announcement strong { font-size: 20px; font-weight: 700; }
 .site-theme .announcement a { min-width: auto; border: 0; background: var(--ink); color: var(--paper); font-size: 14px; }
 .site-theme .announcement button { top: 50%; right: 12px; transform: translateY(-50%); background: transparent; color: var(--ink); }
