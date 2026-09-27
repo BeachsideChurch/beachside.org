@@ -2,7 +2,7 @@
 title: Beachside Online
 description: Watch Beachside Church online and take your next step.
 layout: landing
-youtube_live_url: https://youtu.be/waa1ouN5Aao
+youtube_live_url: https://www.youtube.com/watch?v=L8EbgIwfTZI
 sections:
   - kind: cards
     title: Ready to take a next step?
