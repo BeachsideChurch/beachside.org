@@ -376,6 +376,7 @@
   .message-reading .ministry-schedule { max-width: 540px; }
 }
 @media (max-width: 640px) {
+  .site-theme .header-inner { align-items: center; padding-top: 0; }
   .site-theme .page-header { padding-block: 44px 32px; }
   .site-theme .page-header h1 { font-size: 40px; }
   .site-theme .page-header p { font-size: 18px; }
