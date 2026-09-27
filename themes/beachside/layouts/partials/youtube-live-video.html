@@ -1,0 +1,9 @@
+{{ $url := .url | strings.TrimSpace }}
+{{/* Keep the accepted URL formats in sync with the CMS field pattern. */}}
+{{ $pattern := `^https://(?:(?:www\.)?youtube\.com/(?:watch\?(?:[^#&\s]*&)*v=|(?:live|embed)/)|(?:www\.)?youtube-nocookie\.com/embed/|youtu\.be/)([A-Za-z0-9_-]{11})(?:[?&#][^\s]*)?$` }}
+{{ if findRE $pattern $url }}
+  {{ $videoID := replaceRE $pattern `$1` $url }}
+  <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/{{ $videoID }}" title="Beachside Church live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+{{ else }}
+  {{ errorf "invalid Watch Live YouTube URL %q; use a YouTube watch, live, embed, or youtu.be URL" $url }}
+{{ end }}

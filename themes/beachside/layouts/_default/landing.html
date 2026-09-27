@@ -19,7 +19,12 @@
     </section>
   {{ end }}
 
-  {{ with .Content }}<div class="prose wrap">{{ . }}</div>{{ end }}
+  {{ if or .Content .Params.youtube_live_url }}
+    <div class="prose wrap">
+      {{ .Content }}
+      {{ with .Params.youtube_live_url }}{{ partial "youtube-live-video.html" (dict "url" .) }}{{ end }}
+    </div>
+  {{ end }}
   {{ range .Params.sections }}{{ partial "content-section.html" (dict "section" . "page" $) }}{{ end }}
 </article>
 {{ end }}

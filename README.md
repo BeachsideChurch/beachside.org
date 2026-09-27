@@ -155,6 +155,13 @@ time zone. The browser checks the schedule on load, every second, and when a
 tab resumes, so no scheduled Hugo rebuild is needed. The button stays hidden
 until JavaScript determines that a window is active.
 
+To update the Sunday livestream, open `/admin/`, select **Watch Live**, and paste
+the video's YouTube watch, live, embed, or short `youtu.be` URL into **YouTube
+Live URL**. Save and publish the change; the page automatically converts it to a
+privacy-enhanced YouTube embed. The CMS validates the URL before publishing;
+invalid or unsupported links also fail the site build with an error. Use a
+specific video link, not a channel link.
+
 Edit an existing Markdown file under `content/` to change a normal page. Keep
 the opening and closing front matter delimiters and do not rename fields unless
 the matching template is also updated. A page with `draft: true` is available
