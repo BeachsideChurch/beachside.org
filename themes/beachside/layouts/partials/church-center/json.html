@@ -1,0 +1,11 @@
+{{- $data := dict -}}
+{{- with .resource -}}
+  {{- with try (transform.Unmarshal (dict "format" "json") .Content) -}}
+    {{- if .Err -}}
+      {{- errorf "Church Center: invalid JSON in %s." $.label -}}
+    {{- else -}}
+      {{- $data = .Value -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $data -}}

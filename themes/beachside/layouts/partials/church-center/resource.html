@@ -1,0 +1,13 @@
+{{- /* Keep anonymous session tokens and response bodies out of build errors. */ -}}
+{{- $resource := false -}}
+{{- $options := merge (dict "timeout" "30s") (.options | default dict) -}}
+{{- with try (resources.GetRemote .url $options) -}}
+  {{- if .Err -}}
+    {{- errorf "Church Center: could not fetch %s. Retry the build; no event update was published." $.label -}}
+  {{- else if .Value -}}
+    {{- $resource = .Value -}}
+  {{- else -}}
+    {{- errorf "Church Center: %s was not found." $.label -}}
+  {{- end -}}
+{{- end -}}
+{{- return $resource -}}

@@ -178,6 +178,32 @@ pages do not support embedding and should keep their normal external URLs.
 See Planning Center's [form integration instructions](https://help.planningcenter.com/en/139195-integrate-a-form-onto-your-website.html)
 and [supported embeds](https://help.planningcenter.com/en/144373-embed-or-link-your-church-center-pages.html).
 
+### Events
+
+`/events/` fetches the public listings from
+[Beachside's Church Center events page](https://beachsidecc.churchcenter.com/registrations/events/)
+during each Hugo build. Manage event names, dates, artwork, visibility, and
+featured status in Church Center; `content/events/_index.md` only supplies the
+page title and description. The template uses the same published, unarchived
+feed as Church Center, follows pagination, and places featured events first.
+Events with closed registration remain visible when Church Center lists them.
+
+Run the normal `hugo --gc --minify` command to refresh events. Internet access
+is required, but no staff credentials or API key are needed. The build creates
+an anonymous Church Center session and downloads event artwork into the
+generated site because the source image URLs expire. Remote resource caching
+is disabled in `hugo.toml` so subsequent builds fetch current data. Changes
+appear on the website after the rebuilt site is deployed, not on every visit.
+Restart `hugo server` to explicitly refresh remote listings during development.
+
+If Church Center is unavailable or returns an unexpected response, the build
+fails instead of publishing stale or missing events. Retry the build once the
+service recovers. A successful empty listing displays the page's no-events
+message. The integration lives in `themes/beachside/layouts/partials/church-center/`
+and uses Church Center's public web endpoints, which may require maintenance
+if their response format changes. Run its local fixture checks with
+`python scripts/test_events.py` (Python 3.11+ and Hugo required).
+
 The optional announcement banner is controlled by the announcement values in
 `hugo.toml` under `[params.announcement]`. Set `enabled` to `true` or `false`,
 edit its display `text`, and set its destination `url` and link label

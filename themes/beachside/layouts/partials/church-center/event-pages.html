@@ -1,0 +1,23 @@
+{{- $events := slice -}}
+{{- if or (in .seen .url) (not (strings.HasPrefix .url (printf "%s?" .api))) -}}
+  {{- errorf "Church Center: invalid or repeated event pagination link." -}}
+{{- else -}}
+  {{- $resource := partial "church-center/resource.html" (dict "url" .url "label" "event listing" "options" (dict "headers" .headers)) -}}
+  {{- $page := partial "church-center/json.html" (dict "resource" $resource "label" "event listing") -}}
+  {{- if not (reflect.IsSlice $page.data) -}}
+    {{- errorf "Church Center: the event listing is missing its data array." -}}
+  {{- else -}}
+    {{- range $page.data -}}
+      {{- if or (ne .type "Event") (not (findRE `^\d+$` .id)) (not .attributes.name) -}}
+        {{- errorf "Church Center: an event is missing a valid ID or name." -}}
+      {{- else -}}
+        {{- $events = $events | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $page.links.next -}}
+      {{- $next := partial "church-center/event-pages.html" (dict "url" . "api" $.api "headers" $.headers "seen" ($.seen | append $.url)) -}}
+      {{- $events = $events | append $next -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $events -}}

@@ -1,0 +1,28 @@
+{{- /* Use the same anonymous session and public feed as the Church Center page. */ -}}
+{{- $base := "https://beachsidecc.churchcenter.com" -}}
+{{- $api := "https://api.churchcenter.com/registrations/v2/events" -}}
+{{- $events := slice -}}
+{{- $boot := partial "church-center/resource.html" (dict "url" (printf "%s/web_boot_props" $base) "label" "public session" "options" (dict "responseHeaders" (slice "Set-Cookie"))) -}}
+{{- $props := partial "church-center/json.html" (dict "resource" $boot "label" "public session") -}}
+{{- if not $props.configuration.csrfToken -}}
+  {{- errorf "Church Center: the public session is missing its CSRF token." -}}
+{{- else -}}
+  {{- $cookies := slice -}}
+  {{- range index $boot.Data.Headers "Set-Cookie" -}}
+    {{- $cookies = $cookies | append (index (split . ";") 0) -}}
+  {{- end -}}
+  {{- $headers := dict "Accept" "application/json" "X-CSRF-Token" $props.configuration.csrfToken "Cookie" (delimit $cookies "; ") -}}
+  {{- $session := partial "church-center/resource.html" (dict "url" (printf "%s/sessions/tokens" $base) "label" "anonymous access token" "options" (dict "method" "POST" "headers" $headers)) -}}
+  {{- $auth := partial "church-center/json.html" (dict "resource" $session "label" "anonymous access token") -}}
+  {{- if not $auth.data.attributes.token -}}
+    {{- errorf "Church Center: the anonymous access token is missing." -}}
+  {{- else -}}
+    {{- $headers = dict "Accept" "application/json" "Authorization" (printf "Bearer %s" $auth.data.attributes.token) "X-PCO-API-Version" "2020-06-16" -}}
+    {{- $url := printf "%s?order=starts_at&filter=unarchived,published&fields[Event]=name,featured,logo_url,event_time,starts_at&per_page=100" $api -}}
+    {{- $events = partial "church-center/event-pages.html" (dict "url" $url "api" $api "headers" $headers "seen" slice) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Church Center places featured events first, keeping date order within each group. */ -}}
+{{- $featured := where $events "attributes.featured" true -}}
+{{- $other := where $events "attributes.featured" "ne" true -}}
+{{- return ($featured | append $other) -}}

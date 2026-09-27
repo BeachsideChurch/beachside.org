@@ -2,12 +2,18 @@
 <section class="events-page wrap">
   <header class="page-header"><h1>{{ .Title }}</h1>{{ with .Description }}<p>{{ . }}</p>{{ end }}</header>
   <div class="events-grid">
-    {{ range .Params.events }}
-      <a class="event-card" href="{{ .url }}" target="_blank" rel="noopener">
-        <img src="{{ .image | relURL }}" alt="{{ .title }} event artwork">
+    {{ range partial "church-center/events.html" . }}
+      {{ $event := . }}
+      <a class="event-card" href="https://beachsidecc.churchcenter.com/registrations/events/{{ .id }}" target="_blank" rel="noopener">
+        {{ with .attributes.logo_url }}
+          {{ with partial "church-center/resource.html" (dict "url" . "label" (printf "artwork for event %s" $event.id)) }}
+            {{ $image := . | resources.Copy (printf "images/events/%s.%s" $event.id .MediaType.FirstSuffix.Suffix) | fingerprint }}
+            <img src="{{ $image.RelPermalink }}" alt="{{ $event.attributes.name }} event artwork" loading="lazy">
+          {{ end }}
+        {{ end }}
         <span class="event-card-copy">
-          <strong>{{ .title }}</strong>
-          <time{{ with .date_iso }} datetime="{{ . }}"{{ end }}>{{ .date }}</time>
+          <strong>{{ .attributes.name }}</strong>
+          {{ with .attributes.event_time }}<time{{ with $event.attributes.starts_at }} datetime="{{ . }}"{{ end }}>{{ . }}</time>{{ end }}
         </span>
       </a>
     {{ else }}

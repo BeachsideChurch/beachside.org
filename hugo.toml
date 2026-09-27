@@ -6,6 +6,13 @@ theme = 'beachside'
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 
+# Church Center events and their expiring artwork must be fetched on every build.
+[caches.getresource]
+  maxAge = 0
+
+[security.http]
+  mediaTypes = ['^application/vnd\.api\+json(;|$)']
+
 [pagination]
   pagerSize = 12
 
