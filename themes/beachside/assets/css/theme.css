@@ -73,7 +73,7 @@
 .home-button-dark:hover { background: #3b352d; }
 .home-intro-details { margin: 26px 0 0; font-size: 16px; font-weight: 600; color: rgba(255,255,255,.8); }
 .home-sunday { display: grid; grid-template-columns: 1.1fr 1fr; background: var(--aqua); }
-.home-sunday-copy { padding: 52px 40px 52px max(var(--home-gutter), calc((100vw - 1328px) / 2)); }
+.home-sunday-copy { display: flex; flex-direction: column; justify-content: center; padding: 52px 40px 52px max(var(--home-gutter), calc((100vw - 1328px) / 2)); }
 .home-kicker { margin: 0 0 14px; font-size: 15px; text-transform: uppercase; letter-spacing: .14em !important; color: #3d5750; }
 .home-service-times { display: flex; flex-wrap: wrap; align-items: baseline; gap: 20px; margin: 0; font-size: clamp(42px, 4.85vw, 68px); font-weight: 800; letter-spacing: -.04em; line-height: 1; }
 .home-time-divider { font-size: 30px; color: #426d62; }
