@@ -1,15 +1,3 @@
-[[redirects]]
-from = "/admin1"
-to = "/admin/"
-status = 301
-force = true
-
-[[redirects]]
-status = 302
-force = true
-from = "/test"
-to = "https://beachside.org"
-
 # Exact archive paths only; individual /discipleship-guide/<slug>/ pages stay intact.
 [[redirects]]
 from = "/discipleship-guide"
