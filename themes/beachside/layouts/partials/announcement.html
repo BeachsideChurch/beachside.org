@@ -1,4 +1,4 @@
-{{ with site.Params.announcement }}
+{{ with hugo.Data.announcement }}
   {{ if .enabled }}
     <aside class="announcement" data-announcement aria-label="Featured announcement">
       <strong>{{ .text }}</strong>

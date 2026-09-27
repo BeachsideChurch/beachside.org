@@ -27,12 +27,6 @@ disableKinds = ['taxonomy', 'term']
   logoDark = '/images/brand/logo-dark.png'
   socialImage = '/images/brand/social-card.png'
 
-  [params.announcement]
-    enabled = true
-    text = 'Join a Community Group!'
-    url = '/adults/groups/'
-    linkText = 'Learn More'
-
   [params.social]
     facebook = 'https://www.facebook.com/BeachsideFWB'
     instagram = 'https://www.instagram.com/BeachsideFWB/'

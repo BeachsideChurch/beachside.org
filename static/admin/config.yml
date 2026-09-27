@@ -106,6 +106,19 @@ collections:
               - { label: "Status", name: "status", widget: "number", valueType: "int", default: 301 }
               - { label: "Force", name: "force", widget: "boolean", default: true }
 
+  - name: "announcement"
+    label: "Announcement Banner"
+    files:
+      - file: "data/announcement.yaml"
+        name: "announcement"
+        label: "Announcement Banner"
+        format: "yaml"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: false }
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Destination URL", name: "url", widget: "string", hint: "Use a site path such as /visit/ or a complete https:// URL." }
+          - { label: "Link label", name: "linkText", widget: "string" }
+
   - name: discipleship_guides
     label: Discipleship Guides
     label_singular: Discipleship Guide

@@ -110,14 +110,16 @@ or `assets/` into the web root.
 - `data/home.yaml` contains the homepage's repeatable content, such as feature
   cards and location details. Keep its YAML indentation intact and follow the
   field names used by the existing entries.
+- `data/announcement.yaml` contains the announcement banner settings, editable
+  in Decap under **Announcement Banner**.
 - `static/images/` contains images copied to the site without modification.
   For example, `static/images/pages/visit.jpg` is referenced in content as
   `/images/pages/visit.jpg`.
 - `themes/beachside/` contains the site's Hugo templates, reusable partials,
   source styles, and scripts. Theme CSS and JavaScript live under that theme's
   `assets/` directory.
-- `hugo.toml` contains the public URL, site-wide settings, navigation, and the
-  announcement banner configuration.
+- `hugo.toml` contains the public URL and site-wide settings, including
+  navigation.
 
 Use lowercase, descriptive, hyphen-separated filenames for new Markdown files
 and images. Put general page media in `static/images/pages/`, homepage media in
@@ -204,11 +206,11 @@ and uses Church Center's public web endpoints, which may require maintenance
 if their response format changes. Run its local fixture checks with
 `python scripts/test_events.py` (Python 3.11+ and Hugo required).
 
-The optional announcement banner is controlled by the announcement values in
-`hugo.toml` under `[params.announcement]`. Set `enabled` to `true` or `false`,
-edit its display `text`, and set its destination `url` and link label
-`linkText`. Keep an external destination as a complete `https://` URL. If the
-banner is not needed, disable it instead of deleting its configuration.
+The optional announcement banner is managed in Decap at `/admin/` under
+**Announcement Banner**. Toggle **Enabled**, edit the display text and link
+label, and set the destination URL. Use a site path such as `/visit/` or a
+complete `https://` URL for an external destination. These settings are stored
+in `data/announcement.yaml`; leave the file in place when disabling the banner.
 
 ## Add messages and message series
 
