@@ -13,34 +13,24 @@ message_recap: |-
   Too often, we treat our spiritual lives as isolated experiments, operating under the assumption that our internal habits, or lack thereof, only affect our private worlds. Yet our habits are intrinsically communal; they ripple outward, subtly shaping the rhythms, conversations, and emotional landscapes of everyone around us. When we approach our lives from a deep-seated assumption of scarcity (believing we lack the time, the refined talent, or the spiritual maturity required to make a difference), we instinctively retreat into self-preservation. This posture of lack easily masquerades as humility, convincing us that our refusal to step forward is merely an accurate assessment of our limitations. In reality, this withdrawal is frequently rooted in a subtle fear: the fear of inadequacy, the anxiety of overcommitment, or the quiet doubt that God can truly do anything meaningful with the ordinary fragments of our ordinary lives.
 
   True spiritual formation occurs when we shift our gaze away from our perceived deficits and fix it firmly upon the character of a God who operates out of absolute abundance. When we look at our small offerings, our brief moments of time, our simple skills, or our quiet presences, and declare them useless, we are fundamentally misjudging the Creator of the universe. Jesus does not demand that we become the miracle workers who invent solutions out of thin air; He simply invites us to be like the young boy who unclasps his hands and surrenders his modest lunchbox of five loaves and two fish. Our primary calling is not to manufacture life change in others through heroic effort, but to offer whatever small, ordinary pieces we possess into the hands of Christ. Trusting that He specializes in taking what is small and multiplying it.
-spiritual_practice: "**Purpose of the Practice:** The purpose of this practice is to move our souls out\
-  \ of a default state of anxiety and scarcity, where we constantly calculate what we don’t have, and\
-  \ into a state of quiet trust in the abundance of God. Rather than exhausting ourselves by trying to\
-  \ feel adequate or forcing ourselves to be instantly heroic, we train our bodies and minds to release\
-  \ control over our limited resources. Through this practice, we offer our small, specific realities\
-  \ to Jesus, learning to trust that His presence is the ultimate multiplier.\n\n**Step-by-Step Instructions**\n\
-  \n**Prepare Your Space:** Find a quiet, comfortable place to sit. Place your feet flat on the floor,\
-  \ allowing your posture to be upright yet relaxed. Take three deep, slow breaths, inhaling the reality\
-  \ of God’s present love and exhaling the chaotic demands of your daily schedule.\n\n**Identify Your\
-  \ Scarcity:** Close your eyes and notice where you feel a sense of lack right now. Is it a lack of time?\
-  \ A lack of patience for a relationship? A feeling of spiritual inadequacy? Allow yourself to identify\
-  \ the specific thing you feel you do not have enough of to offer others.\n\n**The Physical Gesture of\
-  \ Release:** Rest your hands on your knees with your palms facing downward. Mentally name your scarcity\
-  \ (e.g., “My energy,” “My busy schedule,” “My inadequate knowledge”). Now, slowly turn your palms upward,\
-  \ opening your hands toward the ceiling. Visualize yourself putting these small fragments into a basket\
-  \ and extending them completely into the space before you, letting go of the need to fix the problem\
-  \ yourself.\n\n**The Prayer of Consecration:** Quietly repeat this breath prayer, matching the words\
-  \ to your breathing:  \nInhale: “Lord, here is my small offering…”  \nExhale: “…do with it what You\
-  \ will.”\n\n**Commit to a Micro-Offering:** Before you open your eyes, identify one tiny, concrete way\
-  \ you can offer this specific resource to someone else today without any need for recognition or control.\
-  \ It could be sending a single text of encouragement, offering a genuine smile to a cashier, or pausing\
-  \ to listen to a family member for five undistracted minutes.\n\n**How This Forms Trust and Obedience:**\
-  \ This practice dismantles our addiction to performance by reminding us that we are not the source of\
-  \ the miracle. By physically and mentally offering our smallness to God, we train our nervous systems\
-  \ to realize that safety does not come from hoarding our time or hiding our talents. Obedience ceases\
-  \ to be a heavy chore born of guilt and becomes a joyful cooperation with a generous Father. We learn\
-  \ by repetitive training that when we give our small fragments away, we do not run out; instead, we\
-  \ find ourselves standing in the overflow of Christ’s unexpected abundance."
+spiritual_practice: |-
+  **Purpose of the Practice:** The purpose of this practice is to move our souls out of a default state of anxiety and scarcity, where we constantly calculate what we don’t have, and into a state of quiet trust in the abundance of God. Rather than exhausting ourselves by trying to feel adequate or forcing ourselves to be instantly heroic, we train our bodies and minds to release control over our limited resources. Through this practice, we offer our small, specific realities to Jesus, learning to trust that His presence is the ultimate multiplier.
+
+  **Step-by-Step Instructions**
+
+  **Prepare Your Space:** Find a quiet, comfortable place to sit. Place your feet flat on the floor, allowing your posture to be upright yet relaxed. Take three deep, slow breaths, inhaling the reality of God’s present love and exhaling the chaotic demands of your daily schedule.
+
+  **Identify Your Scarcity:** Close your eyes and notice where you feel a sense of lack right now. Is it a lack of time? A lack of patience for a relationship? A feeling of spiritual inadequacy? Allow yourself to identify the specific thing you feel you do not have enough of to offer others.
+
+  **The Physical Gesture of Release:** Rest your hands on your knees with your palms facing downward. Mentally name your scarcity (e.g., “My energy,” “My busy schedule,” “My inadequate knowledge”). Now, slowly turn your palms upward, opening your hands toward the ceiling. Visualize yourself putting these small fragments into a basket and extending them completely into the space before you, letting go of the need to fix the problem yourself.
+
+  **The Prayer of Consecration:** Quietly repeat this breath prayer, matching the words to your breathing:  
+  Inhale: “Lord, here is my small offering…”  
+  Exhale: “…do with it what You will.”
+
+  **Commit to a Micro-Offering:** Before you open your eyes, identify one tiny, concrete way you can offer this specific resource to someone else today without any need for recognition or control. It could be sending a single text of encouragement, offering a genuine smile to a cashier, or pausing to listen to a family member for five undistracted minutes.
+
+  **How This Forms Trust and Obedience:** This practice dismantles our addiction to performance by reminding us that we are not the source of the miracle. By physically and mentally offering our smallness to God, we train our nervous systems to realize that safety does not come from hoarding our time or hiding our talents. Obedience ceases to be a heavy chore born of guilt and becomes a joyful cooperation with a generous Father. We learn by repetitive training that when we give our small fragments away, we do not run out; instead, we find ourselves standing in the overflow of Christ’s unexpected abundance.
 main_idea: When you bring what you have to God, he will do immeasurably more with it.
 discussion_questions:
 - question: When you think about the concept of serving others or volunteering in the local church, what

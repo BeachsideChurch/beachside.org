@@ -15,43 +15,46 @@ message_recap: |-
   One of the most important paths the Shepherd invites us to walk is the path of prayer. Yet many of us have experienced prayer as frustrating. We struggle to focus. Our minds wander. We wonder if God is listening, or if our prayers are making any difference at all. Jesus understood those struggles, which is why He didn’t simply tell His disciples to pray—He taught them how. In the Lord’s Prayer, Jesus reveals that prayer is far more than bringing a list of requests before God. It is an invitation to reorient our entire lives. Before we ever ask for what we need, we remember who God is. We acknowledge His holiness, surrender ourselves to His kingdom, trust Him for today’s provision, seek reconciliation with others, and ask Him to keep leading us along His paths. Prayer becomes the place where our hearts are slowly reshaped.
 
   Over time, this changes the way we understand both prayer and spiritual formation. Prayer is not primarily about convincing God to accomplish our agenda; it is about allowing Him to transform ours. As we consistently spend time with our Heavenly Father, our desires begin to align with His desires. Our fears become smaller as His greatness becomes clearer. Our need to control gives way to deeper trust. Like every other spiritual practice, prayer forms us through repetition. Day after day, the Shepherd uses this simple habit to guide us along well-worn paths of righteousness, shaping us into people who increasingly reflect the heart of Christ.
-spiritual_practice: "**Description**\n\nPrayer is one of the most familiar practices in the Christian\
-  \ life, yet it is often one of the most misunderstood. Many of us think of prayer primarily as asking\
-  \ God for help, guidance, or provision. While Jesus certainly invites us to bring our requests before\
-  \ our Heavenly Father, He also shows us that prayer is something much deeper. Prayer is not simply the\
-  \ place where we tell God what we want; it is the place where our hearts are slowly reshaped to want\
-  \ what He wants.\n\nWhen the disciples asked Jesus to teach them how to pray, He didn’t give them a\
-  \ script to repeat mindlessly or a formula that guaranteed results. He gave them a pattern that continually\
-  \ reorients the heart. Beginning with God’s holiness, moving through His kingdom, trusting Him for daily\
-  \ provision, seeking forgiveness, and asking for His guidance, the Lord’s Prayer gently moves us from\
-  \ self-centered living to God-centered living. As we return to this pattern again and again, prayer\
-  \ becomes less about changing God’s mind and more about allowing Him to change ours.\n\nLike every spiritual\
-  \ practice, this is not about earning God’s approval. It is about placing ourselves where God can continue\
-  \ His work of transformation. The goal is not to pray perfectly. The goal is to become people who naturally\
-  \ turn toward the Father throughout the day because we have learned to enjoy His presence.\n\n**How\
-  \ to Practice**\n\nSet aside 10–15 uninterrupted minutes each day this week. Choose a consistent time\
-  \ and place where you can slow down without distraction. Then follow these simple steps.\n\n**1\\. Become\
-  \ aware of God’s presence.**  \nBefore saying anything, take a few slow breaths. Set your phone aside.\
-  \ Resist the urge to rush. Simply remind yourself that God is already with you. Prayer begins not with\
-  \ finding God, but with recognizing His presence.\n\n**2\\. Pray through the Lord’s Prayer slowly.**\
-  \  \nMove through the prayer one phrase at a time rather than reciting it from memory.\n\n**Our Father\
-  \ in heaven, hallowed be your name.**  \nSpend a few moments praising God for who He is. Thank Him for\
-  \ His goodness, His faithfulness, His mercy, and His love.\n\n**Your kingdom come, your will be done.**\
-  \  \nOffer God your plans for the day. Surrender your expectations, your worries, and your desire to\
-  \ control the outcome. Ask Him to shape your heart so that His desires become your own.\n\n**Give us\
-  \ today our daily bread.**  \nBring your needs before Him. Rather than worrying about tomorrow, trust\
-  \ Him to provide what you need for today.\n\n**Forgive us our debts, as we also have forgiven our debtors.**\
-  \  \nConfess anything weighing on your heart. Receive God’s grace, then ask Him to help you forgive\
-  \ those who have hurt you.\n\n**Lead us not into temptation, but deliver us from evil.**  \nAsk the\
-  \ Good Shepherd to guide your decisions, protect your heart, and keep you walking along His paths today.\n\
-  \n**3\\. End with silence.**  \nBefore getting up, spend one or two minutes simply sitting quietly with\
-  \ God. Don’t feel the need to fill every moment with words. Let your prayer end with trust instead of\
-  \ activity.\n\n**Remember**\n\nIf your mind wanders, gently return to the prayer. If you don’t know\
-  \ what to say, simply remain with God. If some days feel meaningful and others feel ordinary, don’t\
-  \ be discouraged. Spiritual formation happens much like a trail through the woods is formed—one faithful\
-  \ step at a time. As you return to this practice day after day, the Good Shepherd slowly shapes your\
-  \ heart, teaching you to trust Him, desire His kingdom, and walk more faithfully along the paths He\
-  \ has prepared for you."
+spiritual_practice: |-
+  **Description**
+
+  Prayer is one of the most familiar practices in the Christian life, yet it is often one of the most misunderstood. Many of us think of prayer primarily as asking God for help, guidance, or provision. While Jesus certainly invites us to bring our requests before our Heavenly Father, He also shows us that prayer is something much deeper. Prayer is not simply the place where we tell God what we want; it is the place where our hearts are slowly reshaped to want what He wants.
+
+  When the disciples asked Jesus to teach them how to pray, He didn’t give them a script to repeat mindlessly or a formula that guaranteed results. He gave them a pattern that continually reorients the heart. Beginning with God’s holiness, moving through His kingdom, trusting Him for daily provision, seeking forgiveness, and asking for His guidance, the Lord’s Prayer gently moves us from self-centered living to God-centered living. As we return to this pattern again and again, prayer becomes less about changing God’s mind and more about allowing Him to change ours.
+
+  Like every spiritual practice, this is not about earning God’s approval. It is about placing ourselves where God can continue His work of transformation. The goal is not to pray perfectly. The goal is to become people who naturally turn toward the Father throughout the day because we have learned to enjoy His presence.
+
+  **How to Practice**
+
+  Set aside 10–15 uninterrupted minutes each day this week. Choose a consistent time and place where you can slow down without distraction. Then follow these simple steps.
+
+  **1\. Become aware of God’s presence.**  
+  Before saying anything, take a few slow breaths. Set your phone aside. Resist the urge to rush. Simply remind yourself that God is already with you. Prayer begins not with finding God, but with recognizing His presence.
+
+  **2\. Pray through the Lord’s Prayer slowly.**  
+  Move through the prayer one phrase at a time rather than reciting it from memory.
+
+  **Our Father in heaven, hallowed be your name.**  
+  Spend a few moments praising God for who He is. Thank Him for His goodness, His faithfulness, His mercy, and His love.
+
+  **Your kingdom come, your will be done.**  
+  Offer God your plans for the day. Surrender your expectations, your worries, and your desire to control the outcome. Ask Him to shape your heart so that His desires become your own.
+
+  **Give us today our daily bread.**  
+  Bring your needs before Him. Rather than worrying about tomorrow, trust Him to provide what you need for today.
+
+  **Forgive us our debts, as we also have forgiven our debtors.**  
+  Confess anything weighing on your heart. Receive God’s grace, then ask Him to help you forgive those who have hurt you.
+
+  **Lead us not into temptation, but deliver us from evil.**  
+  Ask the Good Shepherd to guide your decisions, protect your heart, and keep you walking along His paths today.
+
+  **3\. End with silence.**  
+  Before getting up, spend one or two minutes simply sitting quietly with God. Don’t feel the need to fill every moment with words. Let your prayer end with trust instead of activity.
+
+  **Remember**
+
+  If your mind wanders, gently return to the prayer. If you don’t know what to say, simply remain with God. If some days feel meaningful and others feel ordinary, don’t be discouraged. Spiritual formation happens much like a trail through the woods is formed—one faithful step at a time. As you return to this practice day after day, the Good Shepherd slowly shapes your heart, teaching you to trust Him, desire His kingdom, and walk more faithfully along the paths He has prepared for you.
 main_idea: Prayer can reorient your life. When you pray, you interact in such a way that you exchange
   your wishes for God's wishes.
 discussion_questions:
