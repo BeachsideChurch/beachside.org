@@ -34,7 +34,7 @@ spiritual_practice: |-
 
   **Step-by-Step Instructions (10–15 Minutes):**
 
-  1. **Physical Unplugging \& Stillness (3 minutes):** Find a quiet seat. Place your phone in another room or turn it entirely off. Sit comfortably, rest your hands open on your knees palms-up, and close your eyes. Take three deep, slow breaths—inhaling peace, exhaling the urge to hurry or produce. Pray silently: *“The Lord is my shepherd.”*
+  1. **Physical Unplugging & Stillness (3 minutes):** Find a quiet seat. Place your phone in another room or turn it entirely off. Sit comfortably, rest your hands open on your knees palms-up, and close your eyes. Take three deep, slow breaths—inhaling peace, exhaling the urge to hurry or produce. Pray silently: *“The Lord is my shepherd.”*
   2. **Auditing the Mind (3 minutes):** Ask yourself softly: *Where am I currently operating on cruise control or striving in my own strength?* Let a specific area surface—a work project, a financial worry, a parenting decision, or a relationship.
   3. **The Posture of Release (4 minutes):** Physically hold your hands open. Name that specific worry out loud or in your heart, and explicitly give up control of the outcome. Pray: *“I am not the master of my own destiny. You are the Shepherd; I am the sheep. I release my need to manage this outcome, and I choose to follow Your lead.”*
   4. **Anchoring in Sufficiency (2–3 minutes):** End your time by repeating the second half of Psalm 23:1 out loud three times: *“Because You are my shepherd, I lack nothing.”* Sit in the quiet for one final minute, soaking in the truth that God’s presence is enough.

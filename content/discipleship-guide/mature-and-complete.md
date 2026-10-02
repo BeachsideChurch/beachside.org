@@ -64,7 +64,7 @@ spiritual_practice: |-
   life is hidden with Christ in God. The future is secure. The Shepherd is present. The kingdom is real. We do
   not have to be ruled by every fear, every frustration, every appetite, or every demand.
 
-  Over time, this practice trains us to become more like the tree in Psalm 1\. Rooted people are not people
+  Over time, this practice trains us to become more like the tree in Psalm 1. Rooted people are not people
   who never feel stress. Rooted people are people who know where to take their stress. Fruitful people are not
   people who never get angry. Fruitful people are people who allow the peace of Christ to govern what they do
   with their anger. Mature people are not people who control everything. Mature people are people who have
@@ -153,7 +153,7 @@ daily_devotions:
     restored soul is not a soul without emotion. A restored soul is one where emotion has found its proper
     place under the loving rule of Christ.
 
-    Think of the tree in Psalm 1\. A tree still experiences weather — wind, heat, changing seasons. It is
+    Think of the tree in Psalm 1. A tree still experiences weather — wind, heat, changing seasons. It is
     rooted not because the weather is calm, but because its life comes from a source deeper than the weather.
     Peace doesn’t mean you never feel anger, anxiety, grief, or fear. Peace means those feelings do not have
     the final word.
@@ -244,7 +244,7 @@ daily_devotions:
     or attitude?
 prayer_prompts:
 - prompt: >-
-    Jesus, I confess that \[name a specific worry, hurry, or need for control\] has been trying to run my life lately. I bring it into your presence right now and choose to yield the outcome to you. Let your peace rule here.
+    Jesus, I confess that [name a specific worry, hurry, or need for control] has been trying to run my life lately. I bring it into your presence right now and choose to yield the outcome to you. Let your peace rule here.
 next_steps:
 - step: >-
     Memorize Colossians 3:15 this week: "Let the peace of Christ rule in your hearts, since as members of one

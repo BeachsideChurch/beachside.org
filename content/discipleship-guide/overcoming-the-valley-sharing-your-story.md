@@ -35,12 +35,12 @@ spiritual_practice: |-
 
   **Step-by-Step Instructions (10–15 Minutes):**
 
-  1. **Stillness \& Breath (2 Minutes):** Sit quietly in a comfortable posture. Unclench your hands and rest them open on your lap. Take several deep breaths, praying silently: *“The God who was with me then is with me now.”*
+  1. **Stillness & Breath (2 Minutes):** Sit quietly in a comfortable posture. Unclench your hands and rest them open on your lap. Take several deep breaths, praying silently: *“The God who was with me then is with me now.”*
   2. **Naming the Past Valley (3–5 Minutes):** Think back to a season, habit, or crisis in your life where you felt completely overwhelmed, yet God brought you through—your personal “lion or bear.” Write down 2–3 specific ways God showed His presence, grace, or rescue during that time, even if the outcome was painful or unexpected.
   3. **Confronting the Present Giant (3–5 Minutes):** Name the current valley or challenge you are facing right now (e.g., a strained relationship, a persistent habit, financial anxiety, or career uncertainty). Hold that hard reality alongside the memory of God’s past deliverance. Speak aloud: *“Because You rescued me then, I trust You to shepherd me now.”*
-  4. **Surrender \& Action (2 Minutes):** Ask God for the courage to share a portion of your story with one trusted friend, community group member, or person currently struggling. Close with a short prayer asking Him to use your testimony for someone else’s healing.
+  4. **Surrender & Action (2 Minutes):** Ask God for the courage to share a portion of your story with one trusted friend, community group member, or person currently struggling. Close with a short prayer asking Him to use your testimony for someone else’s healing.
 
-  **How It Forms Trust \& Obedience:** By habitually remembering past deliverance, you break the cycle of
+  **How It Forms Trust & Obedience:** By habitually remembering past deliverance, you break the cycle of
   fear-induced paralysis. Remembering transforms your narrative from one of self-reliance or hidden shame into
   a living witness of the Shepherd’s quiet power.
 main_idea: >-

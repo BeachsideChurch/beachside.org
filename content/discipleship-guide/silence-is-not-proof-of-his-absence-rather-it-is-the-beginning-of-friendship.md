@@ -38,7 +38,7 @@ spiritual_practice: |-
 
   **Step-by-Step Instructions (10–15 Minutes)**
 
-  **Physical Stillness \& Environment (2–3 minutes):** Find a quiet spot where you won’t be interrupted. Place
+  **Physical Stillness & Environment (2–3 minutes):** Find a quiet spot where you won’t be interrupted. Place
   your phone, smartwatch, and laptop in another room. Sit comfortably with your feet planted on the floor and
   your hands resting open in your lap. Close your eyes and take three slow, deep breaths—inhaling for four
   counts, holding for two, and exhaling for six. Let your shoulders drop.
@@ -211,7 +211,7 @@ daily_devotions:
     rises, when the house is warm and the alarm clock rings, every single emotion in their body screams at
     them to pull the blankets up and stay in bed. There is zero emotional warmth, zero excitement, and zero
     instant reward in that freezing darkness. Yet, they swing their feet out of bed, lace up their running
-    shoes, and step out into the cold air. They don’t do it because they \*feel\* like it in that exact
+    shoes, and step out into the cold air. They don’t do it because they *feel* like it in that exact
     moment; they do it because their will has been set toward a long-term goal. They have made a decision that
     overrides their momentary feelings. True endurance is never forged in the moments when conditions are easy
     and pleasant; it is forged in the quiet, unglamorous choice to keep moving forward when every circumstance
@@ -220,14 +220,14 @@ daily_devotions:
     In our spiritual lives, our will is the steering wheel of the soul. It is our capacity to choose, decide,
     and align our lives with God even when our feelings and circumstances fail us. We live in a society that
     tells us obedience should feel effortless and emotionally inspiring, but true spiritual formation occurs
-    when our feelings say \*no\*, our situation says \*give up\*, and our will stands firm and declares \*I
-    choose to trust anyway\*. Look at Job. He sits on a literal heap of ashes, having lost his children, his
+    when our feelings say *no*, our situation says *give up*, and our will stands firm and declares *I
+    choose to trust anyway*. Look at Job. He sits on a literal heap of ashes, having lost his children, his
     health, his wealth, and his status in the community. His body is covered in painful sores, his friends are
     hurling accusations at him, and heaven feels utterly, brutally silent. Job has zero emotional peace and
     zero favorable circumstances. Yet, out of the dark depth of that crushing silence, Job exercises his will
     and cries out: “I know that my Redeemer lives!” In ancient Hebrew, the word translated as “Redeemer” is
     Go’el—the brave family defense attorney who stepped into court when you were bankrupt to pay off your
-    debts and defend your name. Job didn’t \*feel\* redeemed in that moment, but his will grabbed hold of the
+    debts and defend your name. Job didn’t *feel* redeemed in that moment, but his will grabbed hold of the
     truth of his Go’el, making a stubborn choice to trust God even on the ash heap.
 
     Exercising your will in a season of spiritual silence does not mean pulling yourself up by your bootstraps
@@ -266,10 +266,10 @@ daily_devotions:
     Scripture never views human beings as disembodied spirits floating above physical reality. God crafted our
     souls inside physical bodies made of earth, and our nervous systems, sleep, and physical rhythms are
     deeply connected to our spiritual capacity. In Psalm 23, the Shepherd’s very first action toward the sheep
-    is not giving them a complex sermon or demanding high productivity. He \*makes\* them lie down in green
+    is not giving them a complex sermon or demanding high productivity. He *makes* them lie down in green
     pastures. Sheep will not lie down if they are terrified, hungry, or physically restless; they lie down
     only when they feel safe and physically nourished. The Shepherd addresses their body first because He
-    knows a weary, overstimulated sheep cannot journey through the valley. Look at Elijah in 1 Kings 19\. When
+    knows a weary, overstimulated sheep cannot journey through the valley. Look at Elijah in 1 Kings 19. When
     he was completely exhausted, depressed, and asking God to end his life under a broom bush, God didn’t
     scold him for lacking faith or give him a lecture. God sent an angel to bake him warm bread, give him
     water, and tell him to sleep. God restored Elijah’s soul by honoring his physical limits.

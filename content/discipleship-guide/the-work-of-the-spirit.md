@@ -34,43 +34,51 @@ spiritual_practice: |-
   not self-analysis for its own sake. The goal is to become aware of where the Holy Spirit may be inviting
   restoration.
 
-  **Instructions (10–15 Minutes)**  
-  1\. Find a quiet place and bring a journal or notebook.  
-  2\. Begin by sitting quietly for one minute. Take several slow breaths.  
-  3\. Pray: “Holy Spirit, I welcome your presence. Help me see my life honestly. Show me where you are working. Show me what needs healing, restoration, and renewal.”
+  **Instructions (10–15 Minutes)**
+
+  1. Find a quiet place and bring a journal or notebook.
+  2. Begin by sitting quietly for one minute. Take several slow breaths.
+  3. Pray: “Holy Spirit, I welcome your presence. Help me see my life honestly. Show me where you are working.
+     Show me what needs healing, restoration, and renewal.”
 
   **Thoughts**  
   The stories, assumptions, beliefs, mental loops, and imaginations that shape how you see God, yourself,
-  others, and the world.  
-  1\. What thought, story, or assumption has been running my life lately without my permission?  
-  2\. Would this thought come from Jesus, who loves you?  
-  3\. What truth do I need to replace the lie I have been believing?
+  others, and the world.
+
+  1. What thought, story, or assumption has been running my life lately without my permission?
+  2. Would this thought come from Jesus, who loves you?
+  3. What truth do I need to replace the lie I have been believing?
 
   **Feelings**  
-  The emotions, moods, and desires that shape our life.  
-  1\. What emotion has had the most influence over me recently, and what is it trying to tell me?  
-  2\. What do my strongest feelings reveal about what I love, fear, need, or believe I must control?  
-  3\. What would it look like to bring this emotion honestly into the presence of God instead of suppressing it, obeying it, or believing it as truth?
+  The emotions, moods, and desires that shape our life.
+
+  1. What emotion has had the most influence over me recently, and what is it trying to tell me?
+  2. What do my strongest feelings reveal about what I love, fear, need, or believe I must control?
+  3. What would it look like to bring this emotion honestly into the presence of God instead of suppressing
+     it, obeying it, or believing it as truth?
 
   **Will**  
   This area is about choice, surrender, intention, obedience, resistance, agency, and the capacity to say yes
-  or no.  
-  1\. Where am I currently resisting God, wisdom, or love?  
-  2\. What do I know I should do but I keep not doing?  
-  3\. What can I say ‘no’ to that will help me be more like Jesus?
+  or no.
+
+  1. Where am I currently resisting God, wisdom, or love?
+  2. What do I know I should do but I keep not doing?
+  3. What can I say ‘no’ to that will help me be more like Jesus?
 
   **Body**  
-  This area is about habits, appetites, energy, sexuality, sleep, food, movement, addiction, hurry and rest.  
-  1\. What is my body telling me that I have been too busy, distracted, or stubborn to hear?  
-  2\. What habit, appetite, or physical pattern is currently making me less like Jesus? More like Jesus?  
-  3\. What spiritual practice would help my body participate in my discipleship?
+  This area is about habits, appetites, energy, sexuality, sleep, food, movement, addiction, hurry and rest.
+
+  1. What is my body telling me that I have been too busy, distracted, or stubborn to hear?
+  2. What habit, appetite, or physical pattern is currently making me less like Jesus? More like Jesus?
+  3. What spiritual practice would help my body participate in my discipleship?
 
   **Social Spaces**  
   This area is about relationships, community, family, friendships, work environments, church, media
-  ecosystems, and the spaces that normalize certain ways of being.  
-  1\. Who or what is currently forming me the most?  
-  2\. In which relationships or environments do I become more like Jesus, and in which do I become less?  
-  3\. What kind of community do I need to seek, build, or become to be more like Jesus?
+  ecosystems, and the spaces that normalize certain ways of being.
+
+  1. Who or what is currently forming me the most?
+  2. In which relationships or environments do I become more like Jesus, and in which do I become less?
+  3. What kind of community do I need to seek, build, or become to be more like Jesus?
 main_idea: We have to make room for the Spirit to work in our lives.
 discussion_questions:
 - question: >-

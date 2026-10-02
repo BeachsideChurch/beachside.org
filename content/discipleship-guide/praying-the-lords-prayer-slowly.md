@@ -61,12 +61,12 @@ spiritual_practice: |-
   Set aside 10–15 uninterrupted minutes each day this week. Choose a consistent time and place where you can
   slow down without distraction. Then follow these simple steps.
 
-  **1\. Become aware of God’s presence.**  
+  **1. Become aware of God’s presence.**  
   Before saying anything, take a few slow breaths. Set your phone aside. Resist the urge to rush. Simply
   remind yourself that God is already with you. Prayer begins not with finding God, but with recognizing His
   presence.
 
-  **2\. Pray through the Lord’s Prayer slowly.**  
+  **2. Pray through the Lord’s Prayer slowly.**  
   Move through the prayer one phrase at a time rather than reciting it from memory.
 
   **Our Father in heaven, hallowed be your name.**  
@@ -89,7 +89,7 @@ spiritual_practice: |-
   Ask the Good Shepherd to guide your decisions, protect your heart, and keep you walking along His paths
   today.
 
-  **3\. End with silence.**  
+  **3. End with silence.**  
   Before getting up, spend one or two minutes simply sitting quietly with God. Don’t feel the need to fill
   every moment with words. Let your prayer end with trust instead of activity.
 

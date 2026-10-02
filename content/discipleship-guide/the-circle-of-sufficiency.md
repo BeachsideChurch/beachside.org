@@ -36,7 +36,7 @@ spiritual_practice: |-
 
   **Step-by-Step Instructions (10–15 Minutes):**
 
-  **Quiet Center \& Breath (2 Minutes):** Sit comfortably in a quiet space with your hands open on your lap.
+  **Quiet Center & Breath (2 Minutes):** Sit comfortably in a quiet space with your hands open on your lap.
   Close your eyes, take three deep breaths, and silently pray: “Lord, You know me completely.” Allow your body
   to settle into the reality that you do not need to perform or manage your image right now.
 
