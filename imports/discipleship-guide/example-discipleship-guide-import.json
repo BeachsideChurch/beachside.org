@@ -1,10 +1,10 @@
 {
-  "title": "Message Title",
+  "title": "Example discipleship guide",
   "fields": {
-    "message_title": "Message Title",
+    "message_title": "Example discipleship guide",
     "guide_date": "2025-06-01",
     "youtube_link": "https://www.youtube.com/watch?v=example",
-    "message_recap": "<p>HTML content here...</p>",
+    "message_recap": "Summarize the message in a few short paragraphs.",
     "main_idea": "One sentence big idea displayed as pull quote.",
     "discussion_questions": [
       {
@@ -13,18 +13,37 @@
       }
     ],
     "daily_devotions": {
-      "monday": { "scripture": "Psalm 23:3", "reflection": "<p>HTML...</p>" },
-      "tuesday": { "scripture": "Ezekiel 36:26", "reflection": "<p>HTML...</p>" },
-      "wednesday": { "scripture": "1 Cor 15:53", "reflection": "<p>HTML...</p>" },
-      "thursday": { "scripture": "2 Cor 4:16", "reflection": "<p>HTML...</p>" },
-      "friday": { "scripture": "Matthew 5:16", "reflection": "<p>HTML...</p>" }
+      "monday": {
+        "scripture": "Psalm 23:3",
+        "reflection": "Write a short reflection on this passage.\n\n**Reflect:** Add a question to consider today."
+      },
+      "tuesday": {
+        "scripture": "Ezekiel 36:26",
+        "reflection": "Write a short reflection on this passage.\n\n**Reflect:** Add a question to consider today."
+      },
+      "wednesday": {
+        "scripture": "1 Cor 15:53",
+        "reflection": "Write a short reflection on this passage.\n\n**Reflect:** Add a question to consider today."
+      },
+      "thursday": {
+        "scripture": "2 Cor 4:16",
+        "reflection": "Write a short reflection on this passage.\n\n**Reflect:** Add a question to consider today."
+      },
+      "friday": {
+        "scripture": "Matthew 5:16",
+        "reflection": "Write a short reflection on this passage.\n\n**Reflect:** Add a question to consider today."
+      }
     },
-    "spiritual_practice": "<p>HTML content here...</p>",
+    "spiritual_practice": "**Practice for this week**\n\n1. Describe the first step.\n2. Describe the next step.",
     "prayer_prompts": [
-      { "prompt": "Prayer prompt text here." }
+      {
+        "prompt": "Prayer prompt text here."
+      }
     ],
     "next_steps": [
-      { "step": "Next step description here." }
+      {
+        "step": "Next step description here."
+      }
     ],
     "resources": [
       {

@@ -430,6 +430,13 @@ files from a consistent payload rather than hand-writing the full guide HTML.
 Keep your source JSON files in `imports/discipleship-guide/` and name them with a
 clear slug such as `example-discipleship-guide-import.json`.
 
+The single guide example lives at
+[`imports/discipleship-guide/example-discipleship-guide-import.json`](imports/discipleship-guide/example-discipleship-guide-import.json).
+It uses Markdown for prose and remains outside the CMS content collection.
+Copy and customize it before importing; the three duplicate placeholder drafts
+have been removed from `content/discipleship-guide/`. For hand editing, start
+with `hugo new content discipleship-guide/your-guide.md` instead.
+
 From the repository root, run the importer directly with:
 
 ```sh
