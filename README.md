@@ -10,6 +10,9 @@ copied to a different web server without running Hugo there.
 The site was tested with **Hugo v0.164.0 extended**. Use that version or a newer
 compatible extended release when editing or building the site.
 
+For copyable YAML and Markdown examples, file locations, and preview commands,
+see the [content editing reference](docs/content-editing.md).
+
 ## Run the site locally
 
 From the repository root, start Hugo's development server:
@@ -484,7 +487,7 @@ structure after changes:
 
 ```sh
 python -m venv /tmp/beachside-guide-tests
-/tmp/beachside-guide-tests/bin/pip install pyyaml beautifulsoup4
+/tmp/beachside-guide-tests/bin/pip install -r scripts/requirements.txt
 /tmp/beachside-guide-tests/bin/python scripts/test_discipleship_guides.py
 ```
 

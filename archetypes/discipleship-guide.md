@@ -8,6 +8,7 @@ display_series: false
 description: "A short summary for the guide archive and search results."
 draft: true
 video_url: ""
+# Use |- blocks for Markdown paragraphs. See docs/content-editing.md.
 message_recap: ""
 main_idea: ""
 discussion_questions: []
