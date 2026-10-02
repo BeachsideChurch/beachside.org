@@ -15,6 +15,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class GuideTests(unittest.TestCase):
+    def test_import_keeps_markdown_readable_and_lossless(self):
+        for prose in ['First paragraph.\n\nSecond paragraph.',
+                      '**Heading**  \nA hard break.', 'Indented\n    code\n',
+                      '\nLeading blank line\n\n', 'Quotes: "yes" and Unicode: café']:
+            with self.subTest(prose=prose):
+                output = render_doc({'title': 'Readable', 'fields': {
+                    'spiritual_practice': prose,
+                    'daily_devotions': {'monday': {'reflection': prose}},
+                }})
+                data = yaml.safe_load(output.split('---', 2)[1])
+                self.assertEqual(data['spiritual_practice'], prose)
+                self.assertEqual(data['daily_devotions'][0]['reflection'], prose)
+                self.assertNotIn(r'\n', output)
+                self.assertIn('  - day: Monday', output)
+
     def test_existing_guides_match_cms_schema(self):
         config = yaml.safe_load((ROOT / 'static/admin/config.yml').read_text())
         collection = next(c for c in config['collections'] if c['name'] == 'discipleship_guides')

@@ -416,6 +416,7 @@ clear slug such as `example-discipleship-guide-import.json`.
 From the repository root, run the importer directly with:
 
 ```sh
+python -m pip install -r scripts/requirements.txt
 python scripts/import_discipleship_guide.py \
   --input imports/discipleship-guide/example-discipleship-guide-import.json \
   --output-dir content/discipleship-guide \

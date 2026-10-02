@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any
 import unicodedata
 
+from content_yaml import dump_content
+
 
 DAY_ORDER = ["monday", "tuesday", "wednesday", "thursday", "friday"]
 
@@ -76,11 +78,7 @@ def render_doc(payload: dict[str, Any]) -> str:
         "next_steps": fields.get("next_steps") or [],
         "resources": fields.get("resources") or [],
     }
-    # JSON values are valid YAML: keep the importer dependency-free while writing
-    # the same front matter fields as Decap. Markdown and existing HTML both work.
-    return "---\n" + "\n".join(
-        f"{key}: {json.dumps(value, ensure_ascii=False)}" for key, value in data.items()
-    ) + "\n---\n"
+    return "---\n" + dump_content(data) + "---\n"
 
 
 def main() -> int:
