@@ -19,14 +19,13 @@ ministry:
     label: Sunday morning
     times: 9:00 & 10:45
     period: am
-    body: 'Drop-off begins 15 minutes before each service. All Waumba Land volunteers are carefully
-      trained and background checked. We use a strict check-in process to help keep your child safe.
+    body: |
+      Drop-off begins 15 minutes before each service. All Waumba Land volunteers are carefully trained and
+      background checked. We use a strict check-in process to help keep your child safe.
 
+      Tell us about allergies, medical needs, or behavioral needs so we can best support your family. No
+      outside food or drink is permitted.
 
-      Tell us about allergies, medical needs, or behavioral needs so we can best support your family.
-      No outside food or drink is permitted.
-
-      '
     contact: mailto:waumbaland@beachside.org
   feature:
     title: Big discoveries for little people.

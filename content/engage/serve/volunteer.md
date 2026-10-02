@@ -11,7 +11,9 @@ sections:
   - kind: text
     title: Help create a remarkable Sunday
     body: |
-      Every week, volunteers create safe, welcoming, and engaging environments for kids, students, and adults. Whether you enjoy greeting people, working behind the scenes, investing in the next generation, or helping with production, there’s a role that fits you.
+      Every week, volunteers create safe, welcoming, and engaging environments for kids, students, and adults.
+      Whether you enjoy greeting people, working behind the scenes, investing in the next generation, or
+      helping with production, there’s a role that fits you.
     button:
       label: Join a Team
       url: https://beachsidecc.churchcenter.com/people/forms/198159?open-in-church-center-modal=true

@@ -13,7 +13,9 @@ hero:
 sections:
   - kind: text
     body: |
-      Our belief is that as people choose to serve—whether in one of our churches, in the local community, or around the world—the impact of that service changes lives: for those serving, for the people they serve, and even for those observing.
+      Our belief is that as people choose to serve—whether in one of our churches, in the local community, or
+      around the world—the impact of that service changes lives: for those serving, for the people they serve,
+      and even for those observing.
   - kind: cards
     columns: 3
     cards:

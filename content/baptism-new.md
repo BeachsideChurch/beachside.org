@@ -10,7 +10,8 @@ sections:
   - kind: text
     title: Why get baptized?
     body: |
-      Baptism is a public expression of a personal decision to follow Jesus. It’s a way to celebrate what God has done in your life with your friends, family, and church.
+      Baptism is a public expression of a personal decision to follow Jesus. It’s a way to celebrate what God
+      has done in your life with your friends, family, and church.
 
       If you have questions, our team would love to talk with you and help you prepare.
     button:

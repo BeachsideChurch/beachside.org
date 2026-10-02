@@ -10,7 +10,9 @@ hero:
 sections:
   - kind: text
     body: |
-      To grow spiritually, you have to be connected relationally. Groups are a place to pursue authentic community and spiritual growth. You’ll spend time socializing, learning, and praying together. All you have to do is show up, join in, and be real.
+      To grow spiritually, you have to be connected relationally. Groups are a place to pursue authentic
+      community and spiritual growth. You’ll spend time socializing, learning, and praying together. All you
+      have to do is show up, join in, and be real.
   - kind: cards
     title: Groups for Every Season of Life
     columns: 4

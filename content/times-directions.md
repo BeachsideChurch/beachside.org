@@ -13,9 +13,12 @@ sections:
   - kind: text
     title: Welcome
     body: |
-      Thanks for stopping by Beachside! We exist to inspire people to follow Jesus with all of their heart. Everything we do on Sunday morning is geared toward that end. We’ve worked hard to create incredible environments for you and your kids.
+      Thanks for stopping by Beachside! We exist to inspire people to follow Jesus with all of their heart.
+      Everything we do on Sunday morning is geared toward that end. We’ve worked hard to create incredible
+      environments for you and your kids.
 
-      When you join us, stop by the lobby for a cup of coffee. We can’t wait to meet you, help you feel at home, and answer your questions.
+      When you join us, stop by the lobby for a cup of coffee. We can’t wait to meet you, help you feel at
+      home, and answer your questions.
   - kind: columns
     theme: light
     columns:
@@ -51,7 +54,9 @@ sections:
   - kind: text
     theme: light
     title: What to Wear
-    body: We are casual around here. You’ll see jeans, shorts, T-shirts, dresses, and business-casual attire. Wear something comfortable and join us.
+    body: >-
+      We are casual around here. You’ll see jeans, shorts, T-shirts, dresses, and business-casual attire. Wear
+      something comfortable and join us.
     button:
       label: Plan Your Visit
       url: https://beachsidecc.churchcenter.com/people/forms/520773?open-in-church-center-modal=true

@@ -49,7 +49,8 @@ sections:
   - kind: text
     title: What to Expect
     body: |
-      Friendly people, casual clothes, engaging music, and a practical message. If you bring kids, arrive about 15 minutes early so our team can help with secure check-in.
+      Friendly people, casual clothes, engaging music, and a practical message. If you bring kids, arrive
+      about 15 minutes early so our team can help with secure check-in.
     button:
       label: Plan Your Visit
       url: https://beachsidecc.churchcenter.com/people/forms/520773?open-in-church-center-modal=true

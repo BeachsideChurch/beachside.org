@@ -3,20 +3,27 @@ title: No Say in The Matter
 date: '2026-06-21T09:00:00-05:00'
 speaker: Andy Stanley
 series: The Matter With You
-description: Too many of us walk through life carrying an unspoken, heavy doubt about whether God actually
-  loves us as individuals. Real discipleship begins when we trust that God's love is already given, not
-  earned.
+description: >-
+  Too many of us walk through life carrying an unspoken, heavy doubt about whether God actually loves us as
+  individuals. Real discipleship begins when we trust that God's love is already given, not earned.
 draft: false
 guide_format: structured
 video_url: https://www.youtube.com/embed/UjJ45EuBGkk
 message_recap: |-
-  Too many of us walk through life carrying a heavy doubt about whether God actually loves us as individuals. We may nod along to the idea that God loves the world, but deep down we feel like our personal history, habits, and failures disqualify us.
+  Too many of us walk through life carrying a heavy doubt about whether God actually loves us as individuals.
+  We may nod along to the idea that God loves the world, but deep down we feel like our personal history,
+  habits, and failures disqualify us.
 
-  This is not just a theological issue—it shapes how we pray, how we love others, and how we live. Performance-driven thinking teaches us to measure our worth by our output. It leads us to shame, guilt, and a strange judgmentalism toward others. The gospel says the opposite: God's love is fixed, objective, and unearned.
+  This is not just a theological issue—it shapes how we pray, how we love others, and how we live.
+  Performance-driven thinking teaches us to measure our worth by our output. It leads us to shame, guilt, and
+  a strange judgmentalism toward others. The gospel says the opposite: God's love is fixed, objective, and
+  unearned.
 
-  We don't believe in order to make God love us; we believe because He already does. When that truth lands in the heart, the shame and striving begin to melt. We can finally stop earning what has already been given.
-spiritual_practice: '**Practice:** Write down one lie you believe about God''s love, then replace it with
-  one truth from Scripture. Repeat the truth throughout the day.'
+  We don't believe in order to make God love us; we believe because He already does. When that truth lands in
+  the heart, the shame and striving begin to melt. We can finally stop earning what has already been given.
+spiritual_practice: >-
+  **Practice:** Write down one lie you believe about God's love, then replace it with one truth from
+  Scripture. Repeat the truth throughout the day.
 main_idea: You cannot be a fully devoted follower of Jesus until you come to terms with the Father's love
   for you.
 discussion_questions:
@@ -42,9 +49,12 @@ daily_devotions:
   scripture: Philippians 3:4–7
   scripture_url: https://www.bible.com/bible/111/PHP.3.4.NIV
   reflection: |-
-    Our minds are wired for scorekeeping. We assume acceptance must be earned through performance. That is a devastating way to approach God. It turns faith into a constant effort to prove we are good enough.
+    Our minds are wired for scorekeeping. We assume acceptance must be earned through performance. That is a
+    devastating way to approach God. It turns faith into a constant effort to prove we are good enough.
 
-    Paul knew this trap intimately. By every external standard, he was a religious success. But when he encountered Jesus, he realized that achievement cannot buy affection. In the kingdom, love is not a reward for effort; it is a gift from the Father.
+    Paul knew this trap intimately. By every external standard, he was a religious success. But when he
+    encountered Jesus, he realized that achievement cannot buy affection. In the kingdom, love is not a reward
+    for effort; it is a gift from the Father.
 
     **Reflect:**
 
@@ -54,9 +64,12 @@ daily_devotions:
   scripture: John 13:34
   scripture_url: https://www.bible.com/bible/111/JHN.13.34.NIV
   reflection: |-
-    We often know God is love in our heads but not in our hearts. That creates a vague guilt that follows us into prayer, worship, and relationships. We feel like outsiders even when we are deeply loved.
+    We often know God is love in our heads but not in our hearts. That creates a vague guilt that follows us
+    into prayer, worship, and relationships. We feel like outsiders even when we are deeply loved.
 
-    Jesus invites us to bring those feelings honestly before Him. We don't hide our shame from a loving Father. We invite Him into it. Grace is not a polite sentiment—it is a powerful, unrelenting affection that meets us in the middle of our failure.
+    Jesus invites us to bring those feelings honestly before Him. We don't hide our shame from a loving
+    Father. We invite Him into it. Grace is not a polite sentiment—it is a powerful, unrelenting affection
+    that meets us in the middle of our failure.
 
     **Reflect:**
 
@@ -66,9 +79,12 @@ daily_devotions:
   scripture: Philippians 3:6, 9
   scripture_url: https://www.bible.com/bible/111/PHP.3.6.NIV
   reflection: |-
-    There are scenes in our lives where we are tempted to prove ourselves. We hide, defend, justify, or compensate. But the good news is this: God does not call us to earn a new status. He calls us to see the status we already have in Christ.
+    There are scenes in our lives where we are tempted to prove ourselves. We hide, defend, justify, or
+    compensate. But the good news is this: God does not call us to earn a new status. He calls us to see the
+    status we already have in Christ.
 
-    It is one thing to know the gospel in theory. It is another to trust it emotionally. When the truth of God's love settles in the heart, the urgency to prove ourselves loosens.
+    It is one thing to know the gospel in theory. It is another to trust it emotionally. When the truth of
+    God's love settles in the heart, the urgency to prove ourselves loosens.
 
     **Reflect:**
 
@@ -78,9 +94,11 @@ daily_devotions:
   scripture: Romans 8:1
   scripture_url: https://www.bible.com/bible/111/ROM.8.1.NIV
   reflection: |-
-    Condemnation is a powerful voice, but it is not final. It tells us that if God really knew the truth, He would reject us. But the gospel says there is no condemnation for those who are in Christ Jesus.
+    Condemnation is a powerful voice, but it is not final. It tells us that if God really knew the truth, He
+    would reject us. But the gospel says there is no condemnation for those who are in Christ Jesus.
 
-    To live in grace is to refuse the lie that love must be earned. It is to rest in a Father whose affection is not conditioned on your moral performance.
+    To live in grace is to refuse the lie that love must be earned. It is to rest in a Father whose affection
+    is not conditioned on your moral performance.
 
     **Reflect:**
 
@@ -90,21 +108,25 @@ daily_devotions:
   scripture: 1 John 4:19
   scripture_url: https://www.bible.com/bible/111/1JN.4.19.NIV
   reflection: |-
-    Grace is not merely for us to receive in private. It is meant to shape how we love the people around us. When we receive God's love, we become less harsh, more patient, and more gracious.
+    Grace is not merely for us to receive in private. It is meant to shape how we love the people around us.
+    When we receive God's love, we become less harsh, more patient, and more gracious.
 
-    We cannot love others deeply while secretly believing we are unlovable. The Father calls us into the same kind of love He has shown us.
+    We cannot love others deeply while secretly believing we are unlovable. The Father calls us into the same
+    kind of love He has shown us.
 
     **Reflect:**
 
     * Who in your life needs the same patience and mercy you have received?
     * How can you show grace to someone this week without keeping score?
 prayer_prompts:
-- prompt: Pray for the courage to stop hiding from God's love and instead trust His grace in the middle
-    of your weakness.
+- prompt: >-
+    Pray for the courage to stop hiding from God's love and instead trust His grace in the middle of your
+    weakness.
 - prompt: Pray for a heart that receives the Father's affection and then reflects that same mercy to others.
 next_steps:
-- step: Make a short list of the top three lies you believe about God's love and replace them with truth
-    from Scripture.
+- step: >-
+    Make a short list of the top three lies you believe about God's love and replace them with truth from
+    Scripture.
 resources:
 - title: How He Loves by John Mark McMillan
   url: https://www.youtube.com/watch?v=FAcEoGvjlk8

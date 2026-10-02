@@ -10,9 +10,14 @@ sections:
   - kind: text
     title: Work with us
     body: |
-      What started as a small group of people with a passion for their unchurched friends and neighbors has grown into Beachside Church—a thriving North Point Partner church along the Emerald Coast in Fort Walton Beach, Florida.
+      What started as a small group of people with a passion for their unchurched friends and neighbors has
+      grown into Beachside Church—a thriving North Point Partner church along the Emerald Coast in Fort Walton
+      Beach, Florida.
 
-      With a laser-focused mission of inspiring people to follow Jesus with all of their heart, our goal is still to create a church unchurched people love to attend. Our location between the white-sand beaches of the Emerald Coast and the world’s largest Air Force base brings an incredible opportunity to serve young families.
+      With a laser-focused mission of inspiring people to follow Jesus with all of their heart, our goal is
+      still to create a church unchurched people love to attend. Our location between the white-sand beaches
+      of the Emerald Coast and the world’s largest Air Force base brings an incredible opportunity to serve
+      young families.
   - kind: cards
     theme: light
     title: Available Positions

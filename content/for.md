@@ -14,7 +14,8 @@ sections:
   - kind: text
     title: How we serve and love our community.
     body: |
-      We are FOR The Emerald Coast. That’s why each month we partner with a nonprofit making a difference in our community and help them go further, faster.
+      We are FOR The Emerald Coast. That’s why each month we partner with a nonprofit making a difference in
+      our community and help them go further, faster.
   - kind: cards
     title: How to Participate
     columns: 3
@@ -39,13 +40,17 @@ sections:
     body: |
       **“Transforming the lives of families and children.”**
 
-      Fresh Start helps families achieve long-term self-sufficiency through a nine-month residential and educational program. Their mission is to share love and compassion through comprehensive educational, vocational, economic, and housing support.
+      Fresh Start helps families achieve long-term self-sufficiency through a nine-month residential and
+      educational program. Their mission is to share love and compassion through comprehensive educational,
+      vocational, economic, and housing support.
   - kind: cards
     title: Our Community Partners
     columns: 3
     cards:
       - title: Supporting Homeless Students
-        description: Helping local students focus on education instead of wondering where their basic needs will come from.
+        description: >-
+          Helping local students focus on education instead of wondering where their basic needs will come
+          from.
       - title: Bridgeway Center
         description: Health and human services for residents of Okaloosa County and beyond.
       - title: Shelter House

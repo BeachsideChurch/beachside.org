@@ -9,7 +9,8 @@ hero:
 sections:
   - kind: text
     body: |
-      Each month, Beachside partners with an organization doing meaningful work in our community. Together we give, serve, and pray so these partners can go further, faster.
+      Each month, Beachside partners with an organization doing meaningful work in our community. Together we
+      give, serve, and pray so these partners can go further, faster.
     button:
       label: See This Month's Partner
       url: /for/

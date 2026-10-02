@@ -32,20 +32,20 @@ ministry:
   - Live music and practical teaching.
   - Real friendships and small-group conversations.
   - Adult leaders who care about you.
-  body: '**InsideOut meets at 4:00pm on Sundays at Beachside Church.**
+  body: |
+    **InsideOut meets at 4:00pm on Sundays at Beachside Church.**
 
+    The pivotal season of high school goes by fast. InsideOut helps students make the most of it. Students
+    meet with friends for live music, practical teaching, and small-group conversation guided by adult leaders
+    who care about them.
 
-    The pivotal season of high school goes by fast. InsideOut helps students make the most of it.
-    Students meet with friends for live music, practical teaching, and small-group conversation guided
-    by adult leaders who care about them.
-
-    '
   schedule:
     label: Sunday afternoon
     times: '4:00'
     period: pm
-    body: Join us on Sundays at Beachside Church, 200 Racetrack Road NW, Fort Walton Beach. We’d
-      love to help you get connected.
+    body: >-
+      Join us on Sundays at Beachside Church, 200 Racetrack Road NW, Fort Walton Beach. We’d love to help you
+      get connected.
     contact: /contact/
   feature:
     title: Make the most of this season.

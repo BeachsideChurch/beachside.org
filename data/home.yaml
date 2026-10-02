@@ -1,7 +1,9 @@
 # Homepage content for the redesign. Images and links can be replaced here.
 hero:
   title: We help make faith practical.
-  description: A church for families who want a great place for their kids, real friends, and a faith that makes sense for everyday life.
+  description: >-
+    A church for families who want a great place for their kids, real friends, and a faith that makes sense
+    for everyday life.
   image: /images/home/redesign-hero.jpg
   button:
     label: Plan Your Visit
@@ -53,7 +55,10 @@ welcome:
 
 community:
   heading: Life is complicated. You want to get it right. We want to help.
-  description: Beachside is full of locals, military families, and people who are new to the Emerald Coast. We're here to help you discover a practical faith that leads to greater meaning and direction in life. We've built every Sunday with guests in mind, so you'll know where to go, what to expect, and who to ask.
+  description: >-
+    Beachside is full of locals, military families, and people who are new to the Emerald Coast. We're here to
+    help you discover a practical faith that leads to greater meaning and direction in life. We've built every
+    Sunday with guests in mind, so you'll know where to go, what to expect, and who to ask.
   # Replace these welcome cards with approved testimonials when available.
   cards:
     - title: A place to belong.
@@ -89,7 +94,9 @@ families:
 messages:
   description: Missed Sunday, or want to catch up before you visit? Every message is online, free, no signup.
 
-mission: Our mission is to inspire people to follow Jesus with all of their heart. Because what we've found is that following Jesus makes life better and makes us better at life.
+mission: >-
+  Our mission is to inspire people to follow Jesus with all of their heart. Because what we've found is that
+  following Jesus makes life better and makes us better at life.
 
 connect:
   - title: Stay Connected

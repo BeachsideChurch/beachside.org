@@ -8,7 +8,9 @@ aliases:
 speaker: Andy Stanley
 series: Who Needs Church?
 part_number: 1
-description: We take values like human dignity, compassion, and justice for granted today, but they only feel obvious because the church first introduced them.
+description: >-
+  We take values like human dignity, compassion, and justice for granted today, but they only feel obvious
+  because the church first introduced them.
 image: /images/messages/who-needs-church.jpg
 video_url: https://www.youtube.com/watch?v=p_uxsirP4Qo
 guide_url: https://page.beachsidecc.org/302a227f

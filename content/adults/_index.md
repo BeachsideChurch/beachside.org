@@ -13,7 +13,9 @@ hero:
 sections:
   - kind: text
     body: |
-      We’ve created environments to help you meet people who share your season of life and live in your area of town. Young or old, Christian or non-Christian, single, married, or divorced, there’s a place for you to connect and grow.
+      We’ve created environments to help you meet people who share your season of life and live in your area
+      of town. Young or old, Christian or non-Christian, single, married, or divorced, there’s a place for you
+      to connect and grow.
   - kind: cards
     columns: 3
     cards:

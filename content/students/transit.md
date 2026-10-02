@@ -32,20 +32,20 @@ ministry:
   - A community where every student matters.
   - A place to discover how God sees you.
   - You don’t have to navigate middle school alone.
-  body: 'We know the middle school years can be complicated. Students are growing up fast and need
-    a place where they can learn how God sees them.
+  body: |
+    We know the middle school years can be complicated. Students are growing up fast and need a place where
+    they can learn how God sees them.
 
+    Our goal is to create a community where every student knows they matter and belong. The road through
+    middle school may be bumpy, but it doesn’t have to be lonely.
 
-    Our goal is to create a community where every student knows they matter and belong. The road
-    through middle school may be bumpy, but it doesn’t have to be lonely.
-
-    '
   schedule:
     label: Sunday morning
     times: '10:45'
     period: am
-    body: Join us on Sundays at Beachside Church, 200 Racetrack Road NW, Fort Walton Beach. We’d
-      love to help you get connected.
+    body: >-
+      Join us on Sundays at Beachside Church, 200 Racetrack Road NW, Fort Walton Beach. We’d love to help you
+      get connected.
     contact: /contact/
   feature:
     title: The road is better together.

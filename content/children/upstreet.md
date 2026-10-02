@@ -19,14 +19,13 @@ ministry:
     label: Sunday morning
     times: 9:00 & 10:45
     period: am
-    body: 'Drop-off begins 15 minutes before each service. All UpStreet volunteers are carefully
-      trained and background checked. Our secure check-in process helps keep every child safe.
+    body: |
+      Drop-off begins 15 minutes before each service. All UpStreet volunteers are carefully trained and
+      background checked. Our secure check-in process helps keep every child safe.
 
+      Tell us about allergies, medical needs, or behavioral needs so we can best support your family. No
+      outside food or drink is permitted.
 
-      Tell us about allergies, medical needs, or behavioral needs so we can best support your family.
-      No outside food or drink is permitted.
-
-      '
     contact: mailto:upstreet@beachside.org
   feature:
     title: Growing in faith, one Sunday at a time.

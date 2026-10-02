@@ -9,7 +9,8 @@ sections:
   - kind: text
     title: Thank you for your interest in supporting the mission of Beachside Church.
     body: |
-      Your generosity helps create environments where people can take steps toward following Jesus with all of their heart.
+      Your generosity helps create environments where people can take steps toward following Jesus with all of
+      their heart.
     button:
       label: Give Online
       url: https://beachsidecc.churchcenter.com/giving?open-in-church-center-modal=true
@@ -20,9 +21,11 @@ sections:
     image: /images/home/connect.png
     image_side: right
     body: |
-      We automate the important things in our lives—our mortgage or rent, health insurance, and subscriptions. Would you consider automating your giving to Beachside?
+      We automate the important things in our lives—our mortgage or rent, health insurance, and subscriptions.
+      Would you consider automating your giving to Beachside?
 
-      In addition to making our church’s budget more stable and predictable, we hope automated giving makes your participation in Beachside’s mission as easy as possible.
+      In addition to making our church’s budget more stable and predictable, we hope automated giving makes
+      your participation in Beachside’s mission as easy as possible.
     button:
       label: Set Up Giving
       url: https://beachsidecc.churchcenter.com/giving?open-in-church-center-modal=true
