@@ -285,3 +285,568 @@ collections:
       name: body
       widget: collapsible-markdown
       required: false
+
+  # Shared field anchors keep the page editors consistent.
+  - name: homepage
+    label: Homepage
+    files:
+      - file: data/home.yaml
+        name: homepage
+        label: Homepage content
+        format: yaml
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            required: true
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Description, name: description, widget: text, required: true}
+              - {label: Image, name: image, widget: image, required: true}
+              - label: Button
+                name: button
+                widget: object
+                required: true
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true}
+                collapsed: true
+              - label: Live
+                name: live
+                widget: object
+                required: true
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true}
+                  - {label: Time zone, name: time_zone, widget: string, required: true, hint: 'Use an IANA
+                      time zone, such as America/Chicago.'}
+                  - label: Windows
+                    name: windows
+                    widget: list
+                    required: true
+                    fields:
+                      - {label: Start, name: start, widget: string, required: true, pattern: ['^([01][0-9]|2[0-3]):[0-5][0-9]$',
+                          'Use 24-hour HH:MM, such as 08:45.']}
+                      - {label: End, name: end, widget: string, required: true, pattern: ['^([01][0-9]|2[0-3]):[0-5][0-9]$',
+                          'Use 24-hour HH:MM, such as 08:45.']}
+                    collapsed: true
+                    summary: '{{fields.start}}–{{fields.end}}'
+                    hint: Sunday live-button windows, in the configured time zone. Use 24-hour HH:MM times.
+                collapsed: true
+              - label: Secondary
+                name: secondary
+                widget: object
+                required: true
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true}
+                collapsed: true
+              - {label: Schedule, name: schedule, widget: string, required: true}
+              - {label: Address, name: address, widget: string, required: true}
+            collapsed: true
+          - label: Navigation
+            name: navigation
+            widget: list
+            required: true
+            fields:
+              - {label: Label, name: label, widget: string, required: true}
+              - {label: Url, name: url, widget: string, required: true}
+            collapsed: true
+            summary: '{{fields.label}}'
+          - label: Sunday
+            name: sunday
+            widget: object
+            required: true
+            fields:
+              - {label: Heading, name: heading, widget: string, required: true}
+              - label: Times
+                name: times
+                widget: list
+                required: true
+                field: {label: Value, name: value, widget: string, required: true}
+              - {label: Address, name: address, widget: string, required: true}
+              - {label: Landmark, name: landmark, widget: string, required: true}
+              - {label: Image, name: image, widget: image, required: true}
+              - {label: Image alt, name: image_alt, widget: string, required: true}
+            collapsed: true
+          - label: Welcome
+            name: welcome
+            widget: object
+            required: true
+            fields:
+              - {label: Heading, name: heading, widget: string, required: true}
+              - label: Cards
+                name: cards
+                widget: list
+                required: true
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Description, name: description, widget: text, required: true}
+                  - {label: Image, name: image, widget: image, required: true}
+                collapsed: true
+                summary: '{{fields.title}}'
+            collapsed: true
+          - label: Community
+            name: community
+            widget: object
+            required: true
+            fields:
+              - {label: Heading, name: heading, widget: string, required: true}
+              - {label: Description, name: description, widget: text, required: true}
+              - label: Cards
+                name: cards
+                widget: list
+                required: true
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Description, name: description, widget: text, required: true}
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true}
+                collapsed: true
+                summary: '{{fields.title}}'
+            collapsed: true
+          - label: Families
+            name: families
+            widget: object
+            required: true
+            fields:
+              - {label: Eyebrow, name: eyebrow, widget: string, required: true}
+              - {label: Heading, name: heading, widget: string, required: true}
+              - label: Cards
+                name: cards
+                widget: list
+                required: true
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Age, name: age, widget: string, required: true}
+                  - {label: Image, name: image, widget: image, required: true}
+                  - {label: Url, name: url, widget: string, required: true}
+                collapsed: true
+                summary: '{{fields.title}}'
+            collapsed: true
+          - label: Messages
+            name: messages
+            widget: object
+            required: true
+            fields:
+              - {label: Description, name: description, widget: text, required: true}
+            collapsed: true
+          - {label: Mission, name: mission, widget: text, required: true}
+          - label: Connect
+            name: connect
+            widget: list
+            required: true
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Description, name: description, widget: text, required: true}
+              - {label: Label, name: label, widget: string, required: true}
+              - {label: Url, name: url, widget: string, required: true}
+              - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+            collapsed: true
+            summary: '{{fields.title}}'
+      - file: content/_index.md
+        name: home_metadata
+        label: Homepage title and search description
+        fields:
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+    media_folder: /static/images/home
+    public_folder: /images/home
+  - name: site_pages
+    label: Site Pages
+    description: Edit existing pages, their images, buttons, cards, and text sections.
+    files:
+      - file: content/about/_index.md
+        name: content_about__index
+        label: About Us
+        fields: &site_page_fields
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+          - {label: Subtitle, name: subtitle, widget: string, required: false}
+          - {label: Previous URLs, name: aliases, widget: list, required: false, hint: Keep existing aliases
+              so old links continue to work.}
+          - {label: Draft, name: draft, widget: boolean, required: false, default: false}
+          - {label: Layout, name: layout, widget: hidden, required: false, default: landing}
+          - {label: Use the hero as the page heading, name: hide_page_header, widget: boolean, required: false,
+            default: false}
+          - {label: Overlay navigation on the hero, name: header_overlay, widget: boolean, required: false,
+            default: false}
+          - label: Hero
+            name: hero
+            widget: object
+            required: false
+            fields:
+              - {label: Image, name: image, widget: image, required: true}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Eyebrow, name: eyebrow, widget: string, required: false}
+              - {label: Image focal point, name: position, widget: string, required: false, hint: 'For example:
+                  center or center 42%.'}
+              - {label: Height, name: height, widget: string, required: false, hint: 'For example: 58vh.
+                  Leave empty for the default height.'}
+              - {label: Compact, name: compact, widget: boolean, required: false, default: false}
+              - {label: Center the text, name: center, widget: boolean, required: false, default: false}
+              - label: Button
+                name: button
+                widget: object
+                required: false
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                      as /visit/, or a complete https:// URL.'}
+                  - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                collapsed: true
+            collapsed: true
+          - label: Page sections
+            name: sections
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{fields.title}}'
+            typeKey: kind
+            types:
+              - label: Text
+                name: text
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - label: Button
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Label, name: label, widget: string, required: true}
+                      - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                          as /visit/, or a complete https:// URL.'}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+              - label: Image and text
+                name: split
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - {label: Eyebrow, name: eyebrow, widget: string, required: false}
+                  - {label: Image, name: image, widget: image, required: true}
+                  - {label: Image description, name: image_alt, widget: string, required: false}
+                  - {label: Image side, name: image_side, widget: select, required: false, options: [left,
+                      right], default: left}
+                  - label: Button
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Label, name: label, widget: string, required: true}
+                      - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                          as /visit/, or a complete https:// URL.'}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+              - label: Cards
+                name: cards
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - {label: Cards per row, name: columns, widget: number, required: false, value_type: int,
+                    min: 1, max: 4, default: 3}
+                  - label: Cards
+                    name: cards
+                    widget: list
+                    required: false
+                    fields:
+                      - {label: Title, name: title, widget: string, required: true}
+                      - {label: Description, name: description, widget: markdown, required: false}
+                      - {label: Image, name: image, widget: image, required: false}
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Link label, name: link_label, widget: string, required: false}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+                    summary: '{{fields.title}}'
+              - label: Text columns
+                name: columns
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - label: Columns
+                    name: columns
+                    widget: list
+                    required: false
+                    fields:
+                      - {label: Title, name: title, widget: string, required: false}
+                      - {label: Body, name: body, widget: markdown, required: false}
+                    collapsed: true
+                    summary: '{{fields.title}}'
+          - {label: Additional page content, name: body, widget: markdown, required: false}
+      - file: content/about/faq.md
+        name: content_about_faq
+        label: FAQ
+        fields: *site_page_fields
+      - file: content/about/our-story.md
+        name: content_about_our-story
+        label: Our Story
+        fields: *site_page_fields
+      - file: content/adults/_index.md
+        name: content_adults__index
+        label: Adults & Groups
+        fields: *site_page_fields
+      - file: content/adults/groups/childcare-supplement.md
+        name: content_adults_groups_childcare-supplement
+        label: Childcare Supplement
+        fields: *site_page_fields
+      - file: content/adults/groups.md
+        name: content_adults_groups
+        label: Groups
+        fields: *site_page_fields
+      - file: content/adults/starting-point.md
+        name: content_adults_starting-point
+        label: Starting Point
+        fields: *site_page_fields
+      - file: content/baptism-new.md
+        name: content_baptism-new
+        label: Baptism
+        fields: *site_page_fields
+      - file: content/children/_index.md
+        name: content_children__index
+        label: Kids at Beachside
+        fields: *site_page_fields
+      - file: content/children/partnering-with-parents.md
+        name: content_children_partnering-with-parents
+        label: Partnering with Parents
+        fields: *site_page_fields
+      - file: content/contact.md
+        name: content_contact
+        label: Contact Us
+        fields: *site_page_fields
+      - file: content/engage/give.md
+        name: content_engage_give
+        label: Give
+        fields: *site_page_fields
+      - file: content/engage/serve/_index.md
+        name: content_engage_serve__index
+        label: Serve
+        fields: *site_page_fields
+      - file: content/engage/serve/community.md
+        name: content_engage_serve_community
+        label: Serve in the Community
+        fields: *site_page_fields
+      - file: content/engage/serve/in-the-world.md
+        name: content_engage_serve_in-the-world
+        label: Serve in the World
+        fields: *site_page_fields
+      - file: content/engage/serve/volunteer.md
+        name: content_engage_serve_volunteer
+        label: Serve at Beachside
+        fields: *site_page_fields
+      - file: content/for.md
+        name: content_for
+        label: For the Emerald Coast
+        fields: *site_page_fields
+      - file: content/jobs.md
+        name: content_jobs
+        label: Join Our Team
+        fields: *site_page_fields
+      - file: content/privacy-policy.md
+        name: content_privacy-policy
+        label: Privacy Policy
+        fields: *site_page_fields
+      - file: content/students/_index.md
+        name: content_students__index
+        label: Students at Beachside
+        fields: *site_page_fields
+      - file: content/times-directions.md
+        name: content_times-directions
+        label: Locations, Times, and Directions
+        fields: *site_page_fields
+      - file: content/visit.md
+        name: content_visit
+        label: Visit
+        fields: *site_page_fields
+    media_folder: /static/images/pages
+    public_folder: /images/pages
+  - name: ministry_pages
+    label: Ministry Pages
+    description: Edit children and student ministry introductions, meeting details, artwork, and resources.
+    files:
+      - file: content/children/upstreet.md
+        name: content_children_upstreet
+        label: UpStreet
+        fields: &ministry_page_fields
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+          - {label: Layout, name: layout, widget: hidden, required: false, default: ministry}
+          - {label: Draft, name: draft, widget: boolean, required: false, default: false}
+          - label: Hero
+            name: hero
+            widget: object
+            required: false
+            fields:
+              - {label: Image, name: image, widget: image, required: true}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Eyebrow, name: eyebrow, widget: string, required: false}
+              - {label: Image focal point, name: position, widget: string, required: false, hint: 'For example:
+                  center or center 42%.'}
+              - {label: Height, name: height, widget: string, required: false, hint: 'For example: 58vh.
+                  Leave empty for the default height.'}
+              - {label: Compact, name: compact, widget: boolean, required: false, default: false}
+              - {label: Center the text, name: center, widget: boolean, required: false, default: false}
+              - label: Button
+                name: button
+                widget: object
+                required: false
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                      as /visit/, or a complete https:// URL.'}
+                  - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                collapsed: true
+            collapsed: true
+          - label: Ministry details
+            name: ministry
+            widget: object
+            required: true
+            fields:
+              - {label: Age group, name: age, widget: string, required: true}
+              - {label: Introduction heading, name: intro, widget: string, required: true}
+              - {label: Introduction, name: body, widget: markdown, required: false}
+              - {label: Key points, name: beliefs, widget: list, required: false}
+              - label: Schedule
+                name: schedule
+                widget: object
+                required: false
+                fields:
+                  - {label: Label, name: label, widget: string, required: true}
+                  - {label: Times, name: times, widget: string, required: true, hint: 'For example: 9:00
+                      & 10:45.'}
+                  - {label: Period, name: period, widget: select, required: true, options: [am, pm]}
+                  - {label: Meeting details, name: body, widget: markdown, required: false}
+                  - {label: Contact, name: contact, widget: string, required: true, hint: 'Use /contact/
+                      or mailto:address@beachside.org.'}
+                collapsed: true
+              - label: Feature
+                name: feature
+                widget: object
+                required: false
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Image, name: image, widget: image, required: true}
+                  - {label: Idea, name: idea, widget: string, required: true}
+                  - {label: Idea description, name: idea_description, widget: text, required: false}
+                  - {label: Resource title, name: resource_title, widget: string, required: true}
+                  - {label: Resource description, name: resource_description, widget: text, required: false}
+                  - {label: Resource url, name: resource_url, widget: string, required: true}
+                  - {label: Open resource in a new tab, name: resource_external, widget: boolean, required: false,
+                    default: false}
+                collapsed: true
+            collapsed: true
+          - label: Page sections
+            name: sections
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{fields.title}}'
+            typeKey: kind
+            types:
+              - label: Text
+                name: text
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - label: Button
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Label, name: label, widget: string, required: true}
+                      - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                          as /visit/, or a complete https:// URL.'}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+              - label: Image and text
+                name: split
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - {label: Eyebrow, name: eyebrow, widget: string, required: false}
+                  - {label: Image, name: image, widget: image, required: true}
+                  - {label: Image description, name: image_alt, widget: string, required: false}
+                  - {label: Image side, name: image_side, widget: select, required: false, options: [left,
+                      right], default: left}
+                  - label: Button
+                    name: button
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Label, name: label, widget: string, required: true}
+                      - {label: Url, name: url, widget: string, required: true, hint: 'Use a site path such
+                          as /visit/, or a complete https:// URL.'}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+              - label: Cards
+                name: cards
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - {label: Body, name: body, widget: markdown, required: false}
+                  - {label: Cards per row, name: columns, widget: number, required: false, value_type: int,
+                    min: 1, max: 4, default: 3}
+                  - label: Cards
+                    name: cards
+                    widget: list
+                    required: false
+                    fields:
+                      - {label: Title, name: title, widget: string, required: true}
+                      - {label: Description, name: description, widget: markdown, required: false}
+                      - {label: Image, name: image, widget: image, required: false}
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Link label, name: link_label, widget: string, required: false}
+                      - {label: Open in a new tab, name: external, widget: boolean, required: false, default: false}
+                    collapsed: true
+                    summary: '{{fields.title}}'
+              - label: Text columns
+                name: columns
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Theme, name: theme, widget: select, required: false, options: [light, dark,
+                      teal]}
+                  - label: Columns
+                    name: columns
+                    widget: list
+                    required: false
+                    fields:
+                      - {label: Title, name: title, widget: string, required: false}
+                      - {label: Body, name: body, widget: markdown, required: false}
+                    collapsed: true
+                    summary: '{{fields.title}}'
+      - file: content/children/waumba-land.md
+        name: content_children_waumba-land
+        label: Waumba Land
+        fields: *ministry_page_fields
+      - file: content/students/insideout.md
+        name: content_students_insideout
+        label: InsideOut
+        fields: *ministry_page_fields
+      - file: content/students/transit.md
+        name: content_students_transit
+        label: Transit
+        fields: *ministry_page_fields
+    media_folder: /static/images/pages
+    public_folder: /images/pages

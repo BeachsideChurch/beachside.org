@@ -22,8 +22,8 @@ Open the local address printed by Hugo, normally
 <http://localhost:1313/>. Hugo watches the source files and refreshes the site
 as they change. For the browser-based CMS, open
 <http://localhost:1313/admin/>. The Decap-powered admin works against the same
-Markdown files in `content/` and is configured for the message content model
-first. Draft content is hidden by default; include it while reviewing
+Markdown files in `content/` and the homepage data in `data/home.yaml`.
+Draft content is hidden by default; include it while reviewing
 unpublished work with:
 
 ```sh
@@ -31,6 +31,23 @@ hugo server --disableFastRender --buildDrafts
 ```
 
 Stop the server with `Ctrl+C`.
+
+The CMS includes **Homepage**, **Site Pages**, and **Ministry Pages** editors.
+Homepage copy, navigation cards, images, and Sunday live-button windows are
+editable under Homepage. Site Pages covers existing regular pages, with
+repeatable Text, Image and text, Cards, and Text columns sections. Ministry
+Pages covers age groups, introductions, meeting details, artwork, and parent
+resources for Waumba Land, UpStreet, Transit, and InsideOut. Existing page
+paths are fixed so editing a title does not change its URL. Watch Live retains
+its dedicated video editor; custom standalone designs use Landing Pages.
+
+To check that the editors cover existing fields and that CMS saves preserve
+content, install `scripts/requirements.txt`, then run:
+
+```sh
+python scripts/test_cms_content.py
+node scripts/test_cms_yaml.mjs
+```
 
 ## CMS accounts and password recovery
 

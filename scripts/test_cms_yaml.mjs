@@ -40,7 +40,15 @@ try {
     assert.deepEqual(formatter.fromFile(saved), data, name);
     assert.ok(!saved.includes('\\n'), name);
   }
-  console.log('Bundled CMS YAML preserves guide values and readable multiline Markdown.');
+  const config = formatter.fromFile(await readFile(new URL('static/admin/config.yml', root), 'utf8'));
+  for (const collection of config.collections.filter(c => ['homepage', 'site_pages', 'ministry_pages'].includes(c.name))) {
+    for (const entry of collection.files) {
+      const source = await readFile(new URL(entry.file, root), 'utf8');
+      const data = formatter.fromFile(entry.file.endsWith('.md') ? source.split('---')[1] : source);
+      assert.deepEqual(formatter.fromFile(formatter.toFile(data)), data, entry.file);
+    }
+  }
+  console.log('Bundled CMS YAML preserves guides, homepage data, and page content, including shared field anchors.');
 } finally {
   await rm(temp, { recursive: true, force: true });
 }
