@@ -20,6 +20,7 @@ disableKinds = ['taxonomy', 'term']
   home = ['HTML', 'RSS', 'JSON']
 
 [params]
+  netlifyImageCDN = false
   description = "Inspiring people to follow Jesus with all of their heart."
   phone = '850.629.9491'
   address = '200 Racetrack Road NW, Fort Walton Beach, FL 32547'

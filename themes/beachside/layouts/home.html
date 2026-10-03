@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $home := hugo.Data.home }}
   <section class="home-intro" aria-labelledby="home-title">
-    <img class="home-intro-image" src="{{ $home.hero.image | relURL }}" alt="" fetchpriority="high">
+    <img class="home-intro-image" {{ partial "image-attrs.html" (dict "src" $home.hero.image "width" 1920 "sizes" "100vw") | safeHTMLAttr }} alt="" fetchpriority="high">
     <div class="home-container home-intro-content">
       {{ with $home.hero.live }}
         <a class="home-live" href="{{ .url | relURL }}" data-watch-live data-live-time-zone="{{ .time_zone }}" data-live-windows="{{ .windows | jsonify }}" hidden>{{ .label }}</a>
@@ -26,7 +26,7 @@
         <a class="home-button home-button-outline" href="{{ "/visit/" | relURL }}">What to expect</a>
       </div>
     </div>
-    <img src="{{ $home.sunday.image | relURL }}" alt="{{ $home.sunday.image_alt }}" loading="lazy" width="960" height="640">
+    <img {{ partial "image-attrs.html" (dict "src" $home.sunday.image "width" 960 "sizes" "(max-width: 700px) 100vw, 48vw") | safeHTMLAttr }} alt="{{ $home.sunday.image_alt }}" loading="lazy" width="960" height="640">
   </section>
 
   <section class="home-container home-section-space" aria-labelledby="welcome-title">
@@ -34,7 +34,7 @@
     <div class="home-welcome-grid">
       {{ range $home.welcome.cards }}
         <article class="home-welcome-card">
-          <img src="{{ .image | relURL }}" alt="" loading="lazy" width="720" height="440">
+          <img {{ partial "image-attrs.html" (dict "src" .image "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 440px") | safeHTMLAttr }} alt="" loading="lazy" width="720" height="440">
           <h3>{{ .title }}</h3>
           <p>{{ .description }}</p>
         </article>
@@ -71,7 +71,7 @@
     <div class="home-family-grid">
       {{ range $home.families.cards }}
         <a class="home-family-card" href="{{ .url | relURL }}">
-          <img src="{{ .image | relURL }}" alt="" loading="lazy" width="540" height="480">
+          <img {{ partial "image-attrs.html" (dict "src" .image "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 440px") | safeHTMLAttr }} alt="" loading="lazy" width="540" height="480">
           <p class="home-family-age">{{ .age }}</p>
           <h3>{{ .title }} <span aria-hidden="true">↗</span></h3>
         </a>
@@ -86,7 +86,7 @@
     <section class="home-message" aria-labelledby="message-title">
       <div class="home-container home-section-space home-split">
         <a class="home-message-art" href="{{ .RelPermalink }}" aria-label="Watch {{ .Title }}">
-          {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy" width="960" height="540">{{ end }}
+          {{ with .Params.image }}<img {{ partial "image-attrs.html" (dict "src" . "width" 960) | safeHTMLAttr }} alt="" loading="lazy" width="960" height="540">{{ end }}
           <span class="home-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z"/></svg></span>
         </a>
         <div>

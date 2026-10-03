@@ -122,6 +122,36 @@ Before deploying to another hostname, set `baseURL` in `hugo.toml` to the final
 public URL. Never deploy the development server or copy `themes/`, `content/`,
 or `assets/` into the web root.
 
+## Netlify Image CDN
+
+Netlify builds enable `params.netlifyImageCDN` through
+`HUGO_PARAMS_NETLIFYIMAGECDN=true` in `netlify.toml`. Photo and artwork templates
+request `/.netlify/images` with bounded widths and quality 80. Image elements
+also include responsive `srcset` and `sizes`; CSS background images use a fixed
+width. Netlify negotiates the output format and caches each transformation.
+Original files remain in the deployment. Event artwork keeps its fingerprinted
+local source, so no remote-image allowlist is needed.
+
+Plain `hugo` and `hugo server` keep original image URLs for local previews and
+portable static builds. For a CDN-enabled build, run:
+
+```sh
+HUGO_PARAMS_NETLIFYIMAGECDN=true hugo --gc --minify
+```
+
+Serve that output on Netlify (or use Netlify Dev) to exercise transformations;
+Hugo's server does not provide the CDN endpoint. When hosting elsewhere, omit
+that environment variable. External URLs, SVGs, and animated GIFs are left as
+original sources. Favicons and social metadata also keep their original URLs.
+See [Netlify Image CDN documentation](https://docs.netlify.com/build/image-cdn/overview/).
+
+Check template output in both modes and event artwork handling with:
+
+```sh
+python scripts/test_image_cdn.py
+python scripts/test_events.py
+```
+
 ## Where site files live
 
 - `content/` contains editable pages written in Markdown. Front matter at the

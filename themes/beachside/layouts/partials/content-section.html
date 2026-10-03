@@ -4,7 +4,7 @@
     {{ if eq ($s.kind | default "text") "split" }}
       <div class="split{{ if eq $s.image_side "right" }} image-right{{ end }}">
         {{ with $s.image }}
-          <div class="split-image"><img src="{{ . | relURL }}" alt="{{ $s.image_alt | default $s.title }}" loading="lazy"></div>
+          <div class="split-image"><img {{ partial "image-attrs.html" (dict "src" . "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1400px) 50vw, 664px") | safeHTMLAttr }} alt="{{ $s.image_alt | default $s.title }}" loading="lazy"></div>
         {{ end }}
         <div class="split-copy">
           {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}

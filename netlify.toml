@@ -1,3 +1,12 @@
+# Hugo reads HUGO_PARAMS_* as site parameters. Plain Hugo builds keep original URLs.
+[build]
+command = "hugo --gc --minify"
+publish = "public"
+
+[build.environment]
+HUGO_VERSION = "0.166.0"
+HUGO_PARAMS_NETLIFYIMAGECDN = "true"
+
 # Exact archive paths only; individual /discipleship-guide/<slug>/ pages stay intact.
 [[redirects]]
 from = "/discipleship-guide"

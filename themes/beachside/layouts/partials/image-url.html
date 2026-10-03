@@ -1,0 +1,7 @@
+{{- /* Optimize deployed local raster images; keep remote URLs and vectors intact. */ -}}
+{{- $source := .src | relURL -}}
+{{- $url := $source -}}
+{{- if and site.Params.netlifyImageCDN (hasPrefix $source "/") (not (hasPrefix $source "//")) (findRE `(?i)\.(jpe?g|png|webp|avif)(\?|$)` $source) -}}
+  {{- $url = printf "/.netlify/images?url=%s&w=%d&q=80" ($source | urlquery) (.width | default 1280) -}}
+{{- end -}}
+{{- return $url -}}

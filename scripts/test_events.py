@@ -84,6 +84,8 @@ class EventsBuildTests(unittest.TestCase):
         self.api = self.origin + '/registrations/v2/events'
         templates = ROOT / 'themes/beachside/layouts'
         shutil.copytree(templates / 'partials/church-center', self.site / 'layouts/partials/church-center')
+        for name in ['image-attrs.html', 'image-url.html']:
+            shutil.copy(templates / 'partials' / name, self.site / 'layouts/partials' / name)
         (self.site / 'layouts/events').mkdir()
         shutil.copy(templates / 'events/list.html', self.site / 'layouts/events/list.html')
         integration = self.site / 'layouts/partials/church-center/events.html'

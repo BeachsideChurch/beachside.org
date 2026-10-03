@@ -8,7 +8,7 @@
         {{ with .attributes.logo_url }}
           {{ with partial "church-center/resource.html" (dict "url" . "label" (printf "artwork for event %s" $event.id)) }}
             {{ $image := . | resources.Copy (printf "images/events/%s.%s" $event.id .MediaType.FirstSuffix.Suffix) | fingerprint }}
-            <img src="{{ $image.RelPermalink }}" alt="{{ $event.attributes.name }} event artwork" loading="lazy">
+            <img {{ partial "image-attrs.html" (dict "src" $image.RelPermalink "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 440px") | safeHTMLAttr }} alt="{{ $event.attributes.name }} event artwork" loading="lazy">
           {{ end }}
         {{ end }}
         <span class="event-card-copy">

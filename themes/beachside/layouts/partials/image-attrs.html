@@ -1,0 +1,13 @@
+{{- $width := .width | default 960 -}}
+{{- $source := .src | relURL -}}
+{{- $url := partial "image-url.html" (dict "src" .src "width" $width) -}}
+src="{{ $url }}"
+{{- if ne $url $source }}
+  {{- $candidates := slice -}}
+  {{- range slice 320 640 960 1280 1920 -}}
+    {{- if le . (mul $width 2) -}}
+      {{- $candidates = $candidates | append (printf "%s %dw" (partial "image-url.html" (dict "src" $.src "width" .)) .) -}}
+    {{- end -}}
+  {{- end }}
+ srcset="{{ delimit $candidates ", " }}" sizes="{{ .sizes | default "(max-width: 700px) calc(100vw - 40px), 960px" }}"
+{{- end -}}

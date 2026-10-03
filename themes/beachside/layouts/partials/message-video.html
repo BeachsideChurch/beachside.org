@@ -10,5 +10,5 @@
     <iframe src="{{ $embed }}" title="{{ $page.Title }} video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 {{ else }}
-  {{ with $page.Params.image }}<img class="message-hero-image" src="{{ . | relURL }}" alt="{{ $page.Title }} artwork">{{ end }}
+  {{ with $page.Params.image }}<img class="message-hero-image" {{ partial "image-attrs.html" (dict "src" . "width" 1280 "sizes" "(max-width: 1280px) 100vw, 1280px") | safeHTMLAttr }} alt="{{ $page.Title }} artwork">{{ end }}
 {{ end }}

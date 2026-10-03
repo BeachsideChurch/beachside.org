@@ -2,7 +2,7 @@
   {{ $url := .url }}
   {{ if not (or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "mailto:") (hasPrefix $url "tel:")) }}{{ $url = $url | relURL }}{{ end }}
   <a class="content-card" href="{{ $url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>
-    {{ with .image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+    {{ with .image }}<img {{ partial "image-attrs.html" (dict "src" . "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 440px") | safeHTMLAttr }} alt="" loading="lazy">{{ end }}
     <span class="content-card-copy">
       {{ with .title }}<strong>{{ . }}</strong>{{ end }}
       {{ with .description }}<span>{{ . | markdownify }}</span>{{ end }}
@@ -11,7 +11,7 @@
   </a>
 {{ else }}
   <div class="content-card">
-    {{ with .image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+    {{ with .image }}<img {{ partial "image-attrs.html" (dict "src" . "width" 960 "sizes" "(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 440px") | safeHTMLAttr }} alt="" loading="lazy">{{ end }}
     <span class="content-card-copy">
       {{ with .title }}<strong>{{ . }}</strong>{{ end }}
       {{ with .description }}<span>{{ . | markdownify }}</span>{{ end }}

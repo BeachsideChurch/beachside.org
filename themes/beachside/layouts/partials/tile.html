@@ -1,4 +1,4 @@
-<a class="image-tile{{ if .featured }} tile-featured{{ end }}" href="{{ if hasPrefix .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}"{{ if .external }} target="_blank" rel="noopener"{{ end }} style="--tile-image: url('{{ .image | relURL }}')">
+<a class="image-tile{{ if .featured }} tile-featured{{ end }}" href="{{ if hasPrefix .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}"{{ if .external }} target="_blank" rel="noopener"{{ end }} style="--tile-image: url('{{ partial "image-url.html" (dict "src" .image "width" 960) }}')">
   <span class="tile-shade"></span>
   <span class="tile-copy">
     <strong>{{ .title }}</strong>

@@ -8,7 +8,7 @@
   {{ end }}
 
   {{ with .Params.hero }}
-    <section class="page-hero wrap{{ if .compact }} page-hero-compact{{ end }}" style="--page-hero: url('{{ .image | relURL }}'); --hero-position: {{ .position | default "center" }};{{ with .height }} --hero-height: {{ . }};{{ end }}">
+    <section class="page-hero wrap{{ if .compact }} page-hero-compact{{ end }}" style="--page-hero: url('{{ partial "image-url.html" (dict "src" .image "width" 1920) }}'); --hero-position: {{ .position | default "center" }};{{ with .height }} --hero-height: {{ . }};{{ end }}">
       <div class="page-hero-shade"></div>
       <div class="page-hero-copy{{ if .center }} center{{ end }}">
         {{ with .eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}

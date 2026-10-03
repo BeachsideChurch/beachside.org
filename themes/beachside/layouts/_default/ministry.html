@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $ministry := .Params.ministry }}
 <article class="ministry-page">
-  <header class="ministry-hero" style="--ministry-image: url('{{ .Params.hero.image | relURL }}'); --ministry-position: {{ .Params.hero.position | default "center" }}">
+  <header class="ministry-hero" style="--ministry-image: url('{{ partial "image-url.html" (dict "src" .Params.hero.image "width" 1920) }}'); --ministry-position: {{ .Params.hero.position | default "center" }}">
     <div class="home-container">
       <p class="home-eyebrow">{{ $ministry.age }}</p>
       <h1>{{ .Title }}</h1>
@@ -33,7 +33,7 @@
       <div class="home-container home-section-space">
         <h2 class="home-section-title">{{ .title }}</h2>
         <div class="ministry-feature-grid">
-          <img class="ministry-feature-image" src="{{ .image | relURL }}" alt="{{ $.Title }} program artwork" loading="lazy">
+          <img class="ministry-feature-image" {{ partial "image-attrs.html" (dict "src" .image "width" 960) | safeHTMLAttr }} alt="{{ $.Title }} program artwork" loading="lazy">
           <div class="ministry-feature-cards">
             <div class="ministry-idea">
               <p class="home-kicker">Growing together</p>
@@ -56,7 +56,7 @@
       {{ range hugo.Data.home.families.cards }}
         {{ $current := eq .url $.RelPermalink }}
         <a class="home-family-card{{ if $current }} is-current{{ end }}" href="{{ .url | relURL }}"{{ if $current }} aria-current="page"{{ end }}>
-          <div class="ministry-environment-image"><img src="{{ .image | relURL }}" alt="" loading="lazy" width="540" height="480">{{ if $current }}<span>You’re here</span>{{ end }}</div>
+          <div class="ministry-environment-image"><img {{ partial "image-attrs.html" (dict "src" .image "width" 960) | safeHTMLAttr }} alt="" loading="lazy" width="540" height="480">{{ if $current }}<span>You’re here</span>{{ end }}</div>
           <p class="home-family-age">{{ .age }}</p>
           <h3>{{ .title }} <span aria-hidden="true">↗</span></h3>
         </a>
