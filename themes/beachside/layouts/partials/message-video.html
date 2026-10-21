@@ -3,6 +3,8 @@
   {{ $embed := . }}
   {{ if strings.Contains . "youtube.com/watch" }}
     {{ $embed = replaceRE `^.*[?&]v=([^&]+).*$` `https://www.youtube-nocookie.com/embed/$1` . }}
+  {{ else if strings.Contains . "youtube.com/live/" }}
+    {{ $embed = replaceRE `^.*youtube\.com/live/([^?&/]+).*$` `https://www.youtube-nocookie.com/embed/$1` . }}
   {{ else if strings.Contains . "youtu.be/" }}
     {{ $embed = replaceRE `^.*youtu\.be/([^?&/]+).*$` `https://www.youtube-nocookie.com/embed/$1` . }}
   {{ end }}
