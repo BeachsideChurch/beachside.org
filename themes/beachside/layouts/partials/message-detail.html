@@ -15,7 +15,6 @@
             {{ range $parts.ByDate.Reverse }}
               {{ if ne .RelPermalink $page.RelPermalink }}{{ partial "message-series-card.html" (dict "message" .) }}{{ end }}
             {{ end }}
-            {{ if ne $seriesPage.RelPermalink $page.RelPermalink }}{{ partial "message-series-card.html" (dict "message" $seriesPage) }}{{ end }}
           </aside>
         {{ end }}
       </div>

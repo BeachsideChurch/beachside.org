@@ -273,22 +273,33 @@ session. It appears again in a new tab session.
 
 ## Add messages and message series
 
-The message templates support both standalone messages and series with any
-number of parts. Each part has its own page and `video_url`. The series page is
-also Part 1, matching the structure of the original site.
+Message series have a section page and a separate page for each part. The
+section page features the oldest-dated part, and each part has its own
+`video_url` and permalink.
 
 Use the `message` archetype for every message. For a new multi-part series,
-create a branch bundle for Part 1. Use a lowercase, hyphen-separated series
-slug:
+create a branch bundle for the series page. Use a lowercase, hyphen-separated
+series slug:
 
 ```sh
 hugo new content --kind message messages/built-to-last/_index.md
 ```
 
-Hugo uses `archetypes/message.md`; its title and slug start from the folder name.
-Set `series` to the series title, `part_number` to `1`, and `layout` to
-`series`. Complete the speaker, description, artwork, video, and optional
-resource links.
+Hugo uses `archetypes/message.md`; its title and slug start from the folder
+name. Edit the generated `_index.md` to keep the series title, `series`,
+`layout: series`, `date`, `lastmod`, `image`, and `draft` fields. The section
+page is a container, not a message; do not add a `part_number`, `video_url`, or
+message resources to it.
+
+Create Part 1 as a regular message page in the series folder:
+
+```sh
+hugo new content --kind message messages/built-to-last/built-to-last-part-1.md
+```
+
+Set `series` to the series title, `part_number` to `1`, and leave `layout`
+empty. Complete the speaker, description, artwork, video, and optional resource
+links. The series page automatically features the oldest-dated message part.
 
 To add Part 2, or any later weekly part, create a page inside that same series
 directory:
@@ -299,11 +310,10 @@ hugo new content --kind message messages/built-to-last/part-2.md
 
 Use the same archetype, set `series` to match Part 1, and set the correct
 `part_number`. Leave `layout` empty. Each part requires its own `video_url`; this
-is what makes the related links open a different video.
-The series navigation is generated automatically from every Markdown file in
-the directory, newest first, and excludes the page currently being viewed.
-Also update `lastmod` in the series `_index.md` to the new part's date; keep the
-series page's original `date` as the Part 1 date.
+is what makes the related links open a different video. The series navigation
+is generated automatically from every message page in the directory, newest
+first, and excludes the page currently being viewed. Update `lastmod` in the
+series `_index.md` when adding a part.
 
 For a standalone message, create a leaf bundle so the message lives in its own
 folder:

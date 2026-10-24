@@ -1,3 +1,8 @@
 {{ define "main" }}
-  {{ partial "message-detail.html" (dict "page" . "seriesPage" .) }}
+  {{ $seriesPage := . }}
+  {{ with first 1 .RegularPages.ByDate }}
+    {{ partial "message-detail.html" (dict "page" (index . 0) "seriesPage" $seriesPage) }}
+  {{ else }}
+    {{ partial "message-detail.html" (dict "page" $seriesPage "seriesPage" $seriesPage) }}
+  {{ end }}
 {{ end }}
