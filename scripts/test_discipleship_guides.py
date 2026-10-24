@@ -57,6 +57,7 @@ class GuideTests(unittest.TestCase):
         payload['title'] = 'CMS regression guide'
         fields = payload['fields']
         fields['message_recap'] = '**Editable recap**'
+        fields['video_url'] = 'https://www.youtube.com/live/MnNX9ahiw18'
         fields['daily_devotions'] = {
             'tuesday': {'scripture': 'John 3:16', 'scripture_url': 'https://www.bible.com/test', 'reflection': '**Tuesday reflection**'},
             'friday': {'reflection': '<p>Friday reflection</p>'},
@@ -80,7 +81,7 @@ class GuideTests(unittest.TestCase):
             self.assertEqual(page.select_one('.dg-devo-scripture-pill')['href'], 'https://www.bible.com/test')
             for tab in page.select('.dg-devo-tab'):
                 self.assertIsNotNone(page.find(id='devo-' + tab['data-day']))
-            self.assertIn('youtube-nocookie.com/embed/example', page.select_one('.dg-video iframe')['src'])
+            self.assertIn('youtube-nocookie.com/embed/MnNX9ahiw18', page.select_one('.dg-video iframe')['src'])
             empty = BeautifulSoup((temp / 'public/discipleship-guide/cms-empty-guide/index.html').read_text(), 'html.parser')
             self.assertFalse(empty.select('.dg-label, .dg-devo-tab, iframe'))
 

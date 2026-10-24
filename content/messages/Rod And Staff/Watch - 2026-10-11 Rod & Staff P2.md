@@ -9,7 +9,7 @@ description: >-
   present in hard times allows God to build true spiritual resilience and maturity in your life.
 date: 2026-10-11
 image: /images/messages/Rod - Staff.jpg
-guide_url: content/discipleship-guide/Guide - 2026-10-11 Rod & Staff P2
+guide_url: discipleship-guide/rod-and-staff-part-2
 video_url: https://www.youtube.com/live/MnNX9ahiw18
 audio_url: ""
 draft: false
