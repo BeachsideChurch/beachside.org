@@ -277,40 +277,42 @@ The message templates support both standalone messages and series with any
 number of parts. Each part has its own page and `video_url`. The series page is
 also Part 1, matching the structure of the original site.
 
-For a new multi-part series, create a branch bundle. Use a lowercase,
-hyphen-separated series slug:
+Use the `message` archetype for every message. For a new multi-part series,
+create a branch bundle for Part 1. Use a lowercase, hyphen-separated series
+slug:
 
 ```sh
-hugo new content --kind message-series messages/built-to-last/_index.md
+hugo new content --kind message messages/built-to-last/_index.md
 ```
 
-Hugo uses `archetypes/message-series.md` to create the series page. Edit
-`content/messages/built-to-last/_index.md` and replace both instances of
-`Series Title`. Complete the Part 1 speaker, description, artwork, video, and
-optional resource links. Leave `layout: series` and `part_number: 1` in place.
+Hugo uses `archetypes/message.md`; its title and slug start from the folder name.
+Set `series` to the series title, `part_number` to `1`, and `layout` to
+`series`. Complete the speaker, description, artwork, video, and optional
+resource links.
 
 To add Part 2, or any later weekly part, create a page inside that same series
 directory:
 
 ```sh
-hugo new content --kind message-part messages/built-to-last/built-to-last-part-2.md
+hugo new content --kind message messages/built-to-last/part-2.md
 ```
 
-Hugo uses `archetypes/message-part.md`. Edit the new file, make `series` exactly
-match the series page, and set the correct `part_number`. Each part requires its
-own `video_url`; this is what makes the related links open a different video.
+Use the same archetype, set `series` to match Part 1, and set the correct
+`part_number`. Leave `layout` empty. Each part requires its own `video_url`; this
+is what makes the related links open a different video.
 The series navigation is generated automatically from every Markdown file in
 the directory, newest first, and excludes the page currently being viewed.
 Also update `lastmod` in the series `_index.md` to the new part's date; keep the
 series page's original `date` as the Part 1 date.
 
-For a one-week standalone message that will never have additional parts, use:
+For a standalone message, create a leaf bundle so the message lives in its own
+folder:
 
 ```sh
-hugo new content messages/YYYY-MM-DD-slug.md
+hugo new content --kind message messages/message-slug/index.md
 ```
 
-The standalone command uses `archetypes/messages.md`. Whether editing a series
+The folder name supplies the starting title and slug. Whether editing a series
 or standalone message, complete the applicable fields:
 
 ```yaml
@@ -319,7 +321,7 @@ title: "Built to Last"
 date: 2026-09-06T09:00:00-05:00
 speaker: "Speaker Name"
 series: "Series Name"
-part_number: 2 # Multi-part series only
+part_number: 2 # Series messages only
 description: "A short summary used on message cards and in search previews."
 image: "/images/messages/built-to-last.jpg"
 video_url: "https://www.youtube.com/watch?v=example"
