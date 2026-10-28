@@ -18,7 +18,7 @@ ministry:
     - God loves me.
     - Jesus wants to be my friend forever.
   body: "There’s a lot of jumping, singing, dancing, learning, and laughter in
-    every experience. In Waumba Land pre-schoolers will learn:"
+    every experience. In Waumba Land, pre-schoolers will learn:"
   schedule:
     label: Sunday morning
     times: 9:00 & 10:45
