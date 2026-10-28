@@ -33,7 +33,7 @@ ministry:
       Tell us about allergies, medical needs, or behavioral needs so we can best serve your family.
     contact: mailto:waumbaland@beachside.org
   feature:
-    title: Big discoveries for little people.
+    title: This month is Waumba Land your child is learning...
     image: /images/pages/waumba-current.jpg
     idea: Loved
     idea_description: Helping every child discover that God made them and loves them.
