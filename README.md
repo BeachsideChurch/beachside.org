@@ -13,6 +13,10 @@ compatible extended release when editing or building the site.
 For copyable YAML and Markdown examples, file locations, and preview commands,
 see the [content editing reference](docs/content-editing.md).
 
+To copy weekly Watch Markdown, Guide Markdown, and JPG artwork from Google Drive
+directly into GitHub using GitHub Actions, see the
+[Google Drive sync setup](docs/google-drive-sync.md).
+
 ## Run the site locally
 
 From the repository root, start Hugo's development server:
