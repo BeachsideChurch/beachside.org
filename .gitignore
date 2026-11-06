@@ -5,6 +5,10 @@
 /.hugo_build.lock
 /new-theme/
 
+# Generated handoff documents and temporary PDF working files
+/output/pdf/
+/tmp/pdfs/
+
 # Local operating-system files
 .DS_Store
 Thumbs.db
