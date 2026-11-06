@@ -4,7 +4,7 @@ slug: chillguy-pt1
 date: 2026-10-25
 guide_format: structured
 speaker: Jonathan Watson
-series: Just a Chill Guy
+series: Just A Chill Guy
 display_series: true
 description: >-
   Jonathan Watson explores Psalm 23:5 and Mark 4 to show how followers of Jesus can step out of
