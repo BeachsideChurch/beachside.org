@@ -39,7 +39,9 @@ jobs:
       - name: Install sync dependencies
         run: python -m pip install -r scripts/requirements-drive-sync.txt
       - name: Test content routing
-        run: python scripts/test_sync_drive_content.py
+        run: |
+          python scripts/test_sync_drive_content.py
+          python scripts/test_drive_sync_commit.py
       - name: Read and validate Drive content
         env:
           GOOGLE_DRIVE_FOLDER_ID: ${{ inputs.folder_id || secrets.GOOGLE_DRIVE_FOLDER_ID }}
@@ -61,7 +63,8 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Sync message content from Google Drive'
+          python scripts/build_drive_sync_commit.py --output "$RUNNER_TEMP/drive-sync-commit.txt"
+          git commit -F "$RUNNER_TEMP/drive-sync-commit.txt"
           git push origin HEAD:"$DEFAULT_BRANCH"
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
