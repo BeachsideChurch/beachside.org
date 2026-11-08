@@ -9,6 +9,13 @@
 /output/pdf/
 /tmp/pdfs/
 
+# Local Google integration credentials
+/google-scripts/*.pem
+/google-scripts/*.key
+/google-scripts/.env*
+/google-scripts/*service-account*.json
+/google-scripts/credentials.json
+
 # Local operating-system files
 .DS_Store
 Thumbs.db

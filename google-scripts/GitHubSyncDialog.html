@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_blank">
+  <style>
+    body { font: 14px Arial, sans-serif; padding: 16px; color: #172d3b; }
+    select { width: 100%; padding: 10px; margin: 8px 0 16px; }
+    button { padding: 9px 14px; margin: 12px 8px 0 0; cursor: pointer; }
+    #status { white-space: pre-wrap; margin-top: 16px; }
+    .note { color: #52616b; font-size: 13px; line-height: 1.5; }
+    a { display: block; margin-top: 8px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px;
+      overflow: auto; padding: 12px; background: #f2f5f7; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <label for="folder"><strong>Select a weekly message folder</strong></label>
+  <select id="folder" disabled>
+    <option value="">Loading folders...</option>
+  </select>
+  <label><input id="preview" type="checkbox" checked> Dry-run preview</label>
+  <p id="publishCheck" hidden>
+    <label><input id="publishApproval" type="checkbox">
+      I confirm publishing this folder to the live website.</label>
+  </p>
+  <p class="note">Folders are listed newest first. The selected folder and
+    its subfolders will be processed. Older weeks can be synced too.</p>
+  <div>
+    <button id="send" disabled>Preview sync</button>
+    <button id="refresh">Refresh folders</button>
+    <button id="check" hidden>Check run status</button>
+    <button id="close">Close</button>
+  </div>
+  <div id="status" role="status" aria-live="polite">Loading weekly folders...</div>
+  <pre id="runOutput" hidden></pre>
+  <a href="https://github.com/BeachsideChurch/beachside.org/actions/workflows/sync-drive-content.yml"
+    rel="noopener noreferrer">View dry-run results in GitHub Actions</a>
+  <p class="note">Dialog version 2026-11-08.5</p>
+  <script>
+  (function () {
+    'use strict';
+    var folder = document.getElementById('folder');
+    var preview = document.getElementById('preview');
+    var send = document.getElementById('send');
+    var refresh = document.getElementById('refresh');
+    // Avoid window.status, a browser property that coerces values to text.
+    var statusElement = document.getElementById('status');
+    var publishCheck = document.getElementById('publishCheck');
+    var publishApproval = document.getElementById('publishApproval');
+    var busy = false;
+    var check = document.getElementById('check');
+    var runOutput = document.getElementById('runOutput');
+    var activeRunId = '';
+    var pollTimer = null;
+    var monitorStarted = 0;
+    var logRetries = 0;
+    var requestTimer = null;
+    function stopTimer() {
+      window.clearTimeout(requestTimer);
+      requestTimer = null;
+    }
+    function startTimer() {
+      stopTimer();
+      requestTimer = window.setTimeout(function () {
+        failed({message: 'No response received after 60 seconds. ' +
+          'Check GitHub Actions before retrying. The request may have started.'});
+      }, 60000);
+    }
+    window.addEventListener('error', function () {
+      failed({message: 'The dialog encountered a browser error. ' +
+        'Check GitHub Actions, then close and reopen Step 4.'});
+    });
+    window.addEventListener('unhandledrejection', function () {
+      failed({message: 'The dialog could not display the server response. ' +
+        'Check GitHub Actions before retrying.'});
+    });
+    function controls() {
+      folder.disabled = busy || folder.options.length < 2;
+      preview.disabled = busy;
+      refresh.disabled = busy;
+      check.hidden = !activeRunId;
+      check.disabled = busy;
+      publishCheck.hidden = preview.checked;
+      publishApproval.disabled = busy;
+      send.disabled = busy || !folder.value ||
+        (!preview.checked && !publishApproval.checked);
+      send.textContent = preview.checked ? 'Preview sync' : 'Publish to GitHub';
+    }
+    function failed(error) {
+      stopTimer();
+      window.clearTimeout(pollTimer);
+      busy = false;
+      statusElement.textContent = error && error.message ? error.message :
+        'Request failed. Check GitHub Actions before retrying.';
+      controls();
+    }
+    function loadFolders() {
+      busy = true;
+      startTimer();
+      statusElement.textContent = 'Loading weekly folders...';
+      controls();
+      google.script.run.withSuccessHandler(function (folders) {
+        stopTimer();
+        if (!Array.isArray(folders)) {
+          failed({message: 'Invalid folder-list response. Check GitHubSync.gs.'});
+          return;
+        }
+        folder.textContent = '';
+        var placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.textContent = 'Choose a weekly folder...';
+        folder.appendChild(placeholder);
+        folders.forEach(function (item) {
+          var option = document.createElement('option');
+          option.value = item.id;
+          option.textContent = item.name;
+          folder.appendChild(option);
+        });
+        busy = false;
+        statusElement.textContent = folders.length ?
+          'Ready. Select a folder and request a preview or publish.' : 'No dated folders found.';
+        controls();
+      }).withFailureHandler(failed).listGitHubSyncFolders();
+    }
+    function submitSync() {
+      if (busy || !folder.value) return;
+      var dryRun = preview.checked;
+      var name = folder.options[folder.selectedIndex].textContent;
+      if (!dryRun && !publishApproval.checked) return;
+      busy = true;
+      activeRunId = '';
+      runOutput.hidden = true;
+      runOutput.textContent = '';
+      startTimer();
+      statusElement.textContent = 'Requesting GitHub sync...';
+      controls();
+      google.script.run.withSuccessHandler(function (result) {
+        stopTimer();
+        if (!result || result.requested !== true || typeof result.url !== 'string') {
+          failed({message: 'The server returned no usable sync confirmation. ' +
+            'Check GitHub Actions before retrying and update GitHubSync.gs.'});
+          return;
+        }
+        busy = false;
+        statusElement.textContent = (result.dryRun ? 'Preview' : 'Publish') +
+          ' requested for ' + name + '.\n' +
+          'The sync runs asynchronously. Check its result in GitHub Actions.';
+        var link = document.createElement('a');
+        link.href = result.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Open GitHub Actions';
+        statusElement.appendChild(link);
+        controls();
+        if (result.runId) {
+          activeRunId = String(result.runId);
+          monitorStarted = Date.now();
+          logRetries = 0;
+          pollRun();
+        } else {
+          statusElement.appendChild(document.createTextNode(
+            '\nGitHub returned no run ID. Use the Actions link to view this run.'));
+        }
+      }).withFailureHandler(failed)
+        .requestGitHubFolderSync(folder.value, dryRun);
+    }
+    function pollRun() {
+      if (!activeRunId) return;
+      busy = true;
+      controls();
+      startTimer();
+      google.script.run.withSuccessHandler(function (result) {
+        stopTimer();
+        if (!result || typeof result.done !== 'boolean') {
+          failed({message: 'Invalid run-status response. Update GitHubSync.gs.'});
+          return;
+        }
+        var completed = result.done;
+        statusElement.textContent = completed ?
+          'GitHub run completed - ' + result.conclusion :
+          'GitHub run - ' + result.status;
+        if (result.log) {
+          runOutput.textContent = result.log;
+          runOutput.hidden = false;
+        }
+        if (result.logsPending) {
+          logRetries++;
+          statusElement.textContent += '\nWaiting for the step log to become available...';
+          if (result.logNotice) statusElement.textContent += '\n' + result.logNotice;
+        }
+        if ((!completed || result.logsPending) &&
+            Date.now() - monitorStarted < 25 * 60 * 1000 && logRetries < 12) {
+          pollTimer = window.setTimeout(pollRun, 5000);
+          return;
+        }
+        busy = false;
+        if (!completed || result.logsPending) {
+          statusElement.textContent +=
+            '\nAutomatic checks paused. Select Check run status to resume.';
+        }
+        controls();
+      }).withFailureHandler(failed).getGitHubSyncProgress(activeRunId);
+    }
+    function resetApproval() {
+      publishApproval.checked = false;
+      controls();
+    }
+    folder.addEventListener('change', resetApproval);
+    preview.addEventListener('change', resetApproval);
+    publishApproval.addEventListener('change', controls);
+    send.addEventListener('click', submitSync);
+    refresh.addEventListener('click', loadFolders);
+    check.addEventListener('click', function () {
+      monitorStarted = Date.now();
+      logRetries = 0;
+      pollRun();
+    });
+    document.getElementById('close').addEventListener('click', function () {
+      google.script.host.close();
+    });
+    loadFolders();
+  }());
+  </script>
+</body>
+</html>
