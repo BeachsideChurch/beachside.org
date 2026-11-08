@@ -6,7 +6,7 @@ speaker: Jonathan Watson
 description: >-
   Explore how following Jesus calls us to break free from culture's cycles of anger and chronic
   anxiety. Learn how embodying a non-anxious presence can transform your relationships and reflect
-  God's love to the world.
+  God's love to the world...
 date: 2026-11-01
 image: /images/messages/chillguy.jpg
 guide_url: /discipleship-guide/just-a-chill-guy-pt2
