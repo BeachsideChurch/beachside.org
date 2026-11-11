@@ -3,6 +3,7 @@
 /resources/_gen/
 /hugo_stats.json
 /.hugo_build.lock
+__pycache__/
 /new-theme/
 
 # Generated handoff documents and temporary PDF working files
