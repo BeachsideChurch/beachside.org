@@ -4,7 +4,7 @@ command = "python -m pip install -r scripts/requirements-build.txt && python scr
 publish = "public"
 
 [build.environment]
-HUGO_VERSION = "0.166.0"
+HUGO_VERSION = "0.169.0"
 HUGO_PARAMS_NETLIFYIMAGECDN = "true"
 
 # Exact archive paths only; individual /discipleship-guide/<slug>/ pages stay intact.
