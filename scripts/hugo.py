@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def prepare_message(raw):
-    """Supply part-N when a positive integer part is present and slug is empty."""
+    """Default to part-N or a punctuation-free title when slug is empty."""
     text = raw.decode('utf-8-sig')
     match = re.match(r'\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)', text, re.S)
     if not match:
@@ -31,17 +31,26 @@ def prepare_message(raw):
     if slug is not None and str(slug).strip():
         return raw
     part = data.get('part_number')
-    if isinstance(part, bool) or not re.fullmatch(r'[1-9][0-9]*', str(part)):
-        return raw
+    if not isinstance(part, bool) and re.fullmatch(r'[1-9][0-9]*', str(part)):
+        default_slug = f'part-{part}'
+    else:
+        title = data.get('title')
+        if not isinstance(title, str):
+            return raw
+        cleaned = ''.join(char for char in title.lower()
+                          if char.isalnum() or char.isspace() or char == '-')
+        default_slug = re.sub(r'[\s-]+', '-', cleaned).strip('-')
+        if not default_slug:
+            return raw
     newline = '\r\n' if '\r\n' in text else '\n'
     # Change only the slug value; preserve the rest of the front matter/body.
     for key, value in yaml.compose(header).value:
         if key.value == 'slug':
             start = match.start(1) + value.start_mark.index
             end = match.start(1) + value.end_mark.index
-            return (text[:start] + f' part-{part}' + text[end:]).encode('utf-8')
+            return (text[:start] + f' {default_slug}' + text[end:]).encode('utf-8')
     start = match.start(1)
-    return (text[:start] + f'slug: part-{part}' + newline + text[start:]).encode('utf-8')
+    return (text[:start] + f'slug: {default_slug}' + newline + text[start:]).encode('utf-8')
 
 
 def sync_content(source, destination, previous=None):

@@ -32,6 +32,9 @@ For individual messages, omit `slug` or leave `slug: ""` to use these defaults:
   `/messages/just-a-chill-guy/part-3/`. A `series` field is not required.
 - Without a part number, derive the last URL segment from `title`. For example,
   `title: "Finding Hope"` inside `habits` produces `/messages/habits/finding-hope/`.
+  This fallback removes punctuation, lowercases letters, and joins words with
+  hyphens: `Happy Birthday U.S.A.` becomes `happy-birthday-usa`. Explicit slugs
+  retain their punctuation.
 
 Set `slug: "weekly-hope"` to override that default and produce
 `/messages/habits/weekly-hope/`. In **Messages by Series**, use the optional

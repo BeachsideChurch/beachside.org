@@ -20,6 +20,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class MessageURLTests(unittest.TestCase):
+    def test_title_punctuation(self):
+        for title, expected in [
+            ('Happy Birthday U.S.A.', 'happy-birthday-usa'),
+            ("What's Next?", 'whats-next'),
+            ('Hope: Now & Forever!', 'hope-now-forever'),
+            ('Café — A New Beginning', 'café-a-new-beginning'),
+        ]:
+            with self.subTest(title=title):
+                raw = ('---\n' + yaml.safe_dump({'title': title}) + '---\n').encode()
+                result = yaml.safe_load(prepare_message(raw).decode().split('---', 2)[1])
+                self.assertEqual(result['slug'], expected)
+        raw = b'---\ntitle: U.S.A.\nslug: custom.slug\n---\n'
+        self.assertEqual(prepare_message(raw), raw)
+
     def test_slug_defaults_preserve_content(self):
         for extra, expected in [
             ('part_number: 3', 'part-3'),
@@ -30,12 +44,12 @@ class MessageURLTests(unittest.TestCase):
             ('slug:\npart_number: 3', 'part-3'),
             ('slug: custom\npart_number: 3', 'custom'),
             ('slug: custom', 'custom'),
-            ('series: Example', None),
-            ('part_number: 0', None),
-            ('part_number: -1', None),
-            ('part_number: true', None),
-            ('part_number: 1.5', None),
-            ('part_number: ""', None),
+            ('series: Example', 'hope'),
+            ('part_number: 0', 'hope'),
+            ('part_number: -1', 'hope'),
+            ('part_number: true', 'hope'),
+            ('part_number: 1.5', 'hope'),
+            ('part_number: ""', 'hope'),
         ]:
             for newline in ('\n', '\r\n'):
                 with self.subTest(extra=extra, newline=newline):
@@ -48,7 +62,7 @@ class MessageURLTests(unittest.TestCase):
                     self.assertIn(b'# Keep this comment', result)
                     self.assertTrue(result.endswith((newline + '**Body**' + newline).encode()))
                     self.assertEqual(prepare_message(result), result)
-                    if not expected or expected == 'custom':
+                    if expected == 'custom':
                         self.assertEqual(result, raw)
 
     def test_preview_sync_updates_and_deletes_without_editing_source(self):
