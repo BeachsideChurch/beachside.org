@@ -1,7 +1,6 @@
 ---
 title: Rod & Staff Part 2
 series: Rod and Staff
-slug: Rod & Staff Part 2
 part_number: 2
 speaker: Jonathan Watson
 description: >-

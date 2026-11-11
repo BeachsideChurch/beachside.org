@@ -16,7 +16,6 @@ image: /images/messages/happy-birthday-usa.jpeg
 audio_url: ""
 guide_url: /discipleship-guide/liberty-and-selflessness/
 draft: false
-slug: happy-birthday-u-s-a
 video_url: https://www.youtube.com/watch?v=SwrwFuMnUBo
 aliases:
   - /messages/happy-birthday-usa/

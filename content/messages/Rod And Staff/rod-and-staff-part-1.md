@@ -1,6 +1,5 @@
 ---
 title: "Rod and Staff P1"
-slug: rod-and-staff-part-1
 part_number: 1
 series: "Rod and Staff"
 speaker: Jonathan Watson
