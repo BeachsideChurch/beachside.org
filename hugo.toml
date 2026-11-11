@@ -6,6 +6,11 @@ theme = 'beachside'
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 
+# The build wrapper supplies part-N defaults; other messages fall back to title.
+# Keep the series hierarchy and the archive/series section URLs.
+[permalinks.page]
+  messages = '/:sections/:slug/'
+
 # Church Center events and their expiring artwork must be fetched on every build.
 [caches.getresource]
   maxAge = 0

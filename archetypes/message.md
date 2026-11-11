@@ -4,7 +4,7 @@
 {{- end -}}
 ---
 title: "{{ replace $baseName "-" " " | title }}"
-slug: "{{ replace $baseName "-" " " | title | urlize }}"
+slug: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
 speaker: ""

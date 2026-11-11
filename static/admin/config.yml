@@ -95,6 +95,7 @@ collections:
         # No index_file: later parts must keep their individual Markdown filenames.
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug override", name: "slug", widget: "string", required: false, hint: "Leave blank for part-N when Part Number is set, or the title otherwise. Set a slug to keep a fixed URL." }
       - { label: "Date", name: "date", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm", hint: "Required for messages; leave empty on the Watch Messages archive page." }
       - { label: "Speaker", name: "speaker", widget: "string", required: false }
       - { label: "Series", name: "series", widget: "string", required: false, hint: "Match the Series name on the Part 1 page." }

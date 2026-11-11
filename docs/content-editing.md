@@ -19,8 +19,39 @@ text as UTF-8, indent YAML with two spaces, and use spaces instead of tabs.
 
 Images live under `static/images/`; their public URLs start with `/images/`.
 Edit source files, not generated files in `public/` or `resources/_gen/`.
-Keep existing filenames and folder names when changing titles: paths determine
-page URLs. The CMS fixes the paths of regular pages and ministry pages.
+Keep existing filenames and folder names when changing titles. The CMS fixes
+the paths of regular pages and ministry pages. Individual message URLs use
+the title by default, as described below.
+
+## Message URLs
+
+For individual messages, omit `slug` or leave `slug: ""` to use these defaults:
+
+- With a positive integer `part_number`, use `part-N`. For example,
+  `part_number: 3` inside `just-a-chill-guy` produces
+  `/messages/just-a-chill-guy/part-3/`. A `series` field is not required.
+- Without a part number, derive the last URL segment from `title`. For example,
+  `title: "Finding Hope"` inside `habits` produces `/messages/habits/finding-hope/`.
+
+Set `slug: "weekly-hope"` to override that default and produce
+`/messages/habits/weekly-hope/`. In **Messages by Series**, use the optional
+**Slug override** field. New messages created with the message archetype
+start with an empty slug so the default can follow later part number or title edits.
+
+Use `python scripts/hugo.py` for builds and `python scripts/hugo.py server` for
+previews, after installing `scripts/requirements-build.txt`. This wrapper copies
+content to a temporary directory and computes message slugs there before running
+Hugo. It never edits source Markdown, and it mirrors source changes during live
+previews. Netlify uses the wrapper automatically. Plain `hugo` bypasses the
+part-number calculation and uses the title fallback instead.
+
+Series folder URLs and the `/messages/` archive keep their existing behavior.
+Existing explicit slugs remain in effect, including on numbered messages.
+Messages without a slug use their part number or title instead of their filename;
+changing the applicable default changes their URL.
+To preserve a previously shared URL, set an explicit slug matching the old
+URL's last segment, or add a redirect in the CMS. An explicit `url` in front
+matter still overrides the entire URL.
 
 ## Paragraphs and descriptions
 
@@ -126,7 +157,7 @@ for dependency installation and the command. Imported guides start as drafts.
 Preview drafts and future-dated messages or guides:
 
 ```sh
-hugo server --disableFastRender --buildDrafts --buildFuture
+python scripts/hugo.py server --disableFastRender --buildDrafts --buildFuture
 ```
 
 Open the address printed by Hugo. Check paragraphs, lists, images, links, and

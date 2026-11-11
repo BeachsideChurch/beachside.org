@@ -22,7 +22,8 @@ directly into GitHub using GitHub Actions, see the
 From the repository root, start Hugo's development server:
 
 ```sh
-hugo server --disableFastRender
+python -m pip install -r scripts/requirements-build.txt
+python scripts/hugo.py server --disableFastRender
 ```
 
 Open the local address printed by Hugo, normally
@@ -34,10 +35,20 @@ Draft content is hidden by default; include it while reviewing
 unpublished work with:
 
 ```sh
-hugo server --disableFastRender --buildDrafts
+python scripts/hugo.py server --disableFastRender --buildDrafts
 ```
 
 Stop the server with `Ctrl+C`.
+
+Use the wrapper for builds and previews so numbered messages receive `part-N`
+slugs. Explicit `slug` values win; messages without a valid positive integer
+`part_number` fall back to their title. The wrapper prepares temporary content
+without editing source Markdown and mirrors changes during live previews.
+Series section URLs keep their existing behavior. Plain `hugo` bypasses this
+calculation. Netlify runs the wrapper automatically.
+
+Check message URL defaults with `python scripts/test_message_urls.py` (requires
+Hugo on PATH and the build requirements above).
 
 The CMS includes **Homepage**, **Site Pages**, and **Ministry Pages** editors.
 Homepage copy, navigation cards, images, and Sunday live-button windows are
@@ -93,7 +104,7 @@ the actual widget and a mocked Identity API. They cover recovery submission,
 invitations, expired tokens, recovery-email requests, and normal page loads:
 
 ```sh
-hugo --gc --minify
+python scripts/hugo.py --gc --minify
 python -m venv /tmp/beachside-cms-tests
 /tmp/beachside-cms-tests/bin/pip install playwright
 /tmp/beachside-cms-tests/bin/playwright install chromium
@@ -113,7 +124,7 @@ and [Netlify email documentation](https://docs.netlify.com/manage/security/secur
 Create an optimized production build from the repository root:
 
 ```sh
-hugo --gc --minify
+python scripts/hugo.py --gc --minify
 ```
 
 Hugo writes the complete generated website to `public/`. That directory is
@@ -140,7 +151,7 @@ Plain `hugo` and `hugo server` keep original image URLs for local previews and
 portable static builds. For a CDN-enabled build, run:
 
 ```sh
-HUGO_PARAMS_NETLIFYIMAGECDN=true hugo --gc --minify
+HUGO_PARAMS_NETLIFYIMAGECDN=true python scripts/hugo.py --gc --minify
 ```
 
 Serve that output on Netlify (or use Netlify Dev) to exercise transformations;
@@ -251,13 +262,13 @@ page title and description. The template uses the same published, unarchived
 feed as Church Center, follows pagination, and places featured events first.
 Events with closed registration remain visible when Church Center lists them.
 
-Run the normal `hugo --gc --minify` command to refresh events. Internet access
+Run the normal `python scripts/hugo.py --gc --minify` command to refresh events. Internet access
 is required, but no staff credentials or API key are needed. The build creates
 an anonymous Church Center session and downloads event artwork into the
 generated site because the source image URLs expire. Remote resource caching
 is disabled in `hugo.toml` so subsequent builds fetch current data. Changes
 appear on the website after the rebuilt site is deployed, not on every visit.
-Restart `hugo server` to explicitly refresh remote listings during development.
+Restart `python scripts/hugo.py server` to explicitly refresh remote listings during development.
 
 If Church Center is unavailable or returns an unexpected response, the build
 fails instead of publishing stale or missing events. Retry the build once the
@@ -289,8 +300,8 @@ series slug:
 hugo new content --kind message messages/built-to-last/_index.md
 ```
 
-Hugo uses `archetypes/message.md`; its title and slug start from the folder
-name. Edit the generated `_index.md` to keep the series title, `series`,
+Hugo uses `archetypes/message.md`; its title starts from the folder name and
+its slug is empty. Edit the generated `_index.md` to keep the series title, `series`,
 `layout: series`, `date`, `lastmod`, `image`, and `draft` fields. The section
 page is a container, not a message; do not add a `part_number`, `video_url`, or
 message resources to it.
@@ -326,8 +337,9 @@ folder:
 hugo new content --kind message messages/message-slug/index.md
 ```
 
-The folder name supplies the starting title and slug. Whether editing a series
-or standalone message, complete the applicable fields:
+The folder name supplies the starting title. Leave `slug` empty for the automatic
+`part-N` or title default, or set it to override the default. Whether editing a
+series or standalone message, complete the applicable fields:
 
 ```yaml
 ---
@@ -388,7 +400,7 @@ To create a page with its own stylesheet from the command line:
 
 ```sh
 hugo new content --kind landing-pages landing-pages/my-campaign
-hugo server --disableFastRender --buildDrafts
+python scripts/hugo.py server --disableFastRender --buildDrafts
 ```
 
 Edit `content/landing-pages/my-campaign/index.md` and `style.css`. Add
