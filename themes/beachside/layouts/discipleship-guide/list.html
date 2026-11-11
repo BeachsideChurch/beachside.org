@@ -7,15 +7,16 @@
   </header>
 
   <div class="arch-wrap">
+    {{ $paginator := .Paginate .RegularPages.ByDate.Reverse 20 }}
     {{ $series := slice }}
-    {{ range .RegularPages }}
+    {{ range $paginator.Pages }}
       {{ with .Params.series }}{{ $series = $series | append . }}{{ end }}
     {{ end }}
     {{ $series = sort (uniq $series) }}
 
     {{ with $series }}
-      <nav class="arch-filter" aria-label="Filter guides by series">
-        <span class="arch-filter-label">Series</span>
+      <nav class="arch-filter" aria-label="Filter guides on this page by series">
+        <span class="arch-filter-label">Series on this page</span>
         <button class="active" type="button" data-guide-filter="" aria-pressed="true">All</button>
         {{ range . }}
           <button type="button" data-guide-filter="{{ . | urlize }}" aria-pressed="false">{{ . }}</button>
@@ -24,7 +25,7 @@
     {{ end }}
 
     <div class="arch-list" data-guide-list>
-      {{ range .RegularPages.ByDate.Reverse }}
+      {{ range $paginator.Pages }}
         <a class="arch-item" href="{{ .RelPermalink }}" data-guide-item data-guide-series="{{ .Params.series | default "" | urlize }}">
           <time class="arch-item-date-block" datetime="{{ .Date.Format "2006-01-02" }}">
             <span class="arch-item-date-month">{{ .Date.Format "Jan" }}</span>
@@ -44,6 +45,13 @@
       {{ end }}
     </div>
     <p class="arch-empty" data-guide-empty hidden>No guides match this series.</p>
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="message-pagination" aria-label="Guides pagination">
+        {{ with $paginator.Prev }}<a class="watch-link" href="{{ .URL }}">Previous</a>{{ end }}
+        <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+        {{ with $paginator.Next }}<a class="watch-link" href="{{ .URL }}">Next</a>{{ end }}
+      </nav>
+    {{ end }}
   </div>
 
   <footer class="arch-footer-strip">Beachside Church &nbsp;·&nbsp; <span>For the Emerald Coast</span></footer>

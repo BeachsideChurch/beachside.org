@@ -4,7 +4,8 @@
   {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
   <div class="message-list">
     {{/* .Pages includes both one-off messages and branch sections used for multi-part series. */}}
-    {{ range .Pages.ByDate.Reverse }}
+    {{ $paginator := .Paginate .Pages.ByDate.Reverse 6 }}
+    {{ range $paginator.Pages }}
       <article class="message-row">
         <a class="message-art" href="{{ .RelPermalink }}">
           {{ $messageTitle := .Title }}
@@ -20,5 +21,12 @@
       <p>New messages will be posted here.</p>
     {{ end }}
   </div>
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="message-pagination" aria-label="Messages pagination">
+      {{ with $paginator.Prev }}<a class="watch-link" href="{{ .URL }}">Previous</a>{{ end }}
+      <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+      {{ with $paginator.Next }}<a class="watch-link" href="{{ .URL }}">Next</a>{{ end }}
+    </nav>
+  {{ end }}
 </section>
 {{ end }}
