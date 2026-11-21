@@ -58,6 +58,10 @@ class GuideTests(unittest.TestCase):
         fields = payload['fields']
         fields['message_recap'] = '**Editable recap**'
         fields['video_url'] = 'https://www.youtube.com/live/MnNX9ahiw18'
+        fields['discussion_questions'] = [
+            {'question': 'A question with **emphasis**.', 'question_scripture': reference}
+            for reference in ['John 3:16', 'Psalm 23:2–3', '1 Samuel 17:34–37', 'Ephesians 3:16-19']
+        ] + [{'question': 'A question without scripture.', 'question_scripture': ''}]
         fields['daily_devotions'] = {
             'tuesday': {'scripture': 'John 3:16', 'scripture_url': 'https://www.bible.com/test', 'reflection': '**Tuesday reflection**'},
             'friday': {'reflection': '<p>Friday reflection</p>'},
@@ -79,6 +83,18 @@ class GuideTests(unittest.TestCase):
             self.assertEqual(page.select_one('.dg-devo-tab.active').text, 'Tuesday')
             self.assertEqual(len(page.select('.dg-devo-panel.active')), 1)
             self.assertEqual(page.select_one('.dg-devo-scripture-pill')['href'], 'https://www.bible.com/test')
+            scripture_links = page.select('.dg-q-body > .dg-q-scripture > a')
+            self.assertEqual([link['href'] for link in scripture_links], [
+                'https://www.bible.com/bible/111/JHN.3.16.NIV',
+                'https://www.bible.com/bible/111/PSA.23.2-3.NIV',
+                'https://www.bible.com/bible/111/1SA.17.34-37.NIV',
+                'https://www.bible.com/bible/111/EPH.3.16-19.NIV',
+            ])
+            self.assertEqual(page.select_one('.dg-q-body strong').text, 'emphasis')
+            self.assertFalse(page.select('.dg-q-body')[-1].select('.dg-q-scripture'))
+            for link in scripture_links:
+                self.assertEqual(link['target'], '_blank')
+                self.assertIn('noopener', link['rel'])
             for tab in page.select('.dg-devo-tab'):
                 self.assertIsNotNone(page.find(id='devo-' + tab['data-day']))
             self.assertIn('youtube-nocookie.com/embed/MnNX9ahiw18', page.select_one('.dg-video iframe')['src'])

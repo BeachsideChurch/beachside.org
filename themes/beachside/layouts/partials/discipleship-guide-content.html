@@ -19,7 +19,7 @@
   {{ with .Params.discussion_questions }}
     <details class="dg-card dg-disclosure"><summary><h2 class="dg-label">Group Discussion Questions</h2></summary><ol class="dg-q-list">
       {{ range $index, $question := . }}
-        <li><div class="dg-q-num">{{ add $index 1 }}</div><div class="dg-q-body">{{ .question | markdownify }}{{ with .question_scripture }}<div class="dg-q-scripture">{{ . | markdownify }}</div>{{ end }}</div></li>
+        <li><div class="dg-q-num">{{ add $index 1 }}</div><div class="dg-q-body">{{ .question | markdownify }}{{ with .question_scripture }}<div class="dg-q-scripture"><a href="{{ partial "bible-verse-url.html" . }}" target="_blank" rel="noopener">📖 {{ . }}</a></div>{{ end }}</div></li>
       {{ end }}
     </ol></details>
   {{ end }}

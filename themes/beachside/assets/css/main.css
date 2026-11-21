@@ -447,7 +447,9 @@ h1, h2 { font-weight: 900; letter-spacing: -0.045em; }
 .dg-q-list li:last-child { padding-bottom: 0; border-bottom: 0; }
 .dg-q-num { display: flex; flex: 0 0 38px; align-items: center; justify-content: center; width: 38px; height: 38px; border: 2px solid var(--guide-aqua); border-radius: 50%; background: var(--guide-aqua-light); color: var(--guide-slate); font: 900 15px/1 var(--guide-head); }
 .dg-q-body { flex: 1; padding-top: 6px; color: var(--guide-text); font: 400 18px/1.55 Inter, sans-serif; }
-.dg-q-scripture { display: inline-block; margin-top: 8px; padding: 2px 10px; border-radius: 20px; background: #eaf0ef; color: var(--guide-forest); font-size: 13px; font-style: italic; }
+.dg-q-scripture { display: block; margin-top: 8px; font-size: 13px; font-style: italic; }
+.dg-q-scripture a { display: inline-block; padding: 2px 10px; border-radius: 20px; background: #eaf0ef; color: var(--guide-forest); text-decoration: none; }
+.dg-q-scripture a:hover, .dg-q-scripture a:focus-visible { background: var(--guide-aqua); text-decoration: underline; }
 .dg-devo-tabs { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: -1px; }
 .dg-devo-tab { padding: 11px 20px; border: 1px solid var(--guide-border); border-bottom: 0; border-radius: 8px 8px 0 0; background: #f0efea; color: #888; font: 800 12px/1 var(--guide-head); letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
 .dg-devo-tab:hover, .dg-devo-tab:focus-visible { background: var(--guide-aqua-light); color: var(--guide-slate); }
