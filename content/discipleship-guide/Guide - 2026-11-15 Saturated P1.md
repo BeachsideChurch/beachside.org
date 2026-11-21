@@ -7,73 +7,72 @@ speaker: Jonathan Watson
 series: Saturated
 display_series: true
 description: >-
-  Pastor Jonathan Watson explores Psalm 23:5 to show how the abundant life Jesus offers is not found
-  in changing our external circumstances, but in discovering the deep fullness of God right where we
-  are.
+  This message explores how we can discover an overflowing, abundant life in Christ right in the
+  middle of our present circumstances rather than constantly chasing external changes.
 draft: false
 video_url: https://www.youtube.com/live/rSUmMFpYEJM
 message_recap: |-
-  In Psalm 23:5, David describes a cup that overflows and a head lavishly anointed with oil—not while
-  isolated from trouble, but right in the presence of his enemies. When we experience restlessness or
-  chronic anxiety, our default human tendency is often to try adding or subtracting external things,
-  such as seeking a bigger house, a higher salary, or different people around us. Yet even if we could
-  rearrange every external circumstance to our exact liking, we would still have to live with
-  ourselves, and surface-level fixes quickly prove wanting.
+  In Psalm 23:5, David speaks of a feast prepared in the presence of his enemies and a cup that
+  overflows. This image of an overflowing cup represents lavish abundance and saturation—not mere
+  survival in difficult times, but true feasting in the midst of chaos. Often, when life feels chaotic
+  or dissatisfying, we try to fix things by altering our external circumstances—accumulating more
+  possessions, striving for promotions, or wishing the people around us would change. Yet, even when
+  we manage to rearrange our external world, we often find ourselves still carrying the same internal
+  restlessness, anxiety, and discontent.
 
-  True spiritual abundance is not about escaping our current life, but discovering the depth of the
-  life Jesus has already invited us into. Drawing from Ephesians 3 and 2 Corinthians 5, we see that
-  being in Christ transforms us from the inside out so that we are filled with the measure of all the
-  fullness of God. By learning to slow down, practice God's presence in ordinary moments, and
-  intentionally cultivate gratitude, we begin feasting at God's table right in the middle of our daily
-  realities.
+  True abundance does not come from changing our life's circumstances, but from inhabiting our present
+  reality in a brand-new way through Jesus. As we learn to live in Christ, we discover that God's love
+  has a depth, width, and height that far exceeds surface-level relief. By slowing down, actively
+  looking for God's presence in common daily moments, and deeply practicing gratitude, we begin to
+  realize that our lives are already saturated with the goodness and fullness of God.
 main_idea: >-
-  The overflowing life Jesus promises is not a different set of circumstances, but a deeper way of
-  inhabiting our current life in Christ.
+  The abundant life Jesus offers is not about escaping or changing our circumstances, but about
+  discovering the deep fullness of God's presence right where we are.
 icebreaker_question: >-
-  What is a small, ordinary detail in your daily routine—like a morning cup of coffee or a quiet
-  commute—that brings you unexpected comfort?
+  What is one small, ordinary thing in your weekly routine that surprisingly brings you a lot of
+  comfort or joy?
 discussion_questions:
   - question: >-
-      How does our culture reinforce the subtle belief that our lives will only be meaningful or peaceful
-      once our external circumstances change?
+      Why do you think we so easily fall into the belief that changing our external circumstances (like
+      getting a new job, a bigger space, or more time off) will finally bring us lasting peace?
     question_scripture: ""
   - question: >-
-      In what ways do we fall into the trap of believing that having more space, possessions, or income
-      will fix our internal restlessness?
+      What does it mean to live 'in Christ' on a practical level, and how does that shift how we view our
+      daily responsibilities?
     question_scripture: ""
   - question: >-
-      When you feel overwhelmed by daily routines or chaos, what negative emotions tend to surface first
-      within you?
+      When life feels chaotic or rushed, what emotions tend to surface first in your heart, and how do you
+      typically respond to them?
     question_scripture: ""
   - question: >-
-      How does it feel to realize that even if everything around you went exactly according to your plan,
-      you would still have to contend with your internal struggles?
+      How does the idea of 'feasting' in the presence of life's difficulties make you feel compared to
+      just trying to survive them?
     question_scripture: ""
   - question: >-
-      What is one area of your life where you notice yourself constantly striving to control or fix
-      outcomes instead of trusting God?
+      In what specific area of your routine have you been moving too fast to notice God's work, and what
+      would it look like to slow down there this week?
     question_scripture: ""
   - question: >-
-      What practical adjustments would you need to make this week in order to truly slow down and refrain
-      from rushing through your days?
+      What is one daily habit or distraction you could adjust to create more quiet space for prayer and
+      reflection?
     question_scripture: ""
   - question: >-
-      In Psalm 23:5, David speaks of feasting at a table and having an overflowing cup while surrounded by
-      his enemies. How does this picture challenge our usual assumption that God's blessing only happens
-      when trouble is removed?
+      In Psalm 23:5, David describes God preparing a table for him and lavishly pouring out oil in the
+      presence of his enemies. How does this picture of abundance amidst conflict shape your understanding
+      of God's care?
     question_scripture: Psalm 23:5
   - question: >-
-      In Ephesians 3:16-19, Paul prays for believers to be strengthened in their inner being to know the
-      vast dimensions of Christ's love. What does it mean for our spiritual growth that God focuses on
-      transforming our inner being rather than altering our outer conditions?
+      Paul prays in Ephesians 3:16-19 that believers would be strengthened in their inner being to grasp
+      the depth of Christ's love and be filled with God's fullness. Why is inner spiritual strength
+      essential before external circumstances ever change?
     question_scripture: Ephesians 3:16-19
   - question: >-
-      How might bringing a non-anxious, present attitude into your household or workplace change the
-      atmosphere for those around you?
+      How can practicing intentional gratitude change the way we interact with family members, friends, or
+      coworkers when friction arises?
     question_scripture: ""
   - question: >-
-      What is one concrete way you can practice active gratitude toward a specific person in your life
-      this week?
+      What is one practical way our group can encourage one another to slow down and notice God in the
+      common, everyday moments this week?
     question_scripture: ""
 daily_devotions:
   - day: Monday
@@ -83,170 +82,165 @@ daily_devotions:
       “Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!” —
       2 Corinthians 5:17
 
-      We often fall into the subtle mental trap of believing that true peace requires a change in our
-      external circumstances. When discontentment or restlessness settles in, our minds quickly begin
-      rearranging the exterior pieces of our lives. We tell ourselves that a larger house, a higher
-      salary, or a fresh set of opportunities will finally settle our souls, yet these surface fixes
-      consistently leave us feeling empty.
+      We often carry an underlying assumption that our current reality is fundamentally missing something
+      needed for peace. We convince ourselves that if we could just upgrade our environment, fix our
+      schedule, or secure more resources, our internal restlessness would finally settle. Yet this
+      surface-level focus keeps our minds trapped on an endless treadmill of discontent, assuming relief
+      is always just one change away.
 
-      The scripture points us toward a far deeper reality: being in Christ means that a brand-new creation
-      has already begun within us. The core narrative of your life is no longer dictated by what you can
-      acquire or alter on the outside, but by the quiet work of God renewing your heart. Spiritual
-      abundance is not about escaping your present situation, but discovering how to inhabit your current
-      life through the eyes of faith.
+      Scripture invites us to a radical shift in how we process our everyday life. Being in Christ means
+      that a new creation is already underway right in the middle of our existing reality. Instead of
+      constantly striving to escape or rearrange your circumstances, consider that God is offering a new
+      way of inhabiting the very life you currently live.
 
-      Today, pay attention to the mental core beliefs you run to when anxiety whispers that your current
-      life is not enough. Notice where your thoughts reflexively seek relief in hypothetical futures or
-      exterior upgrades. When you catch your mind spiraling into surface-level fixes, pause and anchor
-      your thoughts in the present reality of Christ’s quiet, transforming presence.
+      Transformation begins when we allow the Holy Spirit to reset our core beliefs about abundance. When
+      we stop measuring our well-being by surface conditions, we open our minds to the deep fullness God
+      has already provided. Today, pay attention to where your thoughts automatically leap toward external
+      fixes, and practice anchoring your mind in the reality of Christ’s presence.
 
-      *What external circumstance are you currently assuming must change before your mind can experience
-      true peace?*
+      *What negative core belief or assumption about your present circumstances standardly drives your
+      internal restlessness?*
 
-      *How might viewing your life through the lens of being 'in Christ' alter your perspective on today's
-      mental stresses?*
+      *How can you practice viewing your current daily routine through the lens of being a new creation in
+      Christ?*
   - day: Tuesday
     scripture: Ephesians 3:17-18
     scripture_url: https://www.bible.com/bible/111/EPH.3.17-18.NIV
     reflection: |-
       “And I pray that you, being rooted and established in love, may have power, together with all the
-      Lord’s holy people, to grasp how wide and long and high and deep is the love of Christ,” — Ephesians
+      Lord’s holy people, to grasp how wide and long and high and deep is the love of Christ.” — Ephesians
       3:17-18
 
-      Emotional exhaustion often signals that we have been living exclusively on the frantic surface of
-      our daily routines. When chronic anxiety or emotional burnout settles in, our natural response is
-      often to suppress what we feel or scramble to escape the situation entirely. Yet these heavy
-      emotions are frequently signposts inviting us to drop beneath the surface and seek a deeper source
-      of security.
+      Chronic anxiety, frustration, and emotional exhaustion frequently signal that we are searching for
+      security in changing conditions. When daily demands pile up, our immediate reaction is often to
+      suppress our strain or demand that our environment calm down. Naming these heavy emotions honestly
+      before God is the first step toward discovering a deeper anchor than temporary circumstances.
 
-      Paul prays for believers to be deeply rooted and established in love, capable of sensing the immense
-      dimensions of Christ’s affection. This is not an intellectual concept to analyze, but an emotional
-      sanctuary to inhabit. When we feel overwhelmed by chaotic surroundings or internal disquiet, the
-      invitation is to sink deeper into the immovable love that already surrounds us in every moment.
+      Paul prays that we would gain the spiritual capacity to grasp the multi-dimensional love of Christ.
+      This expansive love is not a theoretical concept, but an emotional and spiritual foundation designed
+      to hold us firm when our surroundings feel chaotic. When anxiety or overwhelm arises, it invites us
+      to sink deeper into the vastness of God's care rather than reacting to surface noise.
 
-      Allow yourself the time to name whatever emotion is sitting heavily in your heart today without
-      immediately trying to clean it up or push it away. Bring that emotion directly into the presence of
-      Jesus, trusting that His love is spacious enough to hold your fear, sadness, or frustration. As you
-      rest in His love, let the depth of His quiet grace settle your restless heart.
+      Take time today to pause whenever a sharp emotion surfaces, acknowledging what you feel without
+      immediate self-judgment. Bring those specific feelings to God and allow His love to envelop the real
+      condition of your heart. As you root your identity in His affection, internal panic gives way to a
+      settled, non-anxious presence.
 
-      *What heavy or uncomfortable emotion have you been trying to ignore or escape lately?*
+      *What primary emotion has been dominating your heart this week, and what does it reveal about where
+      you are seeking security?*
 
-      *What does it feel like in your heart to imagine being rooted and established in the immense love of
-      Christ right now?*
+      *In what way does dwelling on the width, height, and depth of Christ’s love change your perspective
+      on that emotion?*
   - day: Wednesday
+    scripture: Psalm 34:8
+    scripture_url: https://www.bible.com/bible/111/PSA.34.8.NIV
+    reflection: |-
+      “Taste and see that the Lord is good; blessed is the one who takes refuge in him.” — Psalm 34:8
+
+      Our everyday choices reveal where we truly expect to find abundance and satisfaction. When we
+      instinctively reach for distraction, extra work, or consumer fixes to relieve internal tension, our
+      actions reflect a reliance on secondary things. Over time, these daily habits shape our desires and
+      determine whether we move closer to Christ or stay caught on the treadmill of hurry.
+
+      Aligning our will with the kingdom requires choosing intentional habits that position us to
+      experience God’s real-time goodness. To taste and see that the Lord is good is an active, deliberate
+      choice to seek refuge in Him rather than in self-made solutions. Each choice to pause, pray, or
+      release control trains our will to trust His active care over our self-reliance.
+
+      Consider the simple actions that fill your day and ask whether they are forming you into a person
+      marked by trust and peace. Spiritual formation happens in the quiet choices to turn toward God in
+      common moments. Today, make one deliberate decision to yield your agenda and actively take refuge in
+      Christ.
+
+      *What default habit or action do you turn to when seeking relief, and does it help you become more
+      like Jesus?*
+
+      *What is one concrete choice you can make today to deliberately position your will to taste and see
+      God's goodness?*
+  - day: Thursday
     scripture: Psalm 23:5
     scripture_url: https://www.bible.com/bible/111/PSA.23.5.NIV
     reflection: |-
       “You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup
       overflows.” — Psalm 23:5
 
-      Our daily choices and actions are frequently driven by a frantic desire to resolve friction and
-      eliminate discomfort. We hustle to fix every awkward scenario, clear off every task, and remove
-      every obstacle standing between us and a moment of quiet. In doing so, we often treat our days as
-      endless problems to be solved rather than holy ground where God is waiting to meet us.
+      Our physical bodies frequently carry the strain of our internal hurry and desire for control. We
+      push past natural boundaries of exhaustion, skip intentional rest, and treat our physical limits as
+      obstacles to be overcome. Yet God built us as embodied creatures whose physical rhythms directly
+      impact our spiritual awareness and emotional peace.
 
-      David speaks of a feast laid out directly in the presence of his enemies, reminding us that God’s
-      table is prepared right in the thick of life's complications. The shepherd does not wait for the
-      chaos to clear before offering anointing oil and an overflowing cup. True spiritual formation
-      involves choosing to feast on God’s goodness right where we are, rather than deferring joy until all
-      our struggles disappear.
+      The picture of a feast prepared in the presence of chaos reminds us that God cares deeply for our
+      bodily nourishment and restoration. Feasting and receiving an overflowing cup requires us to
+      physically slow down, sit at the table, and receive what is offered. When we honor our body's need
+      for sleep, wholesome food, and unhurried movement, we embody trust in God's ongoing provision.
 
-      Consider your habitual reactions to daily tension and ask whether your actions reflect trust or a
-      desperate attempt at control. Practice making deliberate choices to slow down, even for a few
-      minutes, amidst your daily duties. When you choose stillness over striving, you actively step into
-      the feast God has provided in the middle of your present reality.
+      Pay attention today to how your physical posture and physical stress levels reflect your internal
+      state. Choose to enter rest not as an afterthought, but as a deliberate act of worship and
+      surrender. By allowing your body to slow down, you create space to physically experience the rich
+      abundance God continuously provides.
 
-      *Where in your daily routine are your actions driven more by a desire for control than by trust in
-      God?*
+      *In what physical area—sleep, rest, nourishment, or movement—are you currently feeling the most
+      strain or depletion?*
 
-      *What would it look like for you to 'feast' on God's presence today in the very place you feel most
-      challenged?*
-  - day: Thursday
-    scripture: Psalm 127:2
-    scripture_url: https://www.bible.com/bible/111/PSA.127.2.NIV
-    reflection: |-
-      “In vain you rise early and stay up late, toiling for food to eat—for he grants sleep to those he
-      loves.” — Psalm 127:2
-
-      The hurried pace of modern life extracts a real, physical toll on our bodies. We regularly push past
-      natural boundaries of exhaustion, sacrificing sleep, quiet nourishment, and stillness just to keep
-      up with the endless demands of our schedules. We easily forget that our bodies are not machines
-      built for perpetual output, but sacred vessels designed for divine rhythms of rest.
-
-      Scripture gently confronts our hurried living by reminding us that God bestows rest upon those He
-      loves. God does not demand that we wear ourselves out to prove our worth or secure our future.
-      Physical rest is an embodied act of trust, declaring our confidence that God sustains the world even
-      when we stop striving and close our eyes.
-
-      Listen carefully to what your body is communicating to you today. Pay attention to tightness in your
-      shoulders, shallow breathing, or the impulse to rush mindlessly from one obligation to the next.
-      Give yourself permission to pause, breathe deeply, and accept the gift of physical rest as a holy
-      practice of trust in your loving Father.
-
-      *In what ways is your physical body signaling that you are moving too fast or carrying too much
-      stress?*
-
-      *What is one practical boundary you can set today to honor your body with quiet rest or unhurried
-      movement?*
+      *How can slowing down physically today serve as a practical act of trusting God to care for your
+      life?*
   - day: Friday
-    scripture: Ephesians 3:19
-    scripture_url: https://www.bible.com/bible/111/EPH.3.19.NIV
+    scripture: Ephesians 3:16
+    scripture_url: https://www.bible.com/bible/111/EPH.3.16.NIV
     reflection: |-
-      “and to know this love that surpasses knowledge—that you may be filled to the measure of all the
-      fullness of God.” — Ephesians 3:19
+      “I pray that out of his glorious riches he may strengthen you with power through his Spirit in your
+      inner being.” — Ephesians 3:16
 
-      Relational strain often arises when we quietly demand that the people around us change so we can
-      feel at peace. We catch ourselves wishing our spouses, children, coworkers, or friends would behave
-      differently, believing their transformation is the missing key to our contentment. Yet when we make
-      our internal peace dependent on others' behavior, we miss the opportunity to grow in Christlike
-      love.
+      Relational strain often grows out of our unmet expectation that people around us should change so we
+      can experience peace. We demand attentiveness, gratitude, or perfection from others, hoping their
+      behavior will quiet our internal discontent. Yet when we rely on human relationships to provide the
+      fullness only God offers, we place an unsustainable burden on those we love.
 
-      Paul speaks of being filled with all the fullness of God—a richness of soul that spills over into
-      how we inhabit our everyday relationships. When our inner life is saturated with God’s love, we stop
-      viewing people as obstacles to our peace or tools for our comfort. Instead, we begin seeing them
-      through the eyes of grace, offering them the unearned kindness we have received.
+      Real relational transformation begins when the Holy Spirit strengthens our inner being with Christ's
+      glorious riches. As our internal life becomes filled with the fullness of God, we no longer approach
+      others out of deficit or self-protection. Instead of manipulating circumstances or people, we become
+      capable of offering genuine grace, patience, and non-anxious love.
 
-      Take time today to reflect on the key relationships in your life, especially those marked by ongoing
-      friction or unspoken expectations. Ask God to help you release the urge to fix or manage the people
-      around you. As you rely on His abundance, choose to offer a gesture of patience, gratitude, or quiet
-      blessing to someone in your daily path.
+      Take time today to evaluate how you show up in your primary relationships and family interactions.
+      Are you engaging others from a place of spiritual overflow, or expecting them to fill your internal
+      void? Ask the Holy Spirit to strengthen your inner heart today so that your presence in others'
+      lives becomes a reflection of Christ's overflowing love.
 
-      *Who in your life have you been trying to change or control, and how has that impacted your inner
-      peace?*
+      *Where have you been expecting a spouse, friend, family member, or coworker to change in order for
+      you to feel at peace?*
 
-      *How can the abundance of God’s love in your life change the way you respond to a challenging
-      relationship this week?*
+      *How can receiving God's inner strength today change how you love and respond to that person?*
 spiritual_practice: |-
-  **Practicing the Silent Presence**
+  **Practicing Gratitude and Presence**
 
-  To train the soul to slow down, move past surface-level anxiety, and become aware of God's abiding
-  presence in ordinary moments.
+  To train our focus to recognize God's abundant presence in ordinary daily life rather than
+  constantly seeking relief through external changes.
 
-  1. Set a Quiet Boundary (2-3 minutes): Find a comfortable, quiet space, set aside your phone, and take a few slow, deliberate breaths to quiet your body and mind.
-  2. Invite God's Presence (3-4 minutes): Silently offer a simple prayer such as, 'Lord Jesus, help me to recognize your presence right here in this moment.'
-  3. Dwell in Sacred Solitude (5-6 minutes): Rest in stillness without trying to fix, solve, or manage anything in your life, letting your heart settle into the reality that you are in Christ.
-  4. Return with Expectation (2-3 minutes): Conclude by thanking God for His presence and asking Him to help you stay attentive to Him throughout your upcoming daily routines.
+  1. Preparation and Stillness (2 minutes): Sit comfortably in a quiet space, take a few slow breaths, and release any urgency or mental hurry.
+  2. Reliving Gratitude (5 minutes): Bring to mind a specific moment when you felt deeply grateful for someone or something. Mentally step back into that memory—notice what you felt in your body and soul, and thank God for His goodness in that moment.
+  3. Inviting God's Presence into the Next Moment (3-5 minutes): Look ahead at the next task or interaction in your day. Offer a brief prayer asking God to help you notice His active presence, love, and grace in that ordinary setting.
 
-  **Trust and obedience:** This practice trains us to stop treating our circumstances as things we
-  must constantly manipulate, cultivating a quiet trust that God is actively present and sufficient in
-  our daily lives.
+  **Trust and obedience:** This practice trains us to stop waiting for ideal circumstances before
+  experiencing joy, yielding our need for control and trusting that God's goodness is actively present
+  with us right now.
 prayer_prompts:
   - prompt: >-
-      Heavenly Father, quiet my anxious heart and forgive me for seeking fullness in temporary things.
-      Teach me to slow down and discover the richness of your presence right here in the life you have
-      given me.
+      Heavenly Father, quiet my hurried heart and forgive me for constantly looking for peace in changed
+      circumstances rather than in You. Open my eyes to discover the depth of Your love and presence right
+      here in the middle of my ordinary day.
   - prompt: >-
-      Lord Jesus, strengthen my inner being by your Spirit so that I may grasp the depth of your love and
-      live each daily moment fully aware that I am held in you.
+      Lord Jesus, teach me to sit at Your table of abundance even when chaos surrounds me. Fill me with
+      Your Holy Spirit so that my heart overflows with gratitude and kindness toward the people You have
+      placed in my life.
 next_steps:
   - step: >-
-      Choose one regular daily transition this week—such as stepping into your car or walking into your
-      home—to pause for thirty seconds, pray for awareness of God's presence, and recall one specific gift
-      of His grace.
+      Choose one daily transition this week—such as your morning commute, stepping through your front door
+      after work, or starting a meeting—to pause for thirty seconds, breathe, and pray: 'God, help me see
+      Your presence right here.' Practice this intentional slowing down every day for the next seven days.
 resources: []
 hashtags:
   - "#FollowingJesus"
-  - "#AnxietyAndEmotionalHealth"
   - "#PrayerAndSpiritualLife"
   - "#ChangeGrowthAndTransformation"
+  - "#AnxietyAndEmotionalHealth"
 ---

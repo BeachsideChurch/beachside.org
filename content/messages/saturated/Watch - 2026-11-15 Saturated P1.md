@@ -4,9 +4,9 @@ series: Saturated
 part_number: 1
 speaker: Jonathan Watson
 description: >-
-  Are you waiting for your circumstances to change before you can finally experience peace and joy?
-  Join Pastor Jonathan Watson as he explores Psalm 23:5 and reveals how Jesus offers a deeper,
-  overflowing life right in the midst of everyday chaos.
+  Are you tired of feeling like life is a constant rush to get to the next thing? Discover how the
+  good news of Jesus invites us off the treadmill of discontent and into a life saturated with God's
+  deep presence and peace.
 date: 2026-11-15
 image: /images/messages/saturated.jpg
 guide_url: /discipleship-guide/saturated-pt1
