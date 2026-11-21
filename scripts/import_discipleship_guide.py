@@ -71,6 +71,7 @@ def render_doc(payload: dict[str, Any]) -> str:
         "video_url": fields.get("youtube_link") or "",
         "message_recap": fields.get("message_recap") or "",
         "main_idea": fields.get("main_idea") or "",
+        "icebreaker_question": fields.get("icebreaker_question") or "",
         "discussion_questions": fields.get("discussion_questions") or [],
         "daily_devotions": devotions,
         "spiritual_practice": fields.get("spiritual_practice") or "",

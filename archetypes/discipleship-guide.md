@@ -11,6 +11,7 @@ video_url: ""
 # Use |- blocks for Markdown paragraphs. See docs/content-editing.md.
 message_recap: ""
 main_idea: ""
+icebreaker_question: ""
 discussion_questions: []
 daily_devotions:
   - day: Monday

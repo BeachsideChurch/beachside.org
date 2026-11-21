@@ -16,12 +16,20 @@
   {{ with .Params.main_idea }}
     <details class="dg-big-idea dg-disclosure" open><summary><h2 class="dg-label">Main Idea</h2></summary><blockquote>{{ . | markdownify }}</blockquote></details>
   {{ end }}
-  {{ with .Params.discussion_questions }}
-    <details class="dg-card dg-disclosure"><summary><h2 class="dg-label">Group Discussion Questions</h2></summary><ol class="dg-q-list">
+  {{ if or .Params.icebreaker_question .Params.discussion_questions }}
+    <details class="dg-card dg-disclosure"><summary><h2 class="dg-label">Group Discussion Questions</h2></summary>
+      {{ with .Params.icebreaker_question }}
+        <div class="dg-icebreaker">
+          <h3 class="dg-icebreaker-label">Icebreaker</h3>
+          <div class="dg-prose">{{ . | markdownify }}</div>
+        </div>
+      {{ end }}
+      {{ with .Params.discussion_questions }}<ol class="dg-q-list">
       {{ range $index, $question := . }}
         <li><div class="dg-q-num">{{ add $index 1 }}</div><div class="dg-q-body">{{ .question | markdownify }}{{ with .question_scripture }}<div class="dg-q-scripture"><a href="{{ partial "bible-verse-url.html" . }}" target="_blank" rel="noopener">📖 {{ . }}</a></div>{{ end }}</div></li>
       {{ end }}
-    </ol></details>
+      </ol>{{ end }}
+    </details>
   {{ end }}
   {{ $devotions := slice }}
   {{ range .Params.daily_devotions }}

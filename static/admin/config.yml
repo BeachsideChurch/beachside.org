@@ -198,6 +198,11 @@ collections:
       name: main_idea
       widget: collapsible-markdown
       required: false
+    - label: Icebreaker Question
+      name: icebreaker_question
+      widget: collapsible-markdown
+      required: false
+      hint: Optional opening question shown above the numbered discussion questions.
     - label: Group Discussion Questions
       name: discussion_questions
       widget: list
