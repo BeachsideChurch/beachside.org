@@ -1,0 +1,52 @@
+{{- $type := "page" -}}
+{{- if .IsHome -}}
+  {{- $type = "home" -}}
+{{- else if eq .Section "messages" -}}
+  {{- if .IsPage -}}
+    {{- $type = "message" -}}
+  {{- else if eq .Layout "series" -}}
+    {{- $type = "series" -}}
+  {{- else -}}
+    {{- $type = "messages" -}}
+  {{- end -}}
+{{- else if eq .Section "discipleship-guide" -}}
+  {{- $type = "guide" -}}
+  {{- if not .IsPage }}{{ $type = "guides" }}{{ end -}}
+{{- else if in (slice "children" "students" "adults") .Section -}}
+  {{- $type = "ministry" -}}
+{{- else if eq .Section "events" -}}
+  {{- $type = "events" -}}
+{{- else if eq .Section "engage" -}}
+  {{- $type = "engage" -}}
+{{- else if eq .Section "about" -}}
+  {{- $type = "about" -}}
+{{- end -}}
+<meta data-pagefind-meta="type[content]" content="{{ $type }}">
+{{- $category := "other" -}}
+{{- if in (slice "message" "series" "messages") $type -}}
+  {{- $category = "messages" -}}
+{{- else if in (slice "guide" "guides") $type -}}
+  {{- $category = "guides" -}}
+{{- else if eq $type "ministry" -}}
+  {{- $category = "ministries" -}}
+{{- else if eq $type "events" -}}
+  {{- $category = "events" -}}
+{{- end -}}
+<meta data-pagefind-filter="category[content]" content="{{ $category }}">
+{{- /* Every page needs a sort value: Pagefind omits pages without one when
+      sorting. Undated evergreen pages sort after dated content. */ -}}
+{{- $timestamp := 0 -}}
+{{- if gt .Date.Unix 0 -}}
+  {{- $timestamp = .Date.Unix -}}
+<meta data-pagefind-meta="date[content]" content="{{ .Date.Format "2006-01-02" }}">
+{{- end -}}
+<meta data-pagefind-sort="date[content]" content="{{ $timestamp }}">
+{{- if in (slice "message" "series" "guide") $type -}}
+  {{- $series := .Params.series -}}
+  {{- if and (not $series) (eq $type "message") -}}
+    {{- with .Parent }}{{ $series = .Params.series }}{{ end -}}
+  {{- end -}}
+  {{- with $series }}
+<meta data-pagefind-meta="series[content]" content="{{ . }}">
+  {{- end -}}
+{{- end -}}

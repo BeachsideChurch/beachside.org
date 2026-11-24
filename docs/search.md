@@ -1,0 +1,116 @@
+# Search implementation
+
+## Jupiter Broadcasting reference
+
+Reviewed the live [search page](https://www.jupiterbroadcasting.com/search/)
+and the repository's `develop` branch on November 23, 2026:
+
+- [Search template](https://github.com/JupiterBroadcasting/jupiterbroadcasting.com/blob/develop/themes/jb/layouts/search/list.html):
+  a dedicated Hugo section with a search input, live status, and results container.
+- [Search JavaScript](https://github.com/JupiterBroadcasting/jupiterbroadcasting.com/blob/develop/themes/jb/assets/js/search.js):
+  imports `/pagefind/pagefind.js`, debounces queries, ignores stale responses,
+  retrieves result data, and constructs cards with highlighted excerpts. It
+  fetches up to 60 candidates, reranks them, and displays up to 20 results.
+  Custom ranking promotes exact title matches for selected content types and
+  adjusts episodes for recency and archived status. Metadata supplies type,
+  show, date, and external destinations; low-weight transcript matches get a badge.
+- [Production Dockerfile](https://github.com/JupiterBroadcasting/jupiterbroadcasting.com/blob/develop/Dockerfile):
+  Hugo generates HTML, Pagefind extended 1.6.0 indexes the output, and nginx serves
+  the site and index. Index-only pick pages are removed after indexing.
+
+## Beachside adaptation
+
+Beachside uses the same static build and browser API pattern. Its existing fonts,
+colors, header, footer, and mobile navigation surround a dedicated `/search/`
+page. The header uses a real link so the page remains reachable without JavaScript.
+
+`scripts/build.py` runs Hugo's existing message-slug wrapper, then Python's
+Pagefind CLI. Both steps must succeed. Netlify uses this command. Python's
+`pagefind[bin]` dependency supplies the standard binary, sufficient for this
+English-language site without adding Node to the toolchain.
+
+`pagefind.yml` indexes only `main[data-pagefind-body]`. The shared base template
+opts public content in and excludes search, 404, and `noindex` pages. Standalone
+landing pages and the static CMS never opt in. Explicit title metadata avoids
+the site-name suffix in results. Navigation, footer, and announcement are outside
+the indexed main element. Rendered structured guide sections and message bodies
+are included; video audio and linked external documents are not transcribed or indexed.
+
+The custom interface loads the engine on the first nonempty query, debounces
+typing, and invalidates older requests immediately. Pagefind supplies relevance
+ranking; ten results load at a time. `?q=` restores and shares searches. Status
+messages announce loading, counts, empty results, and errors. Excerpts retain
+only text and `<mark>` highlights, and result links must stay on the current origin.
+The page also offers browse links and a JavaScript-disabled explanation.
+
+Result badges show an icon and content type: Message, Message Series,
+Discipleship Guide, Ministry, Events, Next Steps, About Beachside, Home, or Page.
+Archives use plural labels. Messages, series pages, and guides also show their
+`series` name when supplied. A message without its own series value inherits
+the parent page's series. `partials/search-metadata.html` supplies this metadata
+inside the indexed main element, and the search script renders it as text with
+fixed SVG icons and distinct badge colors.
+
+Content-type controls filter to All, Messages (including series and the archive),
+Discipleship Guides (including the archive), Ministries, Events, or Other Pages.
+The `category` Pagefind filter groups the more detailed badge types into these
+choices. Sort options are Most relevant (Pagefind's default ranking) and Newest
+first (descending publication date). Every indexed page has a numeric `date`
+sort value; undated pages use zero and appear after dated content rather than
+being dropped. Dated results display their publication date.
+
+Query, type, and sort are restored from the URL, for example
+`/search/?q=hope&type=messages&sort=newest`. Unknown values fall back to All and
+Most relevant. Filters and sorting update results immediately and reset loaded
+results. Selecting a content type without a query browses that category;
+selecting Newest first without a query browses recent content across the
+selected category. The default empty search still waits for a search term.
+
+Beachside does not need Jupiter's podcast-specific recency rules, sponsor and
+pick indexing, or external result destinations. Its old description-only JSON
+search and modal have been removed.
+
+## Verification
+
+### Excluding text from search
+
+Add `data-pagefind-ignore="all"` to the HTML wrapper for a section that should
+remain visible but should not contribute to search results:
+
+```html
+<section data-pagefind-ignore="all">
+  <!-- Shared promotional copy or links to other pages -->
+</section>
+```
+
+Everything inside that wrapper is excluded from Pagefind indexing, including
+metadata. The shared **Environments for every age** section in
+`themes/beachside/layouts/_default/ministry.html` uses this attribute so links
+to Transit do not make Waumba Land or other ministry pages match that word.
+The Transit page's own content remains searchable.
+
+For sections generated by a Hugo template, put the attribute on the section
+in the template. For HTML written directly in Markdown, put it on the HTML
+wrapper in that content file. This setting affects site search, not search
+engines such as Google. Rebuild with `scripts/build.py` and deploy the updated
+output to refresh the search index. See
+[Pagefind's indexing controls](https://pagefind.app/docs/indexing/#removing-individual-elements-from-the-index).
+
+### Checks
+
+Install `scripts/requirements-build.txt`, then run:
+
+```sh
+python scripts/test_search.py
+python scripts/build.py --gc --minify --cleanDestinationDir --serve
+```
+
+The regression checks build a temporary Hugo site and inspect Pagefind's actual
+index fragments for body text, correct message URLs, and excluded content. They
+also check that build and indexing failures return a failing exit status.
+
+Visit `/search/` at the printed URL. Search a title and a phrase found only in a
+guide body. Check highlighted excerpts, result links, a nonsense query, clearing
+the field, `?q=` reloads, rapid edits, and loading more than ten matches. Test
+keyboard navigation and narrow widths. Check that terms found only in the footer
+or an unlisted landing page produce no results. Stop the preview with Ctrl+C.

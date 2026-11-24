@@ -50,7 +50,7 @@
     </section>
   {{ end }}
   {{ range .Params.sections }}{{ partial "content-section.html" (dict "section" . "page" $) }}{{ end }}
-  <section class="home-container home-section-space ministry-environments" aria-labelledby="environments-title">
+  <section class="home-container home-section-space ministry-environments" aria-labelledby="environments-title" data-pagefind-ignore="all">
     <h2 class="home-section-title" id="environments-title">Environments for every age.</h2>
     <div class="home-family-grid">
       {{ range hugo.Data.home.families.cards }}

@@ -144,7 +144,6 @@
 .site-theme .announcement strong { font-size: 20px; font-weight: 700; }
 .site-theme .announcement a { min-width: auto; border: 0; background: var(--ink); color: var(--paper); font-size: 14px; }
 .site-theme .announcement button { top: 50%; right: 12px; transform: translateY(-50%); background: transparent; color: var(--ink); }
-.site-theme .search-dialog { font-family: Figtree, system-ui, sans-serif; }
 
 @media (min-width: 960px) and (max-width: 1100px) {
   .site-theme .primary-nav ul { gap: 20px; }
@@ -252,9 +251,6 @@
 .site-theme .events-grid { gap: 32px; }
 .site-theme .event-card-copy { min-height: 150px; padding: 28px; }
 .site-theme .simple-list a { background: white; }
-.site-theme .search-dialog h2 { text-transform: none; }
-.site-theme .search-dialog section { background: var(--paper); }
-.site-theme .search-dialog input { border-color: #a49f92; background: white; }
 .site-theme .message-list { gap: 56px; }
 .site-theme .message-row { grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
 .site-theme .message-art { border-radius: 20px; }
