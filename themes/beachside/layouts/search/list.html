@@ -11,6 +11,23 @@
       <input id="search-query" name="q" type="search" autocomplete="off" placeholder="Try a message, ministry, or topic" aria-describedby="search-status">
       <button class="button button-primary" type="submit">Search</button>
     </div>
+    <div class="site-search-options">
+      <fieldset class="site-search-filters">
+        <legend>Content type</legend>
+        <div class="site-search-filter-list">
+          {{ range slice (dict "value" "all" "label" "All") (dict "value" "messages" "label" "Messages") (dict "value" "guides" "label" "Discipleship Guides") (dict "value" "ministries" "label" "Ministries") (dict "value" "events" "label" "Events") (dict "value" "other" "label" "Other Pages") }}
+          <label class="site-search-filter"><input type="radio" name="type" value="{{ .value }}"{{ if eq .value "all" }} checked{{ end }}><span>{{ .label }}</span></label>
+          {{ end }}
+        </div>
+      </fieldset>
+      <div class="site-search-sort">
+        <label for="search-sort">Sort by</label>
+        <select id="search-sort" name="sort">
+          <option value="relevance">Most relevant</option>
+          <option value="newest">Newest first</option>
+        </select>
+      </div>
+    </div>
   </form>
   <p id="search-status" class="site-search-status" role="status" aria-live="polite" aria-atomic="true">Enter a word or phrase to search Beachside.</p>
   <noscript><p>Search needs JavaScript. You can also browse <a href="{{ "messages/" | relURL }}">messages</a>, <a href="{{ "discipleship-guides/" | relURL }}">discipleship guides</a>, or <a href="{{ "visit/" | relURL }}">plan your visit</a>.</p></noscript>

@@ -138,6 +138,10 @@ need Hugo, Git, or this source repository.
 The header's search link opens `/search/`. Pagefind searches the rendered text
 of public pages, including messages and discipleship guides, with highlighted
 excerpts and ten results at a time. Searches can be shared as `/search/?q=hope`.
+Content-type filters narrow results to messages, guides, ministries, events,
+or other pages. Choose **Most relevant** or **Newest first**; undated pages
+appear after dated content when sorting by newest. Filters and sort order are
+also shareable, such as `/search/?q=hope&type=messages&sort=newest`.
 The index and browser library are hosted in `public/pagefind/`; there is no
 external search service or API key.
 

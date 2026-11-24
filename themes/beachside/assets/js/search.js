@@ -1,6 +1,9 @@
 const page = document.querySelector('[data-search-page]');
 const form = page.querySelector('form');
 const input = form.elements.q;
+const typeFilter = form.elements.type;
+const sortOrder = form.elements.sort;
+const categories = ['all', 'messages', 'guides', 'ministries', 'events', 'other'];
 const status = page.querySelector('[role="status"]');
 const results = page.querySelector('[data-search-results]');
 const more = page.querySelector('[data-search-more]');
@@ -90,12 +93,23 @@ async function loadMore(id) {
       link.href = url.href;
       link.textContent = result.meta.title || url.pathname;
       heading.append(link);
-      item.append(resultBadges(result.meta), heading, excerptNode(result.excerpt || ''));
+      item.append(resultBadges(result.meta), heading);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(result.meta.date || '')) {
+        const date = document.createElement('time');
+        date.className = 'site-search-date';
+        date.dateTime = result.meta.date;
+        date.textContent = new Date(`${result.meta.date}T00:00:00Z`).toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+        });
+        item.append(date);
+      }
+      item.append(excerptNode(result.excerpt || ''));
       results.append(item);
     }
     shown += batch.length;
     more.hidden = shown >= matches.length;
-    status.textContent = `${matches.length} ${matches.length === 1 ? 'result' : 'results'} for “${input.value.trim()}”. Showing ${shown}.`;
+    const query = input.value.trim();
+    status.textContent = `${matches.length} ${matches.length === 1 ? 'result' : 'results'}${query ? ` for “${query}”` : ''}. Showing ${shown}.`;
   } finally {
     if (id === generation) more.disabled = false;
   }
@@ -110,16 +124,23 @@ function showError(id) {
 
 async function search(id) {
   const query = input.value.trim();
-  if (!query) return;
+  const category = typeFilter.value;
+  const newest = sortOrder.value === 'newest';
+  if (!query && category === 'all' && !newest) return;
   try {
     // Load the search engine only when someone searches, and allow retries.
     if (!library) library = import(page.dataset.pagefindUrl).catch(error => { library = null; throw error; });
     const pagefind = await library;
     if (id !== generation) return;
-    const response = await pagefind.search(query);
+    const options = {};
+    if (category !== 'all') options.filters = { category };
+    if (newest) options.sort = { date: 'desc' };
+    const response = await pagefind.search(query || null, options);
     if (id !== generation) return;
     matches = response.results;
-    if (!matches.length) status.textContent = `No results for “${query}”. Try another word or a shorter phrase.`;
+    if (!matches.length) status.textContent = query
+      ? `No results for “${query}” with these filters. Try another word or content type.`
+      : 'No results in this content type. Try another content type.';
     else await loadMore(id);
   } catch (error) {
     showError(id);
@@ -132,25 +153,40 @@ function schedule(delay = 200) {
   clearTimeout(timer);
   const id = ++generation;
   const query = input.value.trim();
+  const active = Boolean(query || typeFilter.value !== 'all' || sortOrder.value === 'newest');
   const url = new URL(location.href);
   if (query) url.searchParams.set('q', query);
   else url.searchParams.delete('q');
+  if (typeFilter.value !== 'all') url.searchParams.set('type', typeFilter.value);
+  else url.searchParams.delete('type');
+  if (sortOrder.value === 'newest') url.searchParams.set('sort', 'newest');
+  else url.searchParams.delete('sort');
   history.replaceState(null, '', url);
   matches = [];
   shown = 0;
   results.replaceChildren();
   more.hidden = true;
   more.disabled = false;
-  results.setAttribute('aria-busy', String(Boolean(query)));
-  status.textContent = query ? 'Searching…' : 'Enter a word or phrase to search Beachside.';
-  if (query) timer = setTimeout(() => search(id), delay);
+  results.setAttribute('aria-busy', String(active));
+  status.textContent = active ? 'Searching…' : 'Enter a word or phrase to search Beachside.';
+  if (active) timer = setTimeout(() => search(id), delay);
 }
 
 input.addEventListener('input', () => schedule());
+form.addEventListener('change', event => {
+  if (event.target.name === 'type' || event.target.name === 'sort') schedule(0);
+});
 form.addEventListener('submit', event => { event.preventDefault(); schedule(0); });
 more.addEventListener('click', () => {
   const id = generation;
   loadMore(id).catch(() => showError(id));
 });
-input.value = new URL(location.href).searchParams.get('q') || '';
+function restoreControls() {
+  const params = new URL(location.href).searchParams;
+  input.value = params.get('q') || '';
+  typeFilter.value = categories.includes(params.get('type')) ? params.get('type') : 'all';
+  sortOrder.value = params.get('sort') === 'newest' ? 'newest' : 'relevance';
+}
+window.addEventListener('popstate', () => { restoreControls(); schedule(0); });
+restoreControls();
 schedule(0);

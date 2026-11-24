@@ -1,5 +1,6 @@
 """Verify real Hugo/Pagefind indexing boundaries and build failure propagation."""
 import gzip
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import shutil
@@ -31,10 +32,10 @@ class SearchBuildTests(unittest.TestCase):
             'layouts/partials/footer.html': '<footer>Footeruniqueterm</footer>',
             'content/search/_index.md': (ROOT / 'content/search/_index.md').read_text(encoding='utf-8'),
             'content/visible.md': '---\ntitle: Visible Page\n---\nBodyonlyuniqueterm lives here.',
-            'content/messages/example.md': '---\ntitle: Message Title\npart_number: 7\nseries: Finding Hope\n---\nMessageuniqueterm',
+            'content/messages/example.md': '---\ntitle: Message Title\npart_number: 7\nseries: Finding Hope\ndate: 2026-10-18\n---\nMessageuniqueterm',
             'content/messages/hope/_index.md': '---\ntitle: Hope Series\nlayout: series\nseries: Finding Hope\n---\n',
             'content/messages/hope/inherited.md': '---\ntitle: Inherited Series\n---\nMessage body.',
-            'content/discipleship-guide/example.md': '---\ntitle: Example Guide\nseries: Finding Hope\n---\nGuide body.',
+            'content/discipleship-guide/example.md': '---\ntitle: Example Guide\nseries: Finding Hope\ndate: 2026-11-15\n---\nGuide body.',
             'content/students/example.md': '---\ntitle: Example Ministry\n---\nMinistry body.',
             'content/children/waumba-land.md': (ROOT / 'content/children/waumba-land.md').read_text(encoding='utf-8'),
             'content/students/transit.md': (ROOT / 'content/students/transit.md').read_text(encoding='utf-8'),
@@ -106,12 +107,51 @@ class SearchBuildTests(unittest.TestCase):
         self.assertIn('Environments for every age.', html)
         self.assertIn('/students/transit/', html)
 
+    def test_filter_groups_and_date_sort_preserve_undated_pages(self):
+        by_url = {fragment['url']: fragment for fragment in self.fragments}
+        for url, category in (
+            ('/messages/part-7/', 'messages'),
+            ('/messages/hope/', 'messages'),
+            ('/discipleship-guide/example/', 'guides'),
+            ('/students/example/', 'ministries'),
+            ('/visible/', 'other'),
+        ):
+            with self.subTest(url=url):
+                self.assertEqual(by_url[url]['filters']['category'], [category])
+        self.assertEqual(by_url['/messages/part-7/']['meta']['date'], '2026-10-18')
+        self.assertEqual(by_url['/discipleship-guide/example/']['meta']['date'], '2026-11-15')
+        self.assertNotIn('date', by_url['/visible/']['meta'])
+
+        class SortParser(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.values = []
+
+            def handle_starttag(self, tag, attrs):
+                attrs = dict(attrs)
+                if attrs.get('data-pagefind-sort') == 'date[content]':
+                    self.values.append(int(attrs['content']))
+
+        values = {}
+        for url in by_url:
+            parser = SortParser()
+            parser.feed((self.output / url.strip('/') / 'index.html').read_text(encoding='utf-8'))
+            self.assertEqual(len(parser.values), 1, url)
+            values[url] = parser.values[0]
+        self.assertGreater(values['/discipleship-guide/example/'], values['/messages/part-7/'])
+        self.assertGreater(values['/messages/part-7/'], values['/visible/'])
+        self.assertEqual(values['/visible/'], 0)
+
     def test_search_page_and_local_engine_are_published(self):
         html = (self.output / 'search/index.html').read_text(encoding='utf-8')
         self.assertIn('name=q', html)
         self.assertIn('role=status', html)
         self.assertIn('data-pagefind-url=/pagefind/pagefind.js', html)
         self.assertNotIn('data-pagefind-body', html)
+        self.assertIn('name=type', html)
+        self.assertIn('name=sort', html)
+        self.assertIn('Most relevant', html)
+        self.assertIn('Newest first', html)
         self.assertTrue((self.output / 'pagefind/pagefind.js').exists())
         self.assertFalse((self.output / 'index.json').exists())
 

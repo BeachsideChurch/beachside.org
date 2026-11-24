@@ -51,6 +51,21 @@ the parent page's series. `partials/search-metadata.html` supplies this metadata
 inside the indexed main element, and the search script renders it as text with
 fixed SVG icons and distinct badge colors.
 
+Content-type controls filter to All, Messages (including series and the archive),
+Discipleship Guides (including the archive), Ministries, Events, or Other Pages.
+The `category` Pagefind filter groups the more detailed badge types into these
+choices. Sort options are Most relevant (Pagefind's default ranking) and Newest
+first (descending publication date). Every indexed page has a numeric `date`
+sort value; undated pages use zero and appear after dated content rather than
+being dropped. Dated results display their publication date.
+
+Query, type, and sort are restored from the URL, for example
+`/search/?q=hope&type=messages&sort=newest`. Unknown values fall back to All and
+Most relevant. Filters and sorting update results immediately and reset loaded
+results. Selecting a content type without a query browses that category;
+selecting Newest first without a query browses recent content across the
+selected category. The default empty search still waits for a search term.
+
 Beachside does not need Jupiter's podcast-specific recency rules, sponsor and
 pick indexing, or external result destinations. Its old description-only JSON
 search and modal have been removed.
