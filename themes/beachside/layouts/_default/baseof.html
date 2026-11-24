@@ -6,11 +6,11 @@
   <body class="site-theme {{ if .IsHome }}home{{ else }}interior{{ end }}{{ if or .Params.header_overlay (eq .Layout "ministry") }} overlay-header{{ end }}{{ if hugo.Data.announcement.enabled }} has-announcement{{ end }}{{ with .Section }} section-{{ . | urlize }}{{ end }}">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     {{ partial "header.html" . }}
-    <main id="main-content">
+    <main id="main-content"{{ if and (ne .Kind "404") (ne .Section "search") (not .Params.noindex) }} data-pagefind-body{{ end }}>
+      {{ partial "search-metadata.html" . }}
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
-    {{ partial "search.html" . }}
     {{ partial "announcement.html" . }}
   </body>
 </html>

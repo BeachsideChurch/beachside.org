@@ -121,17 +121,50 @@ and [Netlify email documentation](https://docs.netlify.com/manage/security/secur
 
 ## Build and deploy
 
-Create an optimized production build from the repository root:
+Create an optimized production build, including the search index, from the repository root:
 
 ```sh
-python scripts/hugo.py --gc --minify
+python scripts/build.py --gc --minify --cleanDestinationDir
 ```
 
-Hugo writes the complete generated website to `public/`. That directory is
+Hugo and Pagefind write the complete generated website to `public/`. That directory is
 ignored by Git because it is build output. Deploy the **contents** of `public/`
 to the destination machine's web root, replacing the previous generated site
 as one release. The destination only needs to serve static files; it does not
 need Hugo, Git, or this source repository.
+
+### Site search
+
+The header's search link opens `/search/`. Pagefind searches the rendered text
+of public pages, including messages and discipleship guides, with highlighted
+excerpts and ten results at a time. Searches can be shared as `/search/?q=hope`.
+The index and browser library are hosted in `public/pagefind/`; there is no
+external search service or API key.
+
+Install `scripts/requirements-build.txt` before building. Netlify runs
+`scripts/build.py` automatically, which runs the existing Hugo wrapper followed
+by the pinned Pagefind CLI. Deploy the entire output, including `pagefind/`.
+The build fails if Hugo or indexing fails. Use `--destination` to choose a
+different output directory.
+
+To preview working search locally:
+
+```sh
+python scripts/build.py --gc --minify --cleanDestinationDir --serve
+```
+
+Open the local URL printed by Pagefind. This serves a finished build; rebuild
+after editing content. The normal `scripts/hugo.py server` command still
+provides live editing, but does not generate or serve the Pagefind index.
+
+`pagefind.yml` restricts indexing to marked main content in the shared layout,
+so navigation and footers never match. The search page, 404, CMS, and pages with
+`noindex: true` are excluded. Standalone landing pages remain unlisted even if
+their search-engine `noindex` option is turned off. Drafts are excluded by
+normal Hugo builds; never deploy a preview built with `--buildDrafts`.
+
+See [the Pagefind implementation notes](docs/search.md) for the reference-site
+analysis and verification instructions.
 
 Before deploying to another hostname, set `baseURL` in `hugo.toml` to the final
 public URL. Never deploy the development server or copy `themes/`, `content/`,
@@ -151,7 +184,7 @@ Plain `hugo` and `hugo server` keep original image URLs for local previews and
 portable static builds. For a CDN-enabled build, run:
 
 ```sh
-HUGO_PARAMS_NETLIFYIMAGECDN=true python scripts/hugo.py --gc --minify
+HUGO_PARAMS_NETLIFYIMAGECDN=true python scripts/build.py --gc --minify --cleanDestinationDir
 ```
 
 Serve that output on Netlify (or use Netlify Dev) to exercise transformations;
@@ -262,7 +295,7 @@ page title and description. The template uses the same published, unarchived
 feed as Church Center, follows pagination, and places featured events first.
 Events with closed registration remain visible when Church Center lists them.
 
-Run the normal `python scripts/hugo.py --gc --minify` command to refresh events. Internet access
+Run the normal `python scripts/build.py --gc --minify --cleanDestinationDir` command to refresh events. Internet access
 is required, but no staff credentials or API key are needed. The build creates
 an anonymous Church Center session and downloads event artwork into the
 generated site because the source image URLs expire. Remote resource caching

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="search-page wrap" aria-labelledby="search-heading" data-search-page data-pagefind-url="{{ "pagefind/pagefind.js" | relURL }}">
+  <header class="page-header">
+    <p class="eyebrow">Find your next step</p>
+    <h1 id="search-heading">{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </header>
+  <form class="site-search-form" role="search" action="{{ .RelPermalink }}" method="get">
+    <label for="search-query">What are you looking for?</label>
+    <div class="site-search-controls">
+      <input id="search-query" name="q" type="search" autocomplete="off" placeholder="Try a message, ministry, or topic" aria-describedby="search-status">
+      <button class="button button-primary" type="submit">Search</button>
+    </div>
+  </form>
+  <p id="search-status" class="site-search-status" role="status" aria-live="polite" aria-atomic="true">Enter a word or phrase to search Beachside.</p>
+  <noscript><p>Search needs JavaScript. You can also browse <a href="{{ "messages/" | relURL }}">messages</a>, <a href="{{ "discipleship-guides/" | relURL }}">discipleship guides</a>, or <a href="{{ "visit/" | relURL }}">plan your visit</a>.</p></noscript>
+  <ol class="site-search-results" aria-label="Search results" data-search-results></ol>
+  <button class="button button-primary" type="button" data-search-more hidden>Load more results</button>
+  <nav class="search-browse" aria-label="Browse Beachside">
+    <h2>Explore Beachside</h2>
+    <a href="{{ "messages/" | relURL }}">Messages</a>
+    <a href="{{ "discipleship-guides/" | relURL }}">Discipleship guides</a>
+    <a href="{{ "events/" | relURL }}">Events</a>
+    <a href="{{ "visit/" | relURL }}">Plan your visit</a>
+  </nav>
+</section>
+{{ end }}

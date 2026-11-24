@@ -3,6 +3,8 @@
 <title>{{ if .IsHome }}Home - {{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
 {{ $description := .Description | default site.Params.description }}
 <meta name="description" content="{{ $description }}">
+<meta data-pagefind-meta="title[content]" content="{{ .Title }}">
+{{ if .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}Home - {{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
@@ -23,3 +25,9 @@
 <script src="https://js.churchcenter.com/modal/v1" defer></script>
 {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
 <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ if eq .Section "search" }}
+  {{ $searchStyle := resources.Get "css/search.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $searchStyle.RelPermalink }}" integrity="{{ $searchStyle.Data.Integrity }}">
+  {{ $searchScript := resources.Get "js/search.js" | minify | fingerprint }}
+  <script type="module" src="{{ $searchScript.RelPermalink }}" integrity="{{ $searchScript.Data.Integrity }}"></script>
+{{ end }}

@@ -12,10 +12,10 @@
         {{ end }}
         <li><a class="nav-featured" href="{{ hugo.Data.home.hero.button.url | relURL }}">{{ hugo.Data.home.hero.button.label }}</a></li>
         <li>
-          <button class="search-toggle" type="button" data-search-open aria-label="Open site search">
+          <a class="search-toggle{{ if eq .Section "search" }} active{{ end }}" href="{{ "search/" | relURL }}" aria-label="Search Beachside"{{ if eq .Section "search" }} aria-current="page"{{ end }}>
             <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 5 5"></path></svg>
             <span>Search</span>
-          </button>
+          </a>
         </li>
       </ul>
     </nav>

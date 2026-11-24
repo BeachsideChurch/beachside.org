@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 body.has-announcement { padding-bottom: 76px; }
-body.menu-open, body.dialog-open { overflow: hidden; }
+body.menu-open { overflow: hidden; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button, input { font: inherit; }
@@ -516,19 +516,6 @@ h1, h2 { font-weight: 900; letter-spacing: -0.045em; }
 .announcement a { min-width: 155px; padding: 11px 30px; border: 2px solid #fff; border-radius: 999px; background: #303033; color: #fff; font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; }
 .announcement button { position: absolute; right: 0; top: -40px; width: 31px; height: 31px; padding: 0; border: 0; background: var(--aqua-soft); color: #fff; font-size: 38px; font-weight: 300; line-height: 25px; cursor: pointer; }
 
-.search-dialog { position: fixed; z-index: 15000; inset: 0; }
-.search-dialog[hidden] { display: none; }
-.search-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.75); }
-.search-dialog section { position: relative; width: min(760px, calc(100% - 40px)); margin: 12vh auto 0; padding: 45px; border-radius: var(--radius); background: #fff; }
-.search-dialog h2 { font-size: 34px; text-transform: uppercase; }
-.search-dialog label { display: block; font-size: 14px; font-weight: 800; }
-.search-dialog input { width: 100%; margin-top: 8px; padding: 16px; border: 2px solid #aaa; border-radius: 8px; }
-.dialog-close { position: absolute; top: 10px; right: 14px; border: 0; background: transparent; font-size: 34px; cursor: pointer; }
-.search-results { max-height: 46vh; margin-top: 16px; overflow: auto; }
-.search-result { display: block; padding: 12px 0; border-top: 1px solid #ddd; text-decoration: none; }
-.search-result strong, .search-result span { display: block; }
-.search-result span { color: #555; font-size: 14px; }
-.search-empty { color: #666; font-size: 15px; }
 
 @media (max-width: 1100px) {
   .primary-nav ul { gap: 15px; }
@@ -648,7 +635,6 @@ h1, h2 { font-weight: 900; letter-spacing: -0.045em; }
   .announcement strong { max-width: 135px; font-size: 14px; }
   .announcement a { min-width: 103px; max-width: 103px; padding: 10px 15px; font-size: 11px; line-height: 1.05; }
   .announcement button { top: -36px; width: 31px; height: 31px; }
-  .search-dialog section { padding: 38px 24px 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -22,7 +22,7 @@ disableKinds = ['taxonomy', 'term']
   pagerSize = 12
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML', 'RSS']
 
 [params]
   netlifyImageCDN = false

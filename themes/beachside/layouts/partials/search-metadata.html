@@ -1,0 +1,33 @@
+{{- $type := "page" -}}
+{{- if .IsHome -}}
+  {{- $type = "home" -}}
+{{- else if eq .Section "messages" -}}
+  {{- if .IsPage -}}
+    {{- $type = "message" -}}
+  {{- else if eq .Layout "series" -}}
+    {{- $type = "series" -}}
+  {{- else -}}
+    {{- $type = "messages" -}}
+  {{- end -}}
+{{- else if eq .Section "discipleship-guide" -}}
+  {{- $type = "guide" -}}
+  {{- if not .IsPage }}{{ $type = "guides" }}{{ end -}}
+{{- else if in (slice "children" "students" "adults") .Section -}}
+  {{- $type = "ministry" -}}
+{{- else if eq .Section "events" -}}
+  {{- $type = "events" -}}
+{{- else if eq .Section "engage" -}}
+  {{- $type = "engage" -}}
+{{- else if eq .Section "about" -}}
+  {{- $type = "about" -}}
+{{- end -}}
+<meta data-pagefind-meta="type[content]" content="{{ $type }}">
+{{- if in (slice "message" "series" "guide") $type -}}
+  {{- $series := .Params.series -}}
+  {{- if and (not $series) (eq $type "message") -}}
+    {{- with .Parent }}{{ $series = .Params.series }}{{ end -}}
+  {{- end -}}
+  {{- with $series }}
+<meta data-pagefind-meta="series[content]" content="{{ . }}">
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,3 @@
+# Only shared-layout public content opts in. Unlisted landing pages, the CMS,
+# search itself, noindex pages, and the 404 page have no matching root.
+root_selector: "main[data-pagefind-body]"
